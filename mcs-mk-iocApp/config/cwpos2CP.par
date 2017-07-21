@@ -1,0 +1,8 @@
+#
+# Pre-determined Counterweight Positions
+#
+
+double $(top)cwmove.A = "10.7";  # Axial 1
+double $(top)cwmove.B = "20.7";  # Axial 2
+double $(top)cwmove.C = "30.7";  # Cross-axial 1
+double $(top)cwmove.D = "40.7";  # Cross-axial 2

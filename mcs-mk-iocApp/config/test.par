@@ -1,0 +1,28 @@
+#
+# pvload parameter file for the MCS (Telescope)
+#
+
+long $(top)simLevelL        = "0";    # Initial value for simulate level.
+long $(top)debugLevelL      = "0";    # Initial value for debug level.
+long $(top)FollowL          = "0";    # Set follow status to "IGNORING".
+long $(top)azDatumL         = "0";    # Set Azimuth to "NOT DATUMED".
+long $(top)elDatumL         = "0";    # Set Elevation to "NOT DATUMED".
+long $(top)state            = "2";    # Set state to "RUNNING".
+long $(top)arrayS           = "0";    # Set status of 20Hz data to "VALID".
+long $(top)azVEalgorithmL   = "0";    # Set Azimuth VE algorithm to "FDE".
+long $(top)azVEheadsL       = "0";    # Set Azimuth VE heads to "NONE".
+long $(top)elVEalgorithmL   = "0";    # Set Elevation VE algorithm to "FDE".
+long $(top)elVEheadsL       = "0";    # Set Elevation VE heads to "NONE".
+long $(top)logDataL         = "0";    # Set initial value for PMAC logging to "OFF".
+
+string $(top)health         = "GOOD";                        # Set health to "GOOD".
+
+# For the telescope
+double $(top)azMaxVel                = "2.0";    # Maximum az velocity (deg/s).
+double $(top)azMaxAccel              = "0.1";    # Maximum az acceleration (deg/s/s).
+double $(top)elMaxVel                = "0.75";   # Maximum el velocity (deg/s).
+double $(top)elMaxAccel              = "0.05";   # Maximum el acceleration (deg/s/s).
+double $(top)azCurrentMaxVel         = "2.0";    # Current maximum azimuth velocity (deg/sec).
+double $(top)elCurrentMaxVel         = "0.75";   # Current maximum elevation velocity (deg/sec).
+double $(top)azCountsPerDegree       = "720000"; # 1 Encoder count = 5 milliarcseconds
+double $(top)elCountsPerDegree       = "720000"; # 1 Encoder count = 5 milliarcseconds

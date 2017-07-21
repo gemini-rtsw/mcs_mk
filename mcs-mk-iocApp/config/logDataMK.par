@@ -1,0 +1,241 @@
+#
+# pvload parameter file for logData menus and PMAC Addresses
+#
+# PMAC Addresses are specified as: <DATASET> <DATATYPE>:$<ADDRESS>
+# where <DATASET> is a 4-bit binary representation of which datasets, this
+# data item is a member of.
+#
+# Thus:
+#	0 => Not in any dataset.
+#	1 => In Dataset 1.
+#	2 => In Dataset 2.
+#	3 => In Datasets 1 and 2.
+#	4 => In Dataset 3.
+#	5 => In Datasets 1 and 3.
+#	6 => In Datasets 2 and 3.
+#	7 => In Datasets 1 and 2 and 3.
+#       8 => In Dataset 4.
+#       9 => In Datasets 1 and 4.
+#      10 => In Datasets 2 and 4.
+#      11 => In Datasets 1 and 2 and 4.
+#      12 => In Datasets 3 and 4.
+#      13 => In Datasets 1 and 3 and 4.
+#      14 => In Datasets 2 and 3 and 4.
+#      15 => In Datasets 1 and 2 and 3 and 4.
+#
+
+#
+# Azimuth PMAC Card
+# Data Logging menus and addresses
+# Azimuth Axis is controlled from PMAC motor 2
+#
+
+# Az Menu Entry 0 and address
+string $(top)azMenuEntry0 = "NONE";
+string $(top)azPmacAddr0  = "0 X:$0000";
+
+# Az Menu Entry 1 and address
+string $(top)azMenuEntry1 = "X-$1201";
+string $(top)azPmacAddr1  = "1 X:$1201";
+
+# Az Menu Entry 2 and address
+string $(top)azMenuEntry2 = "D-$00A3";
+string $(top)azPmacAddr2  = "1 D:$00A3";
+
+# Az Menu Entry 3 and address
+string $(top)azMenuEntry3 = "D-$1304";
+string $(top)azPmacAddr3  = "1 D:$1304";
+
+# Az Menu Entry 4 and address
+string $(top)azMenuEntry4 = "X-$1200";
+string $(top)azPmacAddr4  = "1 X:$1200";
+
+# Az Menu Entry 5 and address
+string $(top)azMenuEntry5 = "X-$0723";
+string $(top)azPmacAddr5  = "1 X:$0723";
+
+# Az Menu Entry 6 and address
+string $(top)azMenuEntry6 = "D-$1303";
+string $(top)azPmacAddr6  = "1 D:$1303";
+
+# Az Menu Entry 7 and address
+string $(top)azMenuEntry7 = "D-$0067";
+string $(top)azPmacAddr7  = "1 D:$0067";
+
+# Az Menu Entry 8 and address
+string $(top)azMenuEntry8 = "D-$0064";
+string $(top)azPmacAddr8  = "4 D:$0064";
+
+# Az Menu Entry 9 and address
+string $(top)azMenuEntry9 = "M68";
+string $(top)azPmacAddr9  = "4 F:$DF08";
+
+# Az Menu Entry 10 and address
+string $(top)azMenuEntry10 = "M69";
+string $(top)azPmacAddr10  = "4 F:$DF09";
+
+# Az Menu Entry 11 and address
+string $(top)azMenuEntry11 = "M70";
+string $(top)azPmacAddr11  = "4 F:$DF0A";
+
+# Az Menu Entry 12 and address
+string $(top)azMenuEntry12 = "M71";
+string $(top)azPmacAddr12  = "4 F:$DF0B";
+
+# Az Menu Entry 13 and address
+string $(top)azMenuEntry13 = "M72";
+string $(top)azPmacAddr13  = "4 F:$DF0C";
+
+# Az Menu Entry 14 and address
+string $(top)azMenuEntry14 = "M73";
+string $(top)azPmacAddr14  = "4 F:$DF0D";
+
+# Az Menu Entry 15 and address
+string $(top)azMenuEntry15 = "M74";
+string $(top)azPmacAddr15  = "4 F:$DF0E";
+
+#
+# Elevation PMAC Card
+# Data Logging menus and addresses
+# Elevation Axis is controlled from PMAC motor 2
+#
+
+# El Menu Entry 0 and address
+string $(top)elMenuEntry0 = "NONE";
+string $(top)elPmacAddr0  = "0 X:$0000";
+
+# El Menu Entry 1 and address
+string $(top)elMenuEntry1 = "X-$1201";
+string $(top)elPmacAddr1  = "2 X:$1201";
+
+# El Menu Entry 2 and address
+string $(top)elMenuEntry2 = "D-$00A3";
+string $(top)elPmacAddr2  = "2 D:$00A3";
+
+# El Menu Entry 3 and address
+string $(top)elMenuEntry3 = "D-$1304";
+string $(top)elPmacAddr3  = "2 D:$1304";
+
+# El Menu Entry 4 and address
+string $(top)elMenuEntry4 = "X-$1200";
+string $(top)elPmacAddr4  = "2 X:$1200";
+
+# El Menu Entry 5 and address
+string $(top)elMenuEntry5 = "X-$0723";
+string $(top)elPmacAddr5  = "2 X:$0723";
+
+# El Menu Entry 6 and address
+string $(top)elMenuEntry6 = "D-$1303";
+string $(top)elPmacAddr6  = "2 D:$1303";
+
+# El Menu Entry 7 and address
+string $(top)elMenuEntry7 = "D-$0067";
+string $(top)elPmacAddr7  = "2 D:$0067";
+
+# El Menu Entry 8 and address
+string $(top)elMenuEntry8 = "D-$0064";
+string $(top)elPmacAddr8  = "4 D:$0064";
+
+# El Menu Entry 9 and address
+string $(top)elMenuEntry9 = "M68";
+string $(top)elPmacAddr9  = "4 F:$DF08";
+
+# El Menu Entry 10 and address
+string $(top)elMenuEntry10 = "M69";
+string $(top)elPmacAddr10  = "4 F:$DF09";
+
+# El Menu Entry 11 and address
+string $(top)elMenuEntry11 = "M70";
+string $(top)elPmacAddr11  = "4 F:$DF0A";
+
+# El Menu Entry 12 and address
+string $(top)elMenuEntry12 = "M71";
+string $(top)elPmacAddr12  = "4 F:$DF0B";
+
+# El Menu Entry 13 and address
+string $(top)elMenuEntry13 = "M72";
+string $(top)elPmacAddr13  = "4 F:$DF0C";
+
+# El Menu Entry 14 and address
+string $(top)elMenuEntry14 = "M73";
+string $(top)elPmacAddr14  = "4 F:$DF0D";
+
+# El Menu Entry 15 and address
+string $(top)elMenuEntry15 = "M74";
+string $(top)elPmacAddr15  = "4 F:$DF0E";
+
+#
+# Counterweights/Service Wraps PMAC Card
+# Data Logging menus and addresses
+# Axial C/W 1 is controlled from PMAC motor 1
+# Axial C/W 2 is controlled from PMAC motor 2
+# Cross-axial C/W 1 is controlled from PMAC motor 3
+# Cross-axial C/W 2 is controlled from PMAC motor 4
+# Azimuth Wrap is controlled from PMAC motor 5
+# Elevation Wrap 1 is controlled from PMAC motor 6
+# Elevation Wrap 2 is controlled from PMAC motor 7
+#
+
+# Cw Menu Entry 0 and address
+string $(top)cwMenuEntry0 = "NONE";
+string $(top)cwPmacAddr0  = "0 X:$0000";
+
+# Cw Menu Entry 1 and address
+string $(top)cwMenuEntry1 = "Ax C/W 1 - POS";
+string $(top)cwPmacAddr1  = "4 D:$002B";
+
+# Cw Menu Entry 2 and address
+string $(top)cwMenuEntry2 = "Ax C/W 1 - VEL";
+string $(top)cwPmacAddr2  = "4 X:$0033";
+
+# Cw Menu Entry 3 and address
+string $(top)cwMenuEntry3 = "Ax C/W 2 - POS";
+string $(top)cwPmacAddr3  = "4 D:$0067";
+
+# Cw Menu Entry 4 and address
+string $(top)cwMenuEntry4 = "Ax C/W 2 - VEL";
+string $(top)cwPmacAddr4  = "4 X:$006F";
+
+# Cw Menu Entry 5 and address
+string $(top)cwMenuEntry5 = "CAx C/W 1 - POS";
+string $(top)cwPmacAddr5  = "4 D:$00A3";
+
+# Cw Menu Entry 6 and address
+string $(top)cwMenuEntry6 = "CAx C/W 1 - VEL";
+string $(top)cwPmacAddr6  = "4 X:$00AB";
+
+# Cw Menu Entry 7 and address
+string $(top)cwMenuEntry7 = "CAx C/W 2 - POS";
+string $(top)cwPmacAddr7  = "4 D:$00DF";
+
+# Cw Menu Entry 8 and address
+string $(top)cwMenuEntry8 = "CAx C/W 2 - VEL";
+string $(top)cwPmacAddr8  = "4 X:$00D7";
+
+# Cw Menu Entry 9 and address
+string $(top)cwMenuEntry9 = "Az Wrap - POS";
+string $(top)cwPmacAddr9  = "4 D:$011B";
+
+# Cw Menu Entry 10 and address
+string $(top)cwMenuEntry10 = "Az Wrap - VEL";
+string $(top)cwPmacAddr10  = "4 X:$0123";
+
+# Cw Menu Entry 11 and address
+string $(top)cwMenuEntry11 = "El Wrap1 - POS";
+string $(top)cwPmacAddr11  = "4 D:$0157";
+
+# Cw Menu Entry 12 and address
+string $(top)cwMenuEntry12 = "El Wrap 1 - VEL";
+string $(top)cwPmacAddr12  = "4 X:$015F";
+
+# Cw Menu Entry 13 and address
+string $(top)cwMenuEntry13 = "El Wrap 2 - POS";
+string $(top)cwPmacAddr13  = "4 D:$0193";
+
+# Cw2 Menu Entry 14 and address
+string $(top)cwMenuEntry14 = "El Wrap 2 - VEL";
+string $(top)cwPmacAddr14  = "4 X:$019B";
+
+# Cw2 Menu Entry 15 and address
+string $(top)cwMenuEntry15 = "El Wrap 2 - VEL";
+string $(top)cwPmacAddr15  = "4 X:$019B";

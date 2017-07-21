@@ -1,0 +1,7 @@
+# Position of edges of Az. Sony Switch (units of 5 milliarcsec)
+double $(top)azSwitchNegativeCnts = 6776900;
+double $(top)azSwitchPositiveCnts = 6833497;
+
+# Position of edges of El. Sony Switch (units of 5 milliarcsec)
+double $(top)elSwitchNegativeCnts = 45400707;
+double $(top)elSwitchPositiveCnts = 45484746;
