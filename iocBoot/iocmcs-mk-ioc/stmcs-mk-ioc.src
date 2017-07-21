@@ -1,0 +1,51 @@
+$(LINUX_ONLY)#!${INSTALL}/bin/${ARCH}/mcs-cp-ioc
+
+cd ${INSTALL}
+
+epicsEnvSet("IOCSH_PS1","mcs-cp-ioc> ")
+
+
+## Register all support components
+dbLoadDatabase("dbd/mcs-cp-ioc.dbd")
+mcs_cp_ioc_registerRecordDeviceDriver(pdbbase)
+
+## Load record instances
+
+dbLoadRecords("db/iocAdminRTEMS.db"," IOC=mc1:iocStats,TODFORMAT=%m/%d/%Y %H:%M:%S")
+dbLoadRecords("db/mctop.db","top=mc1:")
+
+# Configure BANCOMM card
+# - set the bc635 Time Provider priority to something other than the default
+# or set it to a negative value to disable the bc635 Time Provider
+# Must be called before BCconfigure
+bc635TimeSetTpPrio (50)
+# - Master ? Simulate ? intPerSecond, intPerTick, timeOffset (microsec)
+BCconfigure (0, 0, 80, 1, 0)
+
+# configure pmac card:
+var drvPmacDebug 0
+# pmacConfig( cardNumber, addrBase, addrDpram, irqVector, irqLevel)
+pmacConfig(0, 0x7fa000, 0x700000, 0xa1, 6) 
+pmacConfig(1, 0x7fa200, 0x704000, 0xa5, 6) 
+
+mcSetSimuLevel(0)
+
+# If there are more than one XY566DI card, register and memory space must
+# be configured contiguously.
+# xy466DIConfig(num_cards, chans_per_card, reg_addr(A16), mem_addr(A24))
+xy566DIConfig(2, 16, 0xC000, 0xA00000)
+xy566_set_gain(0, 1)
+xy566_set_gain(1, 0)
+
+drvXy240Config(1, 32, 0xd000)
+
+iocInit
+#epicsThreadShowAll
+
+pvload "./data/telescopeCP.par", "top=mc1:"
+pvload "./data/tapePolysCP.par", "top=mc1:"
+pvload "./data/axisLimitsCP.par", "top=mc1:"
+pvload "./data/sonyCP.par", "top=mc1:"
+pvload "./data/debug.par", "top=mc1:"
+
+seq &timeSeq, "sys=mc1:"
