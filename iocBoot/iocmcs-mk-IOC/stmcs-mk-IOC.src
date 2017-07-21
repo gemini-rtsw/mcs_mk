@@ -1,0 +1,16 @@
+$(LINUX_ONLY)#!${INSTALL}/bin/${ARCH}/mcs-mk-IOC
+
+cd ${INSTALL}
+
+## Register all support components
+dbLoadDatabase("dbd/mcs-mk-IOC.dbd")
+mcs_mk_IOC_registerRecordDeviceDriver(pdbbase)
+
+## Load record instances
+#dbLoadTemplate("db/mcs-mk-IOC.substitutions")
+#dbLoadRecords("db/mcs-mk-IOC.db", "user=mikew")
+
+iocInit
+
+## Start any sequence programs
+#seq(sncxxx, "user=mikew")
