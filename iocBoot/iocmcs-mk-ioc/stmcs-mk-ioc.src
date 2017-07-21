@@ -1,12 +1,12 @@
-$(LINUX_ONLY)#!${INSTALL}/bin/${ARCH}/mcs-cp-ioc
+$(LINUX_ONLY)#!${INSTALL}/bin/${ARCH}/mcs-mk-ioc
 
 cd ${INSTALL}
 
-epicsEnvSet("IOCSH_PS1","mcs-cp-ioc> ")
+epicsEnvSet("IOCSH_PS1","mcs-mk-ioc> ")
 
 
 ## Register all support components
-dbLoadDatabase("dbd/mcs-cp-ioc.dbd")
+dbLoadDatabase("dbd/mcs-mk-ioc.dbd")
 mcs_cp_ioc_registerRecordDeviceDriver(pdbbase)
 
 ## Load record instances
@@ -42,10 +42,10 @@ drvXy240Config(1, 32, 0xd000)
 iocInit
 #epicsThreadShowAll
 
-pvload "./data/telescopeCP.par", "top=mc1:"
-pvload "./data/tapePolysCP.par", "top=mc1:"
-pvload "./data/axisLimitsCP.par", "top=mc1:"
-pvload "./data/sonyCP.par", "top=mc1:"
+pvload "./data/telescopeMK.par", "top=mc1:"
+pvload "./data/tapePolysMK.par", "top=mc1:"
+pvload "./data/axisLimitsMK.par", "top=mc1:"
+pvload "./data/sonyMK.par", "top=mc1:"
 pvload "./data/debug.par", "top=mc1:"
 
 seq &timeSeq, "sys=mc1:"
