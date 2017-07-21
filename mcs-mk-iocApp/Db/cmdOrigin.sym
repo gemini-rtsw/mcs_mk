@@ -1,0 +1,22 @@
+[symbol2]
+bbox -256 0 224 208
+port 208 112 100 1792 CMD symbol 2 224 96 0
+port 208 48 100 1792 ORG symbol 2 224 32 0
+port 208 176 100 1792 DIR symbol 2 224 160 0
+uniq 3
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 -224 96 COMMAND ORIGIN
+r 0 -256 0 160 208
+v 0 160 96
+224 96
+_
+v 0 160 32
+224 32
+_
+v 0 160 160
+224 160
+_
+[comments]

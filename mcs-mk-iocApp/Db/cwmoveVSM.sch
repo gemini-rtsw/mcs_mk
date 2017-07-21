@@ -1,0 +1,64 @@
+[schematic2]
+uniq 420
+[tools]
+[detail]
+w 2162 1826 100 0 n#419 eseqs.eseqs#108.LNK5 1968 1888 2048 1888 2048 1824 2336 1824 outhier.FLNK.p
+w 2034 2018 100 0 n#173 eseqs.eseqs#108.LNK1 1968 2016 2160 2016 hwout.hwout#118.outp
+w 2050 1998 100 0 n#173 eseqs.eseqs#108.LNK4 1968 1920 2048 1920 2048 2016 junction
+w 1994 1954 100 0 n#417 eseqs.eseqs#108.LNK3 1968 1952 2080 1952 2080 1888 2160 1888 hwout.hwout#415.outp
+w 2010 1986 100 0 n#416 eseqs.eseqs#108.LNK2 1968 1984 2112 1984 2112 1952 2160 1952 hwout.hwout#196.outp
+w 1370 1986 100 0 n#411 inhier.POS.P 1152 1984 1648 1984 eseqs.eseqs#108.DOL2
+w 1546 1954 100 0 n#411 junction 1504 1984 1504 1952 1648 1952 eseqs.eseqs#108.DOL3
+w 1514 1922 100 0 n#414 hwin.hwin#134.in 1440 1920 1648 1920 eseqs.eseqs#108.DOL4
+w 1370 1698 100 0 n#413 inhier.SLNK.P 1152 1696 1648 1696 eseqs.eseqs#108.SLNK
+w 1514 2020 100 0 n#408 hwin.hwin#124.in 1440 2016 1648 2016 eseqs.eseqs#108.DOL1
+w 1370 2052 100 0 n#367 inhier.MASK.P 1152 2048 1648 2048 eseqs.eseqs#108.SELL
+s 2480 144 100 0 Andy Foster
+s 2784 176 100 0 MCS Level 3
+s 2720 96 200 0 DATUM COMMAND
+[cell use]
+use outhier 2328 1784 100 0 FLNK
+xform 0 2320 1824
+use hwout 2184 1912 100 0 hwout#196
+xform 0 2256 1952
+p 2368 1950 100 0 -1 val(outp):$(top)$(cw)Demand .PP
+use hwout 2184 1976 100 0 hwout#118
+xform 0 2256 2016
+p 2368 2014 100 0 -1 val(outp):$(top)$(cw)C.IVAL .PP
+use hwout 2184 1848 100 0 hwout#415
+xform 0 2256 1888
+p 2368 1886 100 0 -1 val(outp):$(top)$(cw)Current .PP
+use inhier 1160 1656 100 0 SLNK
+xform 0 1152 1696
+use inhier 1160 1944 100 0 POS
+xform 0 1152 1984
+use inhier 1160 2008 100 0 MASK
+xform 0 1152 2048
+use hwin 1272 1976 100 0 hwin#124
+xform 0 1344 2016
+p 1251 2008 100 0 -1 val(in):$(BUSY)
+use hwin 1272 1880 100 0 hwin#134
+xform 0 1344 1920
+p 1251 1912 100 0 -1 val(in):$(IDLE)
+use eseqs 1672 1608 100 0 eseqs#108
+xform 0 1808 1856
+p 1760 2110 100 0 0 DLY1:0.0
+p 1760 2142 100 0 0 DLY2:0.0
+p 1760 1600 100 1024 -1 name:$(top)$(command)$(cw)seq
+p 1984 2016 75 1024 -1 pproc(LNK1):NPP
+p 1984 1984 75 1024 -1 pproc(LNK2):NPP
+p 1760 1806 100 0 1 SELM:Mask
+p 1760 2046 100 0 1 DLY3:2.0
+p 1760 2110 100 0 0 DLY4:0.0
+p 1760 2078 100 0 0 DLY5:0.0
+p 1984 1824 75 1024 -1 pproc(LNK7):NPP
+p 1760 2046 100 0 0 DLY8:0.0
+p 1984 1792 75 1024 -1 pproc(LNK8):NPP
+p 1984 1760 75 1024 -1 pproc(LNK9):NPP
+p 1984 1728 75 1024 -1 pproc(LNKA):NPP
+p 1760 2078 100 0 0 DLY6:0.0
+p 1760 2046 100 0 0 DLY9:0.0
+p 1984 1888 75 1024 -1 pproc(LNK5):PP
+use bc200tr 256 456 -100 0 frame
+xform 0 1936 1760
+[comments]

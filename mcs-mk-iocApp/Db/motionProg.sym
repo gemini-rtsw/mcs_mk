@@ -1,0 +1,19 @@
+[symbol2]
+bbox -320 0 224 224
+port 208 144 100 1792 FLNK symbol 2 224 128 0
+port -304 144 100 1792 SLNK symbol 1 -320 128 0
+uniq 3
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 -160 64 PROGRAMS
+l 200 0 0 -192 128 SETUP MOTION 
+r 0 -256 0 160 224
+v 0 160 128
+224 128
+_
+v 0 -320 128
+-256 128
+_
+[comments]

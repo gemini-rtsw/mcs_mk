@@ -1,0 +1,138 @@
+[schematic2]
+uniq 329
+[tools]
+[detail]
+w 2898 3051 100 0 n#327 egenSub.egenSub#0.OUTB 2848 3040 3008 3040 hwout.hwout#328.outp
+w 4612 1995 100 2 n#326 hwin.hwin#325.in 4608 2000 4608 2000 egenSub.egenSub#323.INPA
+w 4450 1339 100 0 n#324 carIdle.carIdle#216.FLNK 4288 1600 4352 1600 4352 1328 4608 1328 egenSub.egenSub#323.SLNK
+w 2818 1643 100 0 n#322 hwin.hwin#287.in 2688 1632 3008 1632 3008 1920 3136 1920 egenSubD.egenSubD#301.INPK
+w 2802 1707 100 0 n#321 hwin.hwin#265.in 2688 1696 2976 1696 2976 1952 3136 1952 egenSubD.egenSubD#301.INPJ
+w 2786 1771 100 0 n#316 hwin.hwin#261.in 2688 1760 2944 1760 2944 1984 3136 1984 egenSubD.egenSubD#301.INPI
+w 2770 1835 100 0 n#315 hwin.hwin#49.in 2688 1824 2912 1824 2912 2016 3136 2016 egenSubD.egenSubD#301.INPH
+w 2978 2059 100 0 n#314 hwin.hwin#278.in 2688 1888 2880 1888 2880 2048 3136 2048 egenSubD.egenSubD#301.INPG
+w 2962 2091 100 0 n#313 hwin.hwin#259.in 2688 1952 2848 1952 2848 2080 3136 2080 egenSubD.egenSubD#301.INPF
+w 2946 2123 100 0 n#312 hwin.hwin#229.in 2688 2016 2816 2016 2816 2112 3136 2112 egenSubD.egenSubD#301.INPE
+w 2930 2155 100 0 n#311 hwin.hwin#268.in 2688 2080 2784 2080 2784 2144 3136 2144 egenSubD.egenSubD#301.INPD
+w 2914 2187 100 0 n#310 hwin.hwin#222.in 2688 2144 2752 2144 2752 2176 3136 2176 egenSubD.egenSubD#301.INPC
+w 2882 2219 100 0 n#303 hwin.hwin#220.in 2688 2208 3136 2208 egenSubD.egenSubD#301.INPB
+w 2906 3147 100 0 n#302 egenSub.egenSub#0.VALA 2848 3136 3024 3136 3024 2240 3136 2240 egenSubD.egenSubD#301.INPA
+w 3554 1899 100 0 n#280 egenSubD.egenSubD#301.FLNK 3424 1504 3520 1504 3520 1888 3648 1888 eseqs.eseqs#271.SLNK
+w 3554 2219 100 0 n#277 egenSubD.egenSubD#301.VALB 3424 2176 3520 2176 3520 2208 3648 2208 eseqs.eseqs#271.DOL1
+w 3506 2251 100 0 n#276 egenSubD.egenSubD#301.VALA 3424 2240 3648 2240 eseqs.eseqs#271.SELL
+w 3890 1771 100 0 n#275 eseqs.eseqs#271.LNK2 3968 2176 4096 2176 4096 1760 3744 1760 3744 1600 3840 1600 carIdle.carIdle#216.SLNK
+w 4018 2219 100 0 n#274 eseqs.eseqs#271.LNK1 3968 2208 4128 2208 hwout.hwout#255.outp
+w 2482 2923 100 0 n#254 hwin.hwin#253.in 2464 2912 2560 2912 egenSub.egenSub#0.INPD
+w 2482 2987 100 0 n#244 hwin.hwin#243.in 2464 2976 2560 2976 egenSub.egenSub#0.INPC
+w 2482 3051 100 0 n#241 hwin.hwin#242.in 2464 3040 2560 3040 egenSub.egenSub#0.INPB
+w 2482 3115 100 0 n#231 hwin.hwin#232.in 2464 3104 2560 3104 egenSub.egenSub#0.INPA
+w 2402 2443 100 0 SLNK inhier.SLNK.P 2304 2432 2560 2432 egenSub.egenSub#0.SLNK
+s 2016 1696 100 0 IN-POSITION
+s 1904 1760 100 0 DESIRED VELOCITY ZERO
+s 2000 1824 100 0 HOME COMPLETE
+s 1872 1632 100 0 HOME SEARCH IN-PROGRESS
+s 2976 3168 200 0 DIRECTION OF HOMING MOVE
+[cell use]
+use hwout 3008 2999 100 0 hwout#328
+xform 0 3104 3040
+p 2976 3072 100 0 -1 val(outp):$(top)$(dev)DatumL .PP
+use hwin 2520 1592 100 0 hwin#287
+xform 0 2592 1632
+p 2160 1632 100 0 -1 val(in):$(top)$(dev)motstat1:2:HSIP
+use hwin 2496 2039 100 0 hwin#268
+xform 0 2592 2080
+p 2240 2080 100 0 -1 val(in):$(top)$(dev)CommandL
+use hwin 2496 1655 100 0 hwin#265
+xform 0 2592 1696
+p 2192 1696 100 0 -1 val(in):$(top)$(dev)motstat2:2:IP
+use hwin 2520 1720 100 0 hwin#261
+xform 0 2592 1760
+p 2176 1760 100 0 -1 val(in):$(top)$(dev)motstat1:2:DVZ
+use hwin 2272 3063 100 0 hwin#232
+xform 0 2368 3104
+p 2275 3096 100 0 -1 val(in):$(card)
+use hwin 2496 1975 100 0 hwin#229
+xform 0 2592 2016
+p 2400 2016 100 0 -1 val(in):$(card)
+use hwin 2520 1784 100 0 hwin#49
+xform 0 2592 1824
+p 2192 1824 100 0 -1 val(in):$(top)$(dev)motstat2:2:HC
+use hwin 2496 2167 100 0 hwin#220
+xform 0 2592 2208
+p 2128 2208 100 0 -1 val(in):$(top)$(dev)SwitchPositiveCnts
+use hwin 2496 2103 100 0 hwin#222
+xform 0 2592 2144
+p 2128 2144 100 0 -1 val(in):$(top)$(dev)SwitchNegativeCnts
+use hwin 2272 2999 100 0 hwin#242
+xform 0 2368 3040
+p 2064 3040 100 0 -1 val(in):$(top)TiltSwitch
+use hwin 2272 2935 100 0 hwin#243
+xform 0 2368 2976
+p 2128 2976 100 0 -1 val(in):$(top)wrapL
+use hwin 2272 2871 100 0 hwin#253
+xform 0 2368 2912
+p 2000 2912 100 0 -1 val(in):$(top)$(dev)CurrentPos
+use hwin 2496 1911 100 0 hwin#259
+xform 0 2592 1952
+p 2272 1952 100 0 -1 val(in):$(top)debugLevelL
+use hwin 2496 1847 100 0 hwin#278
+xform 0 2592 1888
+p 2224 1888 100 0 -1 val(in):$(top)$(dev)DatumMechL
+use hwin 4416 1959 100 0 hwin#325
+xform 0 4512 2000
+p 4320 2000 100 0 -1 val(in):$(card)
+use egenSub 2560 2343 100 0 egenSub#0
+xform 0 2704 2768
+p 2656 3104 100 0 1 FTA:DOUBLE
+p 2656 3072 100 0 1 FTB:LONG
+p 2656 3040 100 0 1 FTC:LONG
+p 2656 3008 100 0 1 FTD:DOUBLE
+p 2656 2976 100 0 0 FTE:DOUBLE
+p 2640 2720 100 0 1 FTVA:DOUBLE
+p 2624 3200 100 0 1 SNAM:startDatumS
+p 2672 2336 100 1024 -1 name:$(top)$(dev)startDatumS
+use egenSub 4608 1239 100 0 egenSub#323
+xform 0 4752 1664
+p 4704 2000 100 0 1 FTA:DOUBLE
+p 4704 1968 100 0 0 FTB:LONG
+p 4704 1936 100 0 0 FTC:LONG
+p 4704 1904 100 0 0 FTD:DOUBLE
+p 4704 1872 100 0 0 FTE:DOUBLE
+p 4688 1616 100 0 0 FTVA:DOUBLE
+p 4672 2096 100 0 1 SNAM:closeLoop
+p 4720 1232 100 1024 -1 name:$(top)$(dev)closeLoop
+use hwout 4128 2167 100 0 hwout#255
+xform 0 4224 2208
+p 4096 2240 100 0 -1 val(outp):$(top)$(dev)DatumL .PP
+use egenSubD 3136 1447 100 0 egenSubD#301
+xform 0 3280 1872
+p 3216 2224 100 0 1 FTA:DOUBLE
+p 3216 2192 100 0 1 FTB:DOUBLE
+p 3216 2160 100 0 1 FTC:DOUBLE
+p 3216 2128 100 0 1 FTD:LONG
+p 3216 2096 100 0 1 FTE:DOUBLE
+p 3216 2064 100 0 1 FTF:LONG
+p 3216 2032 100 0 1 FTG:LONG
+p 3216 2000 100 0 1 FTH:LONG
+p 3216 1968 100 0 1 FTI:LONG
+p 3216 1936 100 0 1 FTJ:LONG
+p 3216 1856 100 0 1 FTK:LONG
+p 3216 1824 100 0 1 FTL:LONG
+p 3216 1792 100 0 1 FTM:LONG
+p 3216 1632 100 0 1 FTVA:LONG
+p 3216 1600 100 0 1 FTVB:LONG
+p 3200 2320 100 0 1 SCAN:5 second
+p 3200 2288 100 0 1 SNAM:endDatumS
+p 3248 1440 100 1024 -1 name:$(top)$(dev)endDatumS
+use eseqs 3648 1799 100 0 eseqs#271
+xform 0 3808 2048
+p 3760 2272 100 0 1 SELM:Mask
+p 3760 1792 100 1024 -1 name:$(top)$(dev)endDatumSeqS
+p 3984 2176 75 1024 -1 pproc(LNK2):PP
+use inhier 2288 2391 100 0 SLNK
+xform 0 2304 2432
+use carIdle 3840 1447 100 0 carIdle#216
+xform 0 4064 1584
+p 3952 1520 100 0 1 seta:command datumS
+use bc200tr 1696 760 -100 0 frame
+xform 0 3376 2064
+[comments]

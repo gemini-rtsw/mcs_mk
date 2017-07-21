@@ -1,0 +1,9 @@
+[symbol2]
+bbox -368 -232 368 232
+uniq 1
+[tools]
+[attributes]
+[layers]
+<symbol>
+r 0 -368 -232 368 232
+l 200 0 0 -200 -12 PMAC Global Status

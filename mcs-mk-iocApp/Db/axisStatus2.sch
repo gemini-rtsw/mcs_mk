@@ -1,0 +1,114 @@
+[schematic2]
+uniq 139
+[tools]
+[detail]
+w 1722 2027 100 0 n#127 esirs.esirs#119.VAL 1680 2016 1824 2016 1824 2048 1920 2048 esirs.esirs#128.INP
+w 1794 1899 100 0 n#126 esirs.esirs#119.FLNK 1680 2048 1728 2048 1728 1888 1920 1888 esirs.esirs#128.SLNK
+w 1722 2443 100 0 n#125 esirs.esirs#120.VAL 1680 2432 1824 2432 1824 2464 1920 2464 esirs.esirs#122.INP
+w 1794 2315 100 0 n#124 esirs.esirs#120.FLNK 1680 2464 1728 2464 1728 2304 1920 2304 esirs.esirs#122.SLNK
+w 498 1195 100 0 n#116 esirs.esirs#118.VAL 480 1184 576 1184 576 1216 672 1216 esirs.esirs#117.INP
+w 562 1067 100 0 n#115 esirs.esirs#118.FLNK 480 1216 512 1216 512 1056 672 1056 esirs.esirs#117.SLNK
+w 498 1611 100 0 n#112 esirs.esirs#113.VAL 480 1600 576 1600 576 1632 672 1632 esirs.esirs#114.INP
+w 562 1483 100 0 n#111 esirs.esirs#113.FLNK 480 1632 512 1632 512 1472 672 1472 esirs.esirs#114.SLNK
+w 498 2027 100 0 n#108 esirs.esirs#110.VAL 480 2016 576 2016 576 2048 672 2048 esirs.esirs#109.INP
+w 562 1899 100 0 n#107 esirs.esirs#110.FLNK 480 2048 512 2048 512 1888 672 1888 esirs.esirs#109.SLNK
+[cell use]
+use esirs 1272 968 100 0 esirs#138
+xform 0 1456 1120
+p 1392 1070 100 0 1 FTVL:DOUBLE
+p 1392 1134 100 0 0 PINI:NO
+p 1392 1038 100 0 1 PREC:14
+p 1392 1102 100 0 0 SNAM:
+p 1360 960 100 1024 -1 name:$(top)$(dev)capturedPos
+use esirs 1272 584 100 0 esirs#136
+xform 0 1456 736
+p 1392 686 100 0 1 FTVL:DOUBLE
+p 1392 750 100 0 0 PINI:NO
+p 1392 654 100 0 1 PREC:14
+p 1392 718 100 0 0 SNAM:
+p 1360 576 100 1024 -1 name:$(top)$(dev)RefMarkWidth
+use esirs 1920 1799 100 0 esirs#128
+xform 0 2128 1952
+p 1856 1632 100 0 0 DISV:1
+p 2016 1936 100 0 1 FTVL:DOUBLE
+p 2016 1920 100 0 0 NELM:1
+p 2016 1968 100 0 1 PREC:6
+p 2016 1904 100 0 1 SNAM:vecntsTodeg
+p 2032 1792 100 1024 -1 name:$(top)$(dev)SwitchPositiveDeg
+use esirs 1920 2215 100 0 esirs#122
+xform 0 2128 2368
+p 1856 2048 100 0 0 DISV:1
+p 2016 2352 100 0 1 FTVL:DOUBLE
+p 2016 2336 100 0 0 NELM:1
+p 2016 2384 100 0 1 PREC:6
+p 2016 2320 100 0 1 SNAM:vecntsTodeg
+p 2032 2208 100 1024 -1 name:$(top)$(dev)SwitchNegativeDeg
+use esirs 672 1383 100 0 esirs#114
+xform 0 880 1536
+p 832 1536 100 0 1 FTVL:STRING
+p 832 1504 100 0 1 SNAM:commandSIR
+p 784 1376 100 1024 -1 name:$(top)$(dev)CommandS
+use esirs 64 1383 100 0 esirs#113
+xform 0 272 1536
+p 208 1488 100 0 1 FTVL:LONG
+p 176 1376 100 1024 -1 name:$(top)$(dev)CommandL
+use esirs 88 2216 100 0 esirs#95
+xform 0 272 2368
+p 208 2318 100 0 1 FTVL:DOUBLE
+p 208 2382 100 0 0 PINI:NO
+p 208 2286 100 0 1 PREC:14
+p 208 2350 100 0 0 SNAM:
+p 176 2208 100 1024 -1 name:$(top)$(dev)CurrentMaxVel
+use esirs 672 1799 100 0 esirs#109
+xform 0 880 1952
+p 832 1952 100 0 1 FTVL:STRING
+p 832 1920 100 0 1 SNAM:datumSIR
+p 784 1792 100 1024 -1 name:$(top)$(dev)DatumS
+use esirs 64 1799 100 0 esirs#110
+xform 0 272 1952
+p 208 1904 100 0 1 FTVL:LONG
+p 176 1792 100 1024 -1 name:$(top)$(dev)DatumL
+use esirs 672 967 100 0 esirs#117
+xform 0 880 1120
+p 784 1104 100 0 1 FTVL:STRING
+p 784 1072 100 0 1 SNAM:datumMechSIR
+p 784 960 100 1024 -1 name:$(top)$(dev)DatumMechS
+use esirs 64 967 100 0 esirs#118
+xform 0 272 1120
+p 208 1072 100 0 1 FTVL:LONG
+p 176 960 100 1024 -1 name:$(top)$(dev)DatumMechL
+use esirs 1264 1799 100 0 esirs#119
+xform 0 1472 1952
+p 1200 1632 100 0 0 DISV:1
+p 1360 1952 100 0 1 FTVL:DOUBLE
+p 1360 1920 100 0 0 NELM:1
+p 1376 1792 100 1024 -1 name:$(top)$(dev)SwitchPositiveCnts
+use esirs 1264 2215 100 0 esirs#120
+xform 0 1472 2368
+p 1200 2048 100 0 0 DISV:1
+p 1360 2368 100 0 1 FTVL:DOUBLE
+p 1360 2336 100 0 0 NELM:1
+p 1376 2208 100 1024 -1 name:$(top)$(dev)SwitchNegativeCnts
+use esirs 1264 1383 100 0 esirs#132
+xform 0 1472 1536
+p 1200 1216 100 0 0 DISV:1
+p 1360 1536 100 0 1 FTVL:DOUBLE
+p 1360 1504 100 0 1 NELM:4
+p 1376 1376 100 1024 -1 name:$(top)$(dev)FirstRefCnts
+use esirs 1944 1384 100 0 esirs#133
+xform 0 2128 1536
+p 2064 1486 100 0 1 FTVL:DOUBLE
+p 2064 1550 100 0 0 PINI:NO
+p 2064 1454 100 0 1 PREC:14
+p 2064 1518 100 0 0 SNAM:
+p 2032 1376 100 1024 -1 name:$(top)$(dev)capturedTime
+use esirs 1944 968 100 0 esirs#135
+xform 0 2128 1120
+p 2064 1070 100 0 1 FTVL:DOUBLE
+p 2064 1134 100 0 0 PINI:NO
+p 2064 1038 100 0 1 PREC:14
+p 2064 1102 100 0 0 SNAM:
+p 2032 960 100 1024 -1 name:$(top)$(dev)capturedVel
+use bc200tr -224 104 -100 0 frame
+xform 0 1456 1408
+[comments]

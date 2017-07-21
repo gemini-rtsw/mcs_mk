@@ -1,0 +1,26 @@
+[symbol2]
+bbox -128 464 256 1072
+port -96 528 100 1792 SLNK symbol 1 -128 512 0
+port -96 1040 100 1792 MASK symbol 1 -128 1024 0
+port -112 656 100 1792 AZ_CMD symbol 1 -128 640 0
+port -112 592 100 1792 EL_CMD symbol 1 -128 576 0
+uniq 7
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 -16 864 datumNONE
+r 0 -64 464 256 1072
+v 0 -128 512
+-64 512
+_
+v 0 -128 1024
+-64 1024
+_
+v 0 -128 640
+-64 640
+_
+v 0 -128 576
+-64 576
+_
+[comments]

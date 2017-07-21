@@ -1,0 +1,26 @@
+[symbol2]
+bbox -128 736 288 1024
+port -96 784 100 1792 SLNK symbol 1 -128 768 0
+port -96 912 100 1792 HEADS symbol 1 -128 896 0
+port -96 848 100 1792 CMD symbol 1 -128 832 0
+port -96 976 100 1792 ALGO symbol 1 -128 960 0
+uniq 5
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 -32 880 configNONE
+r 0 -64 736 288 1024
+v 0 -128 768
+-64 768
+_
+v 0 -128 896
+-64 896
+_
+v 0 -128 832
+-64 832
+_
+v 0 -128 960
+-64 960
+_
+[comments]

@@ -1,0 +1,10 @@
+[symbol2]
+bbox -192 592 544 1024
+uniq 0
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 16 816 AXIS STATUS 2
+r 0 -192 1024 544 592
+[comments]

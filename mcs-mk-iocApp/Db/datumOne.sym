@@ -1,0 +1,18 @@
+[symbol2]
+bbox -128 832 192 1152
+port -112 880 100 1792 SLNK symbol 1 -128 864 0
+port -112 1072 100 1792 CMD symbol 1 -128 1056 0
+uniq 4
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 -32 992 datumOne
+r 0 -64 832 192 1152
+v 0 -128 864
+-64 864
+_
+v 0 -128 1056
+-64 1056
+_
+[comments]

@@ -1,0 +1,48 @@
+[schematic2]
+uniq 294
+[tools]
+[detail]
+w 1706 2699 100 0 n#293 simmDecode.simmDecode#66.NONE 1648 2688 1824 2688 1824 2976 1952 2976 stopNONE.stopNONE#250.SLNK
+w 1442 3051 100 0 n#292 ecad8.ecad8#236.VALF 992 3040 1952 3040 stopNONE.stopNONE#250.EL_CMD
+w 1442 3115 100 0 n#291 ecad8.ecad8#236.VALE 992 3104 1952 3104 stopNONE.stopNONE#250.AZ_CMD
+w 1442 3243 100 0 n#289 ecad8.ecad8#236.VALC 992 3232 1952 3232 stopNONE.stopNONE#250.EL_MASK
+w 1442 3307 100 0 n#288 ecad8.ecad8#236.VALB 992 3296 1952 3296 stopNONE.stopNONE#250.AZ_MASK
+w 1442 3371 100 0 n#287 ecad8.ecad8#236.VALA 992 3360 1952 3360 stopNONE.stopNONE#250.MASK
+w 554 3010 100 0 n#256 hwin.hwin#244.in 496 3008 672 3008 ecad8.ecad8#236.INPF
+w 554 3074 100 0 n#255 hwin.hwin#241.in 496 3072 672 3072 ecad8.ecad8#236.INPE
+w 1082 2690 100 0 n#246 ecad8.ecad8#236.STLK 992 2688 1232 2688 simmDecode.simmDecode#66.SLNK
+w 1138 3254 100 0 n#240 ecad8.ecad8#236.FLNK 992 2816 1136 2816 1136 3632 1168 3632 engAck.engAck#59.SLNK
+w 1074 3654 100 0 n#106 ecad8.ecad8#236.VAL 992 3552 1072 3552 1072 3696 1168 3696 engAck.engAck#59.INP
+w 554 3140 100 0 n#103 hwin.hwin#94.in 496 3136 672 3136 ecad8.ecad8#236.INPD
+[cell use]
+use bc200 -272 1464 -100 0 frame
+xform 0 1408 2768
+use HPstop 24 3592 100 0 HPstop#257
+xform 0 208 3712
+use stopNONE 1928 3048 100 0 stopNONE#250
+xform 0 2112 3168
+use hwin 328 3096 100 0 hwin#94
+xform 0 400 3136
+p 96 3134 100 0 -1 val(in):$(top)debugLevelL
+use hwin 328 3032 100 0 hwin#241
+xform 0 400 3072
+p 128 3070 100 0 -1 val(in):$(top)azStateL
+use hwin 328 2968 100 0 hwin#244
+xform 0 400 3008
+p 128 3006 100 0 -1 val(in):$(top)elStateL
+use ecad8 696 2600 100 0 ecad8#236
+xform 0 832 3104
+p 768 3406 100 0 1 FTVA:LONG
+p 768 3374 100 0 1 FTVB:LONG
+p 768 3344 100 0 1 FTVC:LONG
+p 768 3312 100 0 0 FTVD:LONG
+p 768 3280 100 0 1 FTVE:LONG
+p 768 3248 100 0 1 FTVF:LONG
+p 768 3454 100 0 1 SNAM:stopCAD
+p 784 2592 100 1024 -1 name:$(top)$(command)
+use simmDecode 1256 2648 100 0 simmDecode#66
+xform 0 1440 2760
+p 1296 2638 100 0 -1 name:$(top)$(command)SD
+use engAck 1192 3496 100 0 engAck#59
+xform 0 1360 3632
+[comments]

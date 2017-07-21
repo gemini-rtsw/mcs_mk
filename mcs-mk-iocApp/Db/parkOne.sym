@@ -1,0 +1,22 @@
+[symbol2]
+bbox -128 800 192 1120
+port -112 1040 100 1792 CMD symbol 1 -128 1024 0
+port -112 848 100 1792 SLNK symbol 1 -128 832 0
+port -112 976 100 1792 DEMAND symbol 1 -128 960 0
+uniq 2
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 -16 960 parkOne
+r 0 -64 800 192 1120
+v 0 -128 1024
+-64 1024
+_
+v 0 -128 832
+-64 832
+_
+v 0 -128 960
+-64 960
+_
+[comments]

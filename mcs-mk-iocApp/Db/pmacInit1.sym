@@ -1,0 +1,18 @@
+[symbol2]
+bbox -288 96 144 192
+port -272 160 100 1792 SLNK symbol 1 -288 144 0
+port 128 160 100 1792 FLNK symbol 2 144 144 0
+uniq 3
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 -192 128 PMAC Init 1
+r 0 -224 96 80 192
+v 0 -288 144
+-224 144
+_
+v 0 80 144
+144 144
+_
+[comments]

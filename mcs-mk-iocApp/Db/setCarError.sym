@@ -1,0 +1,23 @@
+[symbol2]
+bbox -320 -32 128 192
+port -304 144 100 1792 ERRSTR symbol 1 -320 128 0
+port -304 48 100 1792 SLNK symbol 1 -320 32 0
+port 112 112 100 1792 FLNK symbol 2 128 96 0
+uniq 3
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 -160 64 ERROR
+l 200 0 0 -176 112 SET CAR
+r 0 -256 -32 64 192
+v 0 -320 128
+-256 128
+_
+v 0 -320 32
+-256 32
+_
+v 0 64 96
+128 96
+_
+[comments]

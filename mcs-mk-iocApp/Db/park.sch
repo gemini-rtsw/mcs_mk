@@ -1,0 +1,77 @@
+[schematic2]
+uniq 460
+[tools]
+[detail]
+w 1698 1547 100 0 n#459 ecad20.ecad20#246.VALD 1408 1536 2048 1536 parkNONE.parkNONE#454.EL_CMD
+w 1698 1611 100 0 n#458 ecad20.ecad20#246.VALC 1408 1600 2048 1600 parkNONE.parkNONE#454.AZ_CMD
+w 1698 1675 100 0 n#457 ecad20.ecad20#246.VALB 1408 1664 2048 1664 parkNONE.parkNONE#454.EL
+w 1698 1739 100 0 n#456 ecad20.ecad20#246.VALA 1408 1728 2048 1728 parkNONE.parkNONE#454.AZ
+w 1914 299 100 0 n#455 simmDecode.simmDecode#66.NONE 1904 288 1984 288 1984 1472 2048 1472 parkNONE.parkNONE#454.SLNK
+w 642 811 100 0 n#449 hwin.hwin#452.in 512 800 832 800 832 1056 1088 1056 ecad20.ecad20#246.INPK
+w 898 1131 100 0 n#448 hwin.hwin#450.in 512 896 768 896 768 1120 1088 1120 ecad20.ecad20#246.INPJ
+w 850 1323 100 0 n#447 hwin.hwin#262.in 512 1184 672 1184 672 1312 1088 1312 ecad20.ecad20#246.INPG
+w 770 1579 100 0 n#397 hwin.hwin#94.in 512 1568 1088 1568 ecad20.ecad20#246.INPC
+w 874 1186 100 0 n#352 hwin.hwin#264.in 512 992 720 992 720 1184 1088 1184 ecad20.ecad20#246.INPI
+w 858 1250 100 0 n#351 hwin.hwin#263.in 512 1088 688 1088 688 1248 1088 1248 ecad20.ecad20#246.INPH
+w 826 1378 100 0 n#265 hwin.hwin#261.in 512 1280 624 1280 624 1376 1088 1376 ecad20.ecad20#246.INPF
+w 810 1442 100 0 n#260 hwin.hwin#244.in 512 1376 592 1376 592 1440 1088 1440 ecad20.ecad20#246.INPE
+w 794 1506 100 0 n#259 hwin.hwin#241.in 512 1472 560 1472 560 1504 1088 1504 ecad20.ecad20#246.INPD
+w 1508 1238 100 0 n#249 ecad20.ecad20#246.FLNK 1408 416 1504 416 1504 2000 1536 2000 engAck.engAck#59.SLNK
+w 1418 292 100 0 n#247 ecad20.ecad20#246.STLK 1408 288 1488 288 simmDecode.simmDecode#66.SLNK
+w 1444 2022 100 0 n#106 ecad20.ecad20#246.VAL 1408 1920 1440 1920 1440 2064 1536 2064 engAck.engAck#59.INP
+s 2480 144 100 0 Andy Foster
+s 2784 176 100 0 MCS Level 3
+s 2720 96 200 0 MOVE COMMAND
+[cell use]
+use parkNONE 2048 1415 100 0 parkNONE#454
+xform 0 2192 1600
+use hwin 344 1528 100 0 hwin#94
+xform 0 416 1568
+p 288 1534 100 0 -1 val(in):$(top)debugLevelL
+use hwin 344 1432 100 0 hwin#241
+xform 0 416 1472
+p 288 1438 100 0 -1 val(in):$(top)azDatumL
+use hwin 344 1336 100 0 hwin#244
+xform 0 416 1376
+p 288 1342 100 0 -1 val(in):$(top)elDatumL
+use hwin 344 1240 100 0 hwin#261
+xform 0 416 1280
+p 288 1246 100 0 -1 val(in):$(top)azUpperLimit
+use hwin 344 1144 100 0 hwin#262
+xform 0 416 1184
+p 288 1150 100 0 -1 val(in):$(top)azLowerLimit
+use hwin 344 1048 100 0 hwin#263
+xform 0 416 1088
+p 288 1054 100 0 -1 val(in):$(top)elUpperLimit
+use hwin 344 952 100 0 hwin#264
+xform 0 416 992
+p 288 958 100 0 -1 val(in):$(top)elLowerLimit
+use hwin 344 856 100 0 hwin#450
+xform 0 416 896
+p 288 862 100 0 -1 val(in):$(top)azPark
+use hwin 344 760 100 0 hwin#452
+xform 0 416 800
+p 288 766 100 0 -1 val(in):$(top)elPark
+use ecad20 1112 200 100 0 ecad20#246
+xform 0 1248 1088
+p 1184 1630 100 0 1 FTVA:DOUBLE
+p 1184 1598 100 0 1 FTVB:DOUBLE
+p 1184 1566 100 0 1 FTVC:LONG
+p 1184 1534 100 0 1 FTVD:LONG
+p 1184 1502 100 0 0 FTVE:STRING
+p 1184 1470 100 0 0 FTVF:STRING
+p 1184 1440 100 0 0 FTVG:STRING
+p 1184 1406 100 0 0 FTVH:STRING
+p 1184 1376 100 0 0 FTVI:STRING
+p 1184 1344 100 0 0 FTVJ:STRING
+p 1184 2014 100 0 1 PREC:14
+p 1184 1982 100 0 1 SNAM:parkCAD
+p 1200 192 100 1024 -1 name:$(top)$(command)
+use simmDecode 1512 248 100 0 simmDecode#66
+xform 0 1696 360
+p 1552 238 100 0 -1 name:$(top)$(command)SD
+use engAck 1560 1864 100 0 engAck#59
+xform 0 1728 2000
+use bc200tr -128 -104 -100 0 frame
+xform 0 1552 1200
+[comments]

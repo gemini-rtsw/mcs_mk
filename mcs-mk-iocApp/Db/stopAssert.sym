@@ -1,0 +1,14 @@
+[symbol2]
+bbox -320 -32 64 192
+port -304 112 100 1792 SLNK symbol 1 -320 96 0
+uniq 2
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 -224 80 BRAKE AXIS
+r 0 -256 -32 64 192
+v 0 -320 96
+-256 96
+_
+[comments]

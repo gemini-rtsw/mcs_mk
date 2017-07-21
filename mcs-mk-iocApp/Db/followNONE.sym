@@ -1,0 +1,14 @@
+[symbol2]
+bbox -128 768 224 992
+port -96 816 100 1792 SLNK symbol 1 -128 800 0
+uniq 4
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 -32 880 followNONE
+r 0 -64 768 224 992
+v 0 -128 800
+-64 800
+_
+[comments]

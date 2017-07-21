@@ -1,0 +1,14 @@
+[symbol2]
+bbox -320 0 128 160
+port -304 112 100 1792 SLNK symbol 1 -320 96 0
+uniq 1
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 -192 64 CAR BUSY/IDLE
+r 0 -256 0 128 160
+v 0 -320 96
+-256 96
+_
+[comments]

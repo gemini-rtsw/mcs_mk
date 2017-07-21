@@ -1,0 +1,182 @@
+[schematic2]
+uniq 123
+[tools]
+[detail]
+w 1682 523 100 0 n#119 esirs.esirs#120.VAL 1600 480 1664 480 1664 512 1760 512 esirs.esirs#121.INP
+w 1666 363 100 0 n#118 esirs.esirs#120.FLNK 1600 512 1632 512 1632 352 1760 352 esirs.esirs#121.SLNK
+w 1682 843 100 0 n#115 esirs.esirs#117.VAL 1600 800 1664 800 1664 832 1760 832 esirs.esirs#116.INP
+w 1666 683 100 0 n#114 esirs.esirs#117.FLNK 1600 832 1632 832 1632 672 1760 672 esirs.esirs#116.SLNK
+w 1634 1128 100 0 n#113 esirs.esirs#110.FLNK 1600 1184 1632 1184 1632 1024 1760 1024 esirs.esirs#111.SLNK
+w 1688 1186 100 0 n#112 esirs.esirs#110.VAL 1600 1152 1664 1152 1664 1184 1760 1184 esirs.esirs#111.INP
+w 1688 1506 100 0 n#107 esirs.esirs#109.VAL 1600 1472 1664 1472 1664 1504 1760 1504 esirs.esirs#108.INP
+w 1634 1448 100 0 n#106 esirs.esirs#109.FLNK 1600 1504 1632 1504 1632 1344 1760 1344 esirs.esirs#108.SLNK
+w 1682 1835 100 0 n#103 esirs.esirs#103.VAL 1600 1792 1664 1792 1664 1824 1760 1824 esirs.esirs#104.INP
+w 1666 1675 100 0 n#102 esirs.esirs#103.FLNK 1600 1824 1632 1824 1632 1664 1760 1664 esirs.esirs#104.SLNK
+w 498 2123 100 0 n#101 esirs.esirs#82.VAL 416 2080 480 2080 480 2112 576 2112 esirs.esirs#81.INP
+w 482 1963 100 0 n#100 esirs.esirs#82.FLNK 416 2112 448 2112 448 1952 576 1952 esirs.esirs#81.SLNK
+w 1688 2466 100 0 n#69 esirs.esirs#74.VAL 1600 2432 1664 2432 1664 2464 1760 2464 esirs.esirs#75.INP
+w 1634 2408 100 0 n#68 esirs.esirs#74.FLNK 1600 2464 1632 2464 1632 2304 1760 2304 esirs.esirs#75.SLNK
+w 1688 2146 100 0 n#67 esirs.esirs#72.VAL 1600 2112 1664 2112 1664 2144 1760 2144 esirs.esirs#73.INP
+w 1634 2088 100 0 n#66 esirs.esirs#72.FLNK 1600 2144 1632 2144 1632 1984 1760 1984 esirs.esirs#73.SLNK
+w 450 2408 100 0 n#65 esirs.esirs#71.FLNK 416 2464 448 2464 448 2304 576 2304 esirs.esirs#70.SLNK
+w 504 2466 100 0 n#64 esirs.esirs#71.VAL 416 2432 480 2432 480 2464 576 2464 esirs.esirs#70.INP
+w 504 706 100 0 n#63 esirs.esirs#60.VAL 416 672 480 672 480 704 576 704 esirs.esirs#61.INP
+w 450 648 100 0 n#62 esirs.esirs#60.FLNK 416 704 448 704 448 544 576 544 esirs.esirs#61.SLNK
+w 504 1058 100 0 n#59 esirs.esirs#56.VAL 416 1024 480 1024 480 1056 576 1056 esirs.esirs#57.INP
+w 450 1000 100 0 n#58 esirs.esirs#56.FLNK 416 1056 448 1056 448 896 576 896 esirs.esirs#57.SLNK
+w 504 1410 100 0 n#40 esirs.esirs#35.VAL 416 1376 480 1376 480 1408 576 1408 esirs.esirs#32.INP
+w 450 1352 100 0 n#39 esirs.esirs#35.FLNK 416 1408 448 1408 448 1248 576 1248 esirs.esirs#32.SLNK
+w 450 1704 100 0 n#38 esirs.esirs#4.FLNK 416 1760 448 1760 448 1600 576 1600 esirs.esirs#29.SLNK
+w 504 1762 100 0 n#37 esirs.esirs#4.VAL 416 1728 480 1728 480 1760 576 1760 esirs.esirs#29.INP
+s 0 384 100 0 Unfortunately, due to ICD 7b
+s -48 320 100 0 in that it holds a LONG but the name
+s -48 288 100 0 ends with an S.
+s -64 352 100 0 this record breaks my naming convention
+[cell use]
+use esirs 2424 776 100 0 esirs#122
+xform 0 2608 928
+p 2544 878 100 0 1 FTVL:DOUBLE
+p 2560 830 100 0 1 PREC:14
+p 2512 768 100 1024 -1 name:$(top)pmacServoTol
+use esirs 1760 263 100 0 esirs#121
+xform 0 1968 416
+p 1872 416 100 0 1 FTVL:STRING
+p 1872 384 100 0 1 SNAM:trajectorySIR
+p 1872 256 100 1024 -1 name:$(top)trajectoryS
+use esirs 1184 263 100 0 esirs#120
+xform 0 1392 416
+p 1328 368 100 0 1 FTVL:LONG
+p 1296 256 100 1024 -1 name:$(top)TrajectoryL
+p 1136 512 75 1024 -1 pproc(INP):PP
+use esirs 1784 936 100 0 esirs#111
+xform 0 1968 1088
+p 1904 1038 100 0 1 FTVL:STRING
+p 1872 1102 100 0 1 SNAM:inPositionSIR
+p 1872 928 100 1024 -1 name:$(top)inPositionElS
+use esirs 1208 936 100 0 esirs#110
+xform 0 1392 1088
+p 1328 1022 100 0 1 FTVL:LONG
+p 1296 928 100 1024 -1 name:$(top)inPositionEl
+use esirs 1208 1256 100 0 esirs#109
+xform 0 1392 1408
+p 1328 1342 100 0 1 FTVL:LONG
+p 1296 1248 100 1024 -1 name:$(top)inPositionAz
+use esirs 1784 1256 100 0 esirs#108
+xform 0 1968 1408
+p 1904 1358 100 0 1 FTVL:STRING
+p 1872 1422 100 0 1 SNAM:inPositionSIR
+p 1872 1248 100 1024 -1 name:$(top)inPositionAzS
+use esirs 1760 1575 100 0 esirs#104
+xform 0 1968 1728
+p 1920 1728 100 0 1 FTVL:STRING
+p 1920 1696 100 0 1 SNAM:followSIR
+p 1872 1568 100 1024 -1 name:$(top)followS
+use esirs 1184 1575 100 0 esirs#103
+xform 0 1392 1728
+p 1328 1680 100 0 1 FTVL:LONG
+p 1296 1568 100 1024 -1 name:$(top)FollowL
+use esirs 24 1864 100 0 esirs#82
+xform 0 208 2016
+p 160 1950 100 0 1 FTVL:LONG
+p 112 1856 100 1024 -1 name:$(top)logDataL
+use esirs 600 1864 100 0 esirs#81
+xform 0 784 2016
+p 736 1950 100 0 1 FTVL:STRING
+p 688 2014 100 0 1 SNAM:logDataSIR
+p 688 1856 100 1024 -1 name:$(top)logDataS
+use esirs 2424 1864 100 0 esirs#77
+xform 0 2608 2016
+p 2544 1966 100 0 1 FTVL:DOUBLE
+p 2560 1918 100 0 1 PREC:14
+p 2512 1856 100 1024 -1 name:$(top)velocityTol
+use esirs 2424 2216 100 0 esirs#76
+xform 0 2608 2368
+p 2544 2318 100 0 1 FTVL:DOUBLE
+p 2560 2270 100 0 1 PREC:14
+p 2512 2208 100 1024 -1 name:$(top)positionTol
+use esirs 24 1160 100 0 esirs#35
+xform 0 208 1312
+p 144 1262 100 0 1 FTVL:LONG
+p 112 1152 100 1024 -1 name:$(top)simLevelL
+use esirs 600 1160 100 0 esirs#32
+xform 0 784 1312
+p 720 1262 100 0 1 FTVL:STRING
+p 688 1326 100 0 1 SNAM:simulateSIR
+p 688 1152 100 1024 -1 name:$(top)simLevelS
+use esirs 600 1512 100 0 esirs#29
+xform 0 784 1664
+p 736 1598 100 0 1 FTVL:STRING
+p 720 1662 100 0 1 SNAM:debugSIR
+p 688 1504 100 1024 -1 name:$(top)debugLevelS
+use esirs 24 1512 100 0 esirs#4
+xform 0 208 1664
+p 160 1598 100 0 1 FTVL:LONG
+p 144 1662 100 0 0 SNAM:
+p 112 1504 100 1024 -1 name:$(top)debugLevelL
+use esirs 24 808 100 0 esirs#56
+xform 0 208 960
+p 144 894 100 0 1 FTVL:LONG
+p 112 800 100 1024 -1 name:$(top)inPosition
+use esirs 600 808 100 0 esirs#57
+xform 0 784 960
+p 720 910 100 0 1 FTVL:STRING
+p 688 974 100 0 1 SNAM:inPositionSIR
+p 688 800 100 1024 -1 name:$(top)inPositionS
+use esirs 24 456 100 0 esirs#60
+xform 0 208 608
+p 144 542 100 0 1 FTVL:LONG
+p 112 448 100 1024 -1 name:$(top)arrayS
+use esirs 600 456 100 0 esirs#61
+xform 0 784 608
+p 720 558 100 0 1 FTVL:STRING
+p 688 622 100 0 1 SNAM:arraySIR
+p 688 448 100 1024 -1 name:$(top)arraySS
+use esirs 600 2216 100 0 esirs#70
+xform 0 784 2368
+p 736 2302 100 0 1 FTVL:STRING
+p 720 2366 100 0 1 SNAM:wrapSIR
+p 688 2208 100 1024 -1 name:$(top)wrapS
+use esirs 24 2216 100 0 esirs#71
+xform 0 208 2368
+p 160 2302 100 0 1 FTVL:LONG
+p 144 2366 100 0 0 SNAM:
+p 112 2208 100 1024 -1 name:$(top)wrapL
+use esirs 1208 1896 100 0 esirs#72
+xform 0 1392 2048
+p 1344 1982 100 0 1 FTVL:LONG
+p 1296 1888 100 1024 -1 name:$(top)healthL
+use esirs 1784 1896 100 0 esirs#73
+xform 0 1968 2048
+p 1920 1982 100 0 1 FTVL:STRING
+p 1872 2046 100 0 1 SNAM:healthSIR
+p 1872 1888 100 1024 -1 name:$(top)health
+use esirs 1208 2216 100 0 esirs#74
+xform 0 1392 2368
+p 1344 2302 100 0 1 FTVL:LONG
+p 1296 2208 100 1024 -1 name:$(top)state
+use esirs 1784 2216 100 0 esirs#75
+xform 0 1968 2368
+p 1920 2302 100 0 1 FTVL:STRING
+p 1872 2366 100 0 1 SNAM:stateSIR
+p 1872 2208 100 1024 -1 name:$(top)stateS
+use esirs 2424 1160 100 0 esirs#78
+xform 0 2608 1312
+p 2560 1246 100 0 1 FTVL:LONG
+p 2512 1152 100 1024 -1 name:$(top)LANperfL
+use esirs 2424 1512 100 0 esirs#95
+xform 0 2608 1664
+p 2544 1614 100 0 1 FTVL:DOUBLE
+p 2560 1566 100 0 1 PREC:14
+p 2512 1504 100 1024 -1 name:$(top)moveTol
+use esirs 1760 583 100 0 esirs#116
+xform 0 1968 736
+p 1920 736 100 0 1 FTVL:STRING
+p 1920 704 100 0 1 SNAM:slewSIR
+p 1872 576 100 1024 -1 name:$(top)SlewS
+use esirs 1184 583 100 0 esirs#117
+xform 0 1392 736
+p 1328 688 100 0 1 FTVL:LONG
+p 1296 576 100 1024 -1 name:$(top)SlewL
+use bc200tr -224 104 -100 0 frame
+xform 0 1456 1408
+[comments]

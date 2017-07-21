@@ -1,0 +1,22 @@
+[symbol2]
+bbox -64 768 416 1024
+port 400 880 100 1792 FLNK symbol 2 416 864 0
+port 400 944 100 1792 OMSS symbol 2 416 928 0
+port 400 1008 100 1792 VAL symbol 2 416 992 0
+uniq 0
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 300 0 0 -48 880 AXIS CARS
+r 0 -64 1024 352 768
+v 0 352 864
+416 864
+_
+v 0 352 928
+416 928
+_
+v 0 352 992
+416 992
+_
+[comments]

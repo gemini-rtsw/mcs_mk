@@ -1,0 +1,22 @@
+[symbol2]
+bbox 0 736 512 864
+port 496 784 100 1792 FAIL symbol 2 512 768 0
+port 496 848 100 1792 OK symbol 2 512 832 0
+port 32 816 100 1792 SLNK symbol 1 0 800 0
+uniq 1
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 80 784 DISASSERT->GIS
+r 0 64 736 448 864
+v 0 448 768
+512 768
+_
+v 0 448 832
+512 832
+_
+v 0 0 800
+64 800
+_
+[comments]

@@ -1,0 +1,22 @@
+[symbol2]
+bbox 0 736 448 848
+port 32 816 100 1792 SLNK symbol 1 0 800 0
+port 432 848 100 1792 OK symbol 2 448 832 0
+port 432 784 100 1792 FAIL symbol 2 448 768 0
+uniq 1
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 96 784 ASSERT->GIS
+r 0 64 736 384 848
+v 0 0 800
+64 800
+_
+v 0 384 832
+448 832
+_
+v 0 384 768
+448 768
+_
+[comments]

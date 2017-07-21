@@ -1,0 +1,19 @@
+[symbol2]
+bbox -224 -112 160 112
+port -208 16 100 1792 SLNK symbol 1 -224 0 0
+port -208 80 100 1792 INP symbol 1 -224 64 0
+uniq 12
+[tools]
+[attributes]
+p -160 -130 100 0 -1 name:$(top)$(command)Ack
+[layers]
+<symbol>
+l 100 0 0 -36 -12 engAck
+r 0 -160 -104 160 104
+v 0 -224 0
+-160 0
+_
+v 0 -224 64
+-160 64
+_
+[comments]

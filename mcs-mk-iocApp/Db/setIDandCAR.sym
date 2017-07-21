@@ -1,0 +1,19 @@
+[symbol2]
+bbox -320 0 160 224
+port -304 32 100 1792 SLNK symbol 1 -320 16 0
+port -320 224 100 1792 TRACKID symbol 1 -320 208 0
+uniq 4
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 -160 64 AND CARS
+l 200 0 0 -192 128 SET TRACK ID
+r 0 -256 0 160 224
+v 0 -320 16
+-256 16
+_
+v 0 -320 208
+-256 208
+_
+[comments]

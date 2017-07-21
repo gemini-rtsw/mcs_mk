@@ -1,0 +1,26 @@
+[symbol2]
+bbox -128 864 224 992
+port 192 944 100 1792 FLNK symbol 2 224 928 0
+port -96 912 100 1792 SLNK symbol 1 -128 896 0
+port -84 975 100 1792 POS symbol 1 -128 960 0
+port -84 943 100 1792 MASK symbol 1 -128 928 0
+uniq 0
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 100 0 0 -16 928 cwmoveVSM
+r 0 -64 992 160 864
+v 0 160 928
+224 928
+_
+v 0 -128 896
+-64 896
+_
+v 0 -128 960
+-64 960
+_
+v 0 -128 928
+-64 928
+_
+[comments]

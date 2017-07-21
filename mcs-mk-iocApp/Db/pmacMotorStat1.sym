@@ -1,0 +1,11 @@
+[symbol2]
+bbox -368 -240 368 240
+uniq 1
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 -160 -16 Status Word 1
+l 200 0 0 -208 64 PMAC Motor <num>
+r 0 -368 -232 368 232
+[comments]

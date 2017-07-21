@@ -1,0 +1,132 @@
+[schematic2]
+uniq 433
+[tools]
+[detail]
+w 886 1323 100 0 ORG eseqs.eseqs#430.LNK1 784 1312 1024 1312 1024 1376 junction
+w 870 1291 100 0 DIR eseqs.eseqs#430.LNK2 784 1280 992 1280 992 1568 junction
+w 354 1282 100 0 n#429 hwin.hwin#432.in 304 1280 464 1280 eseqs.eseqs#430.DOL2
+w 386 1314 100 0 n#428 hwin.hwin#431.in 304 1344 368 1344 368 1312 464 1312 eseqs.eseqs#430.DOL1
+w 2930 1579 100 0 DIR eseqs.eseqs#403.LNK3 2784 2080 2880 2080 2880 1568 3040 1568 outhier.DIR.p
+w 2814 971 100 0 DIR eseqs.eseqs#417.LNK3 2784 960 2880 960 2880 1568 junction
+w 2382 1579 100 0 DIR eseqs.eseqs#376.LNK3 1792 2080 1920 2080 1920 1568 2880 1568 junction
+w 1822 971 100 0 DIR eseqs.eseqs#412.LNK3 1760 960 1920 960 1920 1568 junction
+w 1438 1579 100 0 DIR eseqs.eseqs#365.LNK2 832 2112 992 2112 992 1568 1920 1568 junction
+w 2834 2155 100 0 ORG eseqs.eseqs#403.LNK1 2784 2144 2944 2144 2944 1376 3040 1376 outhier.ORG.p
+w 2846 1035 100 0 ORG eseqs.eseqs#417.LNK1 2784 1024 2944 1024 2944 1376 junction
+w 2446 1387 100 0 ORG eseqs.eseqs#376.LNK1 1792 2144 1984 2144 1984 1376 2944 1376 junction
+w 1854 1035 100 0 ORG eseqs.eseqs#412.LNK1 1760 1024 1984 1024 1984 1376 junction
+w 1486 1387 100 0 ORG eseqs.eseqs#365.LNK1 832 2144 1024 2144 1024 1376 1984 1376 junction
+w 2818 2123 100 0 CMD eseqs.eseqs#403.LNK2 2784 2112 2912 2112 2912 1472 3040 1472 outhier.CMD.p
+w 2830 1003 100 0 CMD eseqs.eseqs#417.LNK2 2784 992 2912 992 2912 1472 junction
+w 2414 1483 100 0 CMD eseqs.eseqs#376.LNK2 1792 2112 1952 2112 1952 1472 2912 1472 junction
+w 1838 1003 100 0 CMD eseqs.eseqs#412.LNK2 1760 992 1952 992 1952 1472 junction
+w 2362 1003 100 0 n#421 hwin.hwin#420.in 2272 1024 2320 1024 2320 992 2464 992 eseqs.eseqs#417.DOL2
+w 2338 971 100 0 n#416 hwin.hwin#418.in 2272 960 2464 960 eseqs.eseqs#417.DOL3
+w 2290 1099 100 0 n#415 hwin.hwin#419.in 2272 1088 2368 1088 2368 1024 2464 1024 eseqs.eseqs#417.DOL1
+w 1266 1099 100 0 n#414 hwin.hwin#410.in 1248 1088 1344 1088 1344 1024 1440 1024 eseqs.eseqs#412.DOL1
+w 1314 971 100 0 n#413 hwin.hwin#411.in 1248 960 1440 960 eseqs.eseqs#412.DOL3
+w 1338 1003 100 0 n#408 hwin.hwin#409.in 1248 1024 1296 1024 1296 992 1440 992 eseqs.eseqs#412.DOL2
+w 2362 2123 100 0 n#407 hwin.hwin#406.in 2272 2144 2320 2144 2320 2112 2464 2112 eseqs.eseqs#403.DOL2
+w 2338 2091 100 0 n#402 hwin.hwin#404.in 2272 2080 2464 2080 eseqs.eseqs#403.DOL3
+w 2290 2219 100 0 n#401 hwin.hwin#405.in 2272 2208 2368 2208 2368 2144 2464 2144 eseqs.eseqs#403.DOL1
+w 1370 2123 100 0 n#400 hwin.hwin#399.in 1280 2144 1328 2144 1328 2112 1472 2112 eseqs.eseqs#376.DOL2
+w 1346 2091 100 0 n#375 hwin.hwin#377.in 1280 2080 1472 2080 eseqs.eseqs#376.DOL3
+w 1298 2219 100 0 n#374 hwin.hwin#378.in 1280 2208 1376 2208 1376 2144 1472 2144 eseqs.eseqs#376.DOL1
+w 402 2114 100 0 n#369 hwin.hwin#368.in 352 2112 512 2112 eseqs.eseqs#365.DOL2
+w 434 2146 100 0 n#367 hwin.hwin#366.in 352 2176 416 2176 416 2144 512 2144 eseqs.eseqs#365.DOL1
+[cell use]
+use hwin 136 1240 100 0 hwin#432
+xform 0 208 1280
+p 115 1272 100 0 -1 val(in):$(START)
+use hwin 136 1304 100 0 hwin#431
+xform 0 208 1344
+p 115 1336 100 0 -1 val(in):$(BS)
+use eseqs 488 904 100 0 eseqs#430
+xform 0 624 1152
+p 576 1374 100 0 1 DLY2:0.25
+p 576 896 100 1024 -1 name:$(top)ESBalance
+p 800 1280 75 1024 -1 pproc(LNK2):PP
+use outhier 3008 1527 100 0 DIR
+xform 0 3024 1568
+use outhier 3008 1431 100 0 CMD
+xform 0 3024 1472
+use outhier 3008 1335 100 0 ORG
+xform 0 3024 1376
+use hwin 184 2072 100 0 hwin#368
+xform 0 256 2112
+p 163 2104 100 0 -1 val(in):$(START)
+use hwin 184 2136 100 0 hwin#366
+xform 0 256 2176
+p 163 2168 100 0 -1 val(in):$(ES)
+use hwin 1112 2040 100 0 hwin#377
+xform 0 1184 2080
+p 1091 2072 100 0 -1 val(in):$(START)
+use hwin 1112 2168 100 0 hwin#378
+xform 0 1184 2208
+p 1091 2200 100 0 -1 val(in):$(HP)
+use hwin 1112 2104 100 0 hwin#399
+xform 0 1184 2144
+p 1091 2136 100 0 -1 val(in):$(AZUP)
+use hwin 2104 2040 100 0 hwin#404
+xform 0 2176 2080
+p 2083 2072 100 0 -1 val(in):$(START)
+use hwin 2104 2168 100 0 hwin#405
+xform 0 2176 2208
+p 2083 2200 100 0 -1 val(in):$(HP)
+use hwin 2104 2104 100 0 hwin#406
+xform 0 2176 2144
+p 2083 2136 100 0 -1 val(in):$(AZDOWN)
+use hwin 1080 984 100 0 hwin#409
+xform 0 1152 1024
+p 1059 1016 100 0 -1 val(in):$(ELUP)
+use hwin 1080 1048 100 0 hwin#410
+xform 0 1152 1088
+p 1059 1080 100 0 -1 val(in):$(HP)
+use hwin 1080 920 100 0 hwin#411
+xform 0 1152 960
+p 1059 952 100 0 -1 val(in):$(START)
+use hwin 2104 920 100 0 hwin#418
+xform 0 2176 960
+p 2083 952 100 0 -1 val(in):$(START)
+use hwin 2104 1048 100 0 hwin#419
+xform 0 2176 1088
+p 2083 1080 100 0 -1 val(in):$(HP)
+use hwin 2104 984 100 0 hwin#420
+xform 0 2176 1024
+p 2083 1016 100 0 -1 val(in):$(ELDOWN)
+use eseqs 536 1736 100 0 eseqs#365
+xform 0 672 1984
+p 624 2206 100 0 1 DLY2:0.25
+p 624 1728 100 1024 -1 name:$(top)ESMove
+p 848 2112 75 1024 -1 pproc(LNK2):PP
+use eseqs 1496 1736 100 0 eseqs#376
+xform 0 1632 1984
+p 1584 2206 100 0 0 DLY2:0.0
+p 1584 2208 100 0 1 DLY3:0.25
+p 1584 1728 100 1024 -1 name:$(top)HPazup
+p 1808 2112 75 1024 -1 pproc(LNK2):NPP
+p 1808 2080 75 1024 -1 pproc(LNK3):PP
+use eseqs 2488 1736 100 0 eseqs#403
+xform 0 2624 1984
+p 2576 2206 100 0 0 DLY2:0.0
+p 2576 2208 100 0 1 DLY3:0.25
+p 2576 1728 100 1024 -1 name:$(top)HPazdown
+p 2800 2112 75 1024 -1 pproc(LNK2):NPP
+p 2800 2080 75 1024 -1 pproc(LNK3):PP
+use eseqs 1464 616 100 0 eseqs#412
+xform 0 1600 864
+p 1552 1086 100 0 0 DLY2:0.0
+p 1552 1088 100 0 1 DLY3:0.25
+p 1552 608 100 1024 -1 name:$(top)HPelup
+p 1776 992 75 1024 -1 pproc(LNK2):NPP
+p 1776 960 75 1024 -1 pproc(LNK3):PP
+use eseqs 2488 616 100 0 eseqs#417
+xform 0 2624 864
+p 2576 1086 100 0 0 DLY2:0.0
+p 2576 1088 100 0 1 DLY3:0.25
+p 2576 608 100 1024 -1 name:$(top)HPeldown
+p 2800 992 75 1024 -1 pproc(LNK2):NPP
+p 2800 960 75 1024 -1 pproc(LNK3):PP
+use bc200tr -128 -104 -100 0 frame
+xform 0 1552 1200
+[comments]

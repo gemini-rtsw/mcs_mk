@@ -1,0 +1,34 @@
+[symbol2]
+bbox -384 -160 128 224
+port 32 0 100 0 CMESS symbol 2 128 0 0
+port 16 64 100 0 CWMESS symbol 2 128 64 0
+port 32 128 100 0 CVAL symbol 2 128 128 0
+port 32 192 100 0 CWVAL symbol 2 128 192 0
+port 32 -128 100 0 FLNK symbol 2 128 -128 0
+port -336 -128 100 0 SLNK symbol 1 -384 -128 0
+uniq 4
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 100 0 0 -224 48 Health of Axis
+r 0 -352 -160 96 224
+v 0 96 0
+128 0
+_
+v 0 96 64
+128 64
+_
+v 0 96 128
+128 128
+_
+v 0 96 192
+128 192
+_
+v 0 96 -128
+128 -128
+_
+v 0 -384 -128
+-352 -128
+_
+[comments]

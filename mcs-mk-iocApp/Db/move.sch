@@ -1,0 +1,116 @@
+[schematic2]
+uniq 447
+[tools]
+[detail]
+w 2026 299 100 0 n#446 simmDecode.simmDecode#66.NONE 1904 288 2208 288 2208 1216 2304 1216 moveNONE.moveNONE#335.SLNK
+w 1826 1291 100 0 n#445 ecad20.ecad20#246.VALH 1408 1280 2304 1280 moveNONE.moveNONE#335.EL_CMD
+w 1826 1355 100 0 n#444 ecad20.ecad20#246.VALG 1408 1344 2304 1344 moveNONE.moveNONE#335.AZ_CMD
+w 1826 1483 100 0 n#442 ecad20.ecad20#246.VALE 1408 1472 2304 1472 moveNONE.moveNONE#335.MASK
+w 1826 1547 100 0 n#441 ecad20.ecad20#246.VALD 1408 1536 2304 1536 moveNONE.moveNONE#335.EL
+w 1826 1611 100 0 n#440 ecad20.ecad20#246.VALC 1408 1600 2304 1600 moveNONE.moveNONE#335.ELVEL
+w 1826 1675 100 0 n#439 ecad20.ecad20#246.VALB 1408 1664 2304 1664 moveNONE.moveNONE#335.AZ
+w 1826 1739 100 0 n#438 ecad20.ecad20#246.VALA 1408 1728 2304 1728 moveNONE.moveNONE#335.AZVEL
+w 1474 1195 100 0 n#418 ecad20.ecad20#246.OUTI 1408 1184 1600 1184 hwout.hwout#410.outp
+w 738 171 100 0 n#417 hwin.hwin#414.in 512 160 1024 160 1024 480 1088 480 ecad20.ecad20#246.INPT
+w 722 267 100 0 n#416 hwin.hwin#415.in 512 256 992 256 992 544 1088 544 ecad20.ecad20#246.INPS
+w 1474 1131 100 0 n#413 ecad20.ecad20#246.OUTJ 1408 1120 1600 1120 hwout.hwout#412.outp
+w 706 363 100 0 n#403 hwin.hwin#401.in 512 352 960 352 960 672 1088 672 ecad20.ecad20#246.INPQ
+w 674 459 100 0 n#402 hwin.hwin#400.in 512 448 896 448 896 736 1088 736 ecad20.ecad20#246.INPP
+w 642 555 100 0 n#399 hwin.hwin#357.in 512 544 832 544 832 800 1088 800 ecad20.ecad20#246.INPO
+w 898 875 100 0 n#398 hwin.hwin#356.in 512 640 768 640 768 864 1088 864 ecad20.ecad20#246.INPN
+w 770 1323 100 0 n#397 hwin.hwin#94.in 512 1312 1088 1312 ecad20.ecad20#246.INPG
+w 802 1867 100 0 n#396 cmdOrigin.cmdOrigin#393.CMD 704 1856 960 1856 960 1664 1088 1664 ecad20.ecad20#246.B
+w 818 1803 100 0 n#395 cmdOrigin.cmdOrigin#393.ORG 704 1792 992 1792 992 1728 1088 1728 ecad20.ecad20#246.A
+w 866 1931 100 0 n#394 cmdOrigin.cmdOrigin#393.DIR 704 1920 1088 1920 ecad20.ecad20#246.DIR
+w 874 930 100 0 n#352 hwin.hwin#264.in 512 736 720 736 720 928 1088 928 ecad20.ecad20#246.INPM
+w 858 994 100 0 n#351 hwin.hwin#263.in 512 832 688 832 688 992 1088 992 ecad20.ecad20#246.INPL
+w 842 1058 100 0 n#266 hwin.hwin#262.in 512 928 656 928 656 1056 1088 1056 ecad20.ecad20#246.INPK
+w 826 1122 100 0 n#265 hwin.hwin#261.in 512 1024 624 1024 624 1120 1088 1120 ecad20.ecad20#246.INPJ
+w 810 1186 100 0 n#260 hwin.hwin#244.in 512 1120 592 1120 592 1184 1088 1184 ecad20.ecad20#246.INPI
+w 794 1250 100 0 n#259 hwin.hwin#241.in 512 1216 560 1216 560 1248 1088 1248 ecad20.ecad20#246.INPH
+w 1508 1238 100 0 n#249 ecad20.ecad20#246.FLNK 1408 416 1504 416 1504 2000 1536 2000 engAck.engAck#59.SLNK
+w 1418 292 100 0 n#247 ecad20.ecad20#246.STLK 1408 288 1488 288 simmDecode.simmDecode#66.SLNK
+w 1444 2022 100 0 n#106 ecad20.ecad20#246.VAL 1408 1920 1440 1920 1440 2064 1536 2064 engAck.engAck#59.INP
+s 2480 144 100 0 Andy Foster
+s 2784 176 100 0 MCS Level 3
+s 2720 96 200 0 MOVE COMMAND
+[cell use]
+use hwin 344 216 100 0 hwin#415
+xform 0 416 256
+p 288 222 100 0 -1 val(in):$(top)azCurrentMaxVel
+use hwin 344 120 100 0 hwin#414
+xform 0 416 160
+p 288 126 100 0 -1 val(in):$(top)elCurrentMaxVel
+use hwin 344 1272 100 0 hwin#94
+xform 0 416 1312
+p 288 1278 100 0 -1 val(in):$(top)debugLevelL
+use hwin 344 1176 100 0 hwin#241
+xform 0 416 1216
+p 288 1182 100 0 -1 val(in):$(top)azDatumL
+use hwin 344 1080 100 0 hwin#244
+xform 0 416 1120
+p 288 1086 100 0 -1 val(in):$(top)elDatumL
+use hwin 344 984 100 0 hwin#261
+xform 0 416 1024
+p 288 990 100 0 -1 val(in):$(top)azUpperLimit
+use hwin 344 888 100 0 hwin#262
+xform 0 416 928
+p 288 894 100 0 -1 val(in):$(top)azLowerLimit
+use hwin 344 792 100 0 hwin#263
+xform 0 416 832
+p 288 798 100 0 -1 val(in):$(top)elUpperLimit
+use hwin 344 696 100 0 hwin#264
+xform 0 416 736
+p 288 702 100 0 -1 val(in):$(top)elLowerLimit
+use hwin 344 600 100 0 hwin#356
+xform 0 416 640
+p 288 606 100 0 -1 val(in):$(top)azMaxVel
+use hwin 344 504 100 0 hwin#357
+xform 0 416 544
+p 288 510 100 0 -1 val(in):$(top)elMaxVel
+use hwin 344 408 100 0 hwin#400
+xform 0 416 448
+p 288 414 100 0 -1 val(in):$(top)azCountsPerDegree
+use hwin 344 312 100 0 hwin#401
+xform 0 416 352
+p 288 318 100 0 -1 val(in):$(top)elCountsPerDegree
+use hwout 1600 1143 100 0 hwout#410
+xform 0 1696 1184
+p 1808 1184 100 0 -1 val(outp):$(top)azCurrentMaxVel .PP
+use hwout 1600 1079 100 0 hwout#412
+xform 0 1696 1120
+p 1808 1120 100 0 -1 val(outp):$(top)elCurrentMaxVel .PP
+use cmdOrigin 224 1735 100 0 cmdOrigin#393
+xform 0 464 1864
+p 336 2096 100 0 -1 seta:ES 1
+p 336 2048 100 0 -1 setb:HP 2
+p 432 2144 100 0 -1 setc:AZUP 1
+p 432 2096 100 0 -1 setd:AZDOWN 2
+p 432 2048 100 0 -1 sete:ELUP 3
+p 432 2000 100 0 -1 setf:ELDOWN 4
+p 336 2000 100 0 -1 setg:BS 3
+use moveNONE 2296 1352 100 0 moveNONE#335
+xform 0 2480 1472
+use ecad20 1112 200 100 0 ecad20#246
+xform 0 1248 1088
+p 1184 1630 100 0 1 FTVA:STRING
+p 1184 1598 100 0 1 FTVB:STRING
+p 1184 1566 100 0 1 FTVC:STRING
+p 1184 1534 100 0 1 FTVD:STRING
+p 1184 1502 100 0 1 FTVE:LONG
+p 1184 1470 100 0 0 FTVF:LONG
+p 1184 1440 100 0 1 FTVG:LONG
+p 1184 1406 100 0 1 FTVH:LONG
+p 1184 1376 100 0 1 FTVI:DOUBLE
+p 1184 1344 100 0 1 FTVJ:DOUBLE
+p 1184 2014 100 0 1 PREC:14
+p 1184 1982 100 0 1 SNAM:moveCAD
+p 1200 192 100 1024 -1 name:$(top)$(command)
+use simmDecode 1512 248 100 0 simmDecode#66
+xform 0 1696 360
+p 1552 238 100 0 -1 name:$(top)$(command)SD
+use engAck 1560 1864 100 0 engAck#59
+xform 0 1728 2000
+use bc200tr -128 -104 -100 0 frame
+xform 0 1552 1200
+[comments]

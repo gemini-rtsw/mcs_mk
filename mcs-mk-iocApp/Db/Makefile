@@ -11,7 +11,8 @@ vpath %.db $(SYS_DB_PATHS)
 #----------------------------------------------------
 # Create and install (or just install) into <top>/db
 # databases, templates, substitutions like this
-# DB += xxx.db
+DB += mctop.db
+DB += iocAdminRTEMS.db
 
 include $(TOP)/configure/RULES
 #----------------------------------------
@@ -19,4 +20,5 @@ include $(TOP)/configure/RULES
 $(COMMON_DIR)/%.db: %.db
 	cp $< $@
 
-
+clean::
+	$(RM) *.dat *.bak

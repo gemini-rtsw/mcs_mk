@@ -1,0 +1,31 @@
+[symbol2]
+bbox -48 16 368 192
+port 336 112 100 1792 FAST symbol 2 368 96 0
+port 336 144 100 1792 VSM symbol 2 368 128 0
+port 336 80 100 1792 FULL symbol 2 368 64 0
+port 336 48 100 1792 NONE symbol 2 368 32 0
+port -16 48 100 1792 SLNK symbol 1 -48 32 0
+uniq 59
+[tools]
+[attributes]
+p 16 -18 100 0 0 name:$(top)$(command)SD
+[layers]
+<symbol>
+l 100 0 0 118 86 simmDecode
+r 0 16 16 304 192
+v 0 304 96
+368 96
+_
+v 0 304 128
+368 128
+_
+v 0 304 64
+368 64
+_
+v 0 304 32
+368 32
+_
+v 0 -48 32
+16 32
+_
+[comments]

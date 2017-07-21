@@ -1,0 +1,27 @@
+[symbol2]
+bbox -64 640 448 832
+port 432 688 100 1792 VAL symbol 2 448 672 0
+port 432 816 100 1792 FLNK symbol 2 448 800 0
+port -48 688 100 1792 INP symbol 1 -64 672 0
+port -48 816 100 1792 SLNK symbol 1 -64 800 0
+uniq 1
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 128 704 Filter
+l 200 0 0 48 768 XY240 Process
+r 0 0 832 384 640
+v 0 384 672
+448 672
+_
+v 0 384 800
+448 800
+_
+v 0 -64 672
+0 672
+_
+v 0 -64 800
+0 800
+_
+[comments]

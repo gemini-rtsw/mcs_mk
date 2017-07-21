@@ -1,0 +1,27 @@
+[symbol2]
+bbox -128 512 544 896
+port -48 544 100 0 SLNK symbol 1 -128 544 0
+port 384 544 100 0 FLNK symbol 2 544 544 0
+port 384 736 100 0 VAL symbol 2 544 736 0
+port 384 640 100 0 MESS symbol 2 544 640 0
+uniq 2
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 96 736 health
+l 200 0 0 -32 816 Generate time stamp
+r 0 -64 512 448 896
+v 0 -128 544
+-64 544
+_
+v 0 448 544
+544 544
+_
+v 0 448 736
+544 736
+_
+v 0 448 640
+544 640
+_
+[comments]

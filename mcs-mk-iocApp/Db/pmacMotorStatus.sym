@@ -1,0 +1,11 @@
+[symbol2]
+bbox -240 -64 192 96
+uniq 1
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 -192 48 PMAC Motor <num>
+l 200 0 0 -96 -16 Status
+r 0 -225 95 190 -60
+[comments]

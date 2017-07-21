@@ -1,0 +1,11 @@
+[symbol2]
+bbox -256 -32 64 192
+uniq 2
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 -176 32 COMMAND
+l 200 0 0 -192 80 END MOVE
+r 0 -256 -32 64 192
+[comments]

@@ -1,0 +1,42 @@
+[symbol2]
+bbox -128 416 224 992
+port -112 592 100 1792 AZ_CMD symbol 1 -128 576 0
+port -96 784 100 1792 EL symbol 1 -128 768 0
+port -96 976 100 1792 AZVEL symbol 1 -128 960 0
+port -96 848 100 1792 ELVEL symbol 1 -128 832 0
+port -96 912 100 1792 AZ symbol 1 -128 896 0
+port -96 720 100 1792 MASK symbol 1 -128 704 0
+port -96 464 100 1792 SLNK symbol 1 -128 448 0
+port -112 528 100 1792 EL_CMD symbol 1 -128 512 0
+uniq 5
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 -16 736 moveNONE
+r 0 -64 416 224 992
+v 0 -128 576
+-64 576
+_
+v 0 -128 768
+-64 768
+_
+v 0 -128 960
+-64 960
+_
+v 0 -128 832
+-64 832
+_
+v 0 -128 896
+-64 896
+_
+v 0 -128 704
+-64 704
+_
+v 0 -128 448
+-64 448
+_
+v 0 -128 512
+-64 512
+_
+[comments]

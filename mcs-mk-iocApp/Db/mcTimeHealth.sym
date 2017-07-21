@@ -1,0 +1,27 @@
+[symbol2]
+bbox -160 512 544 896
+port -48 544 100 0 SLNK symbol 1 -160 544 0
+port 384 544 100 0 FLNK symbol 2 544 544 0
+port 384 672 100 0 MESS symbol 2 544 672 0
+port 384 768 100 0 VAL symbol 2 544 768 0
+uniq 2
+[tools]
+[attributes]
+[layers]
+<symbol>
+l 200 0 0 -64 816 Generate overall time
+l 200 0 0 96 736 health
+r 0 -64 512 448 896
+v 0 -160 544
+-64 544
+_
+v 0 448 544
+544 544
+_
+v 0 448 672
+544 672
+_
+v 0 448 768
+544 768
+_
+[comments]

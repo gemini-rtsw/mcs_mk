@@ -1,0 +1,152 @@
+[schematic2]
+uniq 26
+[tools]
+[detail]
+w 370 763 100 0 n#1 hwin.hwin#190.in 320 752 480 752 eais.eais#189.INP
+w 2322 2155 100 0 n#2 egenSubD.egenSubD#96.OUTA 2256 2144 2448 2144 hwout.hwout#78.outp
+w 2322 1899 100 0 n#3 egenSubD.egenSubD#96.OUTE 2256 1888 2448 1888 hwout.hwout#80.outp
+w 1058 715 100 0 n#4 eais.eais#189.VAL 736 704 1440 704 1440 1920 1968 1920 egenSubD.egenSubD#96.INPI
+w 1194 747 100 0 n#5 eais.eais#189.FLNK 736 736 1712 736 1712 1472 1968 1472 egenSubD.egenSubD#96.SLNK
+w 610 875 100 0 n#6 eais.eais#169.FLNK 768 1264 896 1264 896 864 384 864 384 720 480 720 eais.eais#189.SLNK
+w 642 1419 100 0 n#7 eais.eais#149.FLNK 768 1536 896 1536 896 1408 448 1408 448 1248 512 1248 eais.eais#169.SLNK
+w 642 1675 100 0 n#8 eais.eais#5.FLNK 768 1792 896 1792 896 1664 448 1664 448 1520 512 1520 eais.eais#149.SLNK
+w 642 1931 100 0 n#9 eais.eais#1.FLNK 768 2048 896 2048 896 1920 448 1920 448 1776 512 1776 eais.eais#5.SLNK
+w 1874 1675 100 0 n#10 hwin.hwin#160.in 1840 1664 1968 1664 egenSubD.egenSubD#96.INPQ
+w 402 1819 100 0 n#11 hwin.hwin#181.in 352 1808 512 1808 eais.eais#5.INP
+w 1218 1654 100 0 n#12 eais.eais#169.VAL 768 1232 1216 1232 1216 2016 1968 2016 egenSubD.egenSubD#96.INPF
+w 1466 2114 100 0 n#13 eais.eais#1.VAL 768 2016 1024 2016 1024 2112 1968 2112 egenSubD.egenSubD#96.INPC
+w 1498 2082 100 0 n#14 eais.eais#5.VAL 768 1760 1088 1760 1088 2080 1968 2080 egenSubD.egenSubD#96.INPD
+w 1530 2050 100 0 n#15 eais.eais#149.VAL 768 1504 1152 1504 1152 2048 1968 2048 egenSubD.egenSubD#96.INPE
+w 414 1554 100 0 n#16 hwin.hwin#150.in 352 1552 512 1552 eais.eais#149.INP
+w 2322 1954 100 0 n#17 egenSubD.egenSubD#96.OUTD 2256 1952 2448 1952 hwout.hwout#111.outp
+w 2322 2018 100 0 n#18 egenSubD.egenSubD#96.OUTC 2256 2016 2448 2016 hwout.hwout#88.outp
+w 2322 2082 100 0 n#19 egenSubD.egenSubD#96.OUTB 2256 2080 2448 2080 hwout.hwout#86.outp
+w 818 994 100 0 n#20 hwin.hwin#94.in 352 992 1344 992 1344 1952 1968 1952 egenSubD.egenSubD#96.INPH
+w 786 1122 100 0 n#21 hwin.hwin#92.in 352 1120 1280 1120 1280 1984 1968 1984 egenSubD.egenSubD#96.INPG
+w 994 2242 100 0 n#22 hwin.hwin#121.in 352 2240 1696 2240 1696 2144 1968 2144 egenSubD.egenSubD#96.INPB
+w 1026 2402 100 0 n#23 hwin.hwin#37.in 352 2400 1760 2400 1760 2176 1968 2176 egenSubD.egenSubD#96.INPA
+w 414 1282 100 0 n#24 hwin.hwin#10.in 352 1280 512 1280 eais.eais#169.INP
+w 414 2066 100 0 n#25 hwin.hwin#2.in 352 2064 512 2064 eais.eais#1.INP
+s 112 1744 100 0 PMAC ACTUAL POSITION
+[cell use]
+use bc200tr -208 56 -100 0 frame
+xform 0 1472 1360
+use hwin 152 712 100 0 hwin#190
+xform 0 224 752
+p 128 782 100 0 -1 val(in):#C$(card) S0 @D:$0900
+use hwin 184 1768 100 0 hwin#181
+xform 0 256 1808
+p 160 1838 100 0 -1 val(in):#C$(card) S0 @D:$0067
+use hwin 1672 1624 100 0 hwin#160
+xform 0 1744 1664
+p 1651 1656 100 0 -1 val(in):$(card)
+use hwin 184 1512 100 0 hwin#150
+xform 0 256 1552
+p 160 1582 100 0 -1 val(in):#C$(card) S0 @D:$0062
+use hwin 184 2200 100 0 hwin#121
+xform 0 256 2240
+p 160 2190 100 0 -1 val(in):$(top)$(dev)DemandVel
+use hwin 184 2360 100 0 hwin#37
+xform 0 256 2400
+p 160 2430 100 0 -1 val(in):$(top)$(dev)DemandPos
+use hwin 184 1240 100 0 hwin#10
+xform 0 256 1280
+p 160 1310 100 0 -1 val(in):#C$(card) S0 @SX:$006F
+use hwin 184 2024 100 0 hwin#2
+xform 0 256 2064
+p 160 2094 100 0 -1 val(in):#C$(card) S0 @D:$0064
+use hwin 184 1080 100 0 hwin#92
+xform 0 256 1120
+p 144 1070 100 0 -1 val(in):$(top)$(dev)ServoFreq
+use hwin 184 952 100 0 hwin#94
+xform 0 256 992
+p 144 942 100 0 -1 val(in):$(top)$(dev)CountsPerDegree
+use eais 504 648 100 0 eais#189
+xform 0 608 720
+p 496 798 100 0 1 DTYP:PMAC-VME DPRAM
+p 496 862 100 0 0 PINI:NO
+p 496 830 100 0 1 SCAN:Passive
+p 32 656 100 0 1 SIML:
+p 32 688 100 0 1 SIOL:$(top)$(dev)SimFollowError
+p 592 640 100 1024 -1 name:$(top)$(dev)FollowError
+use eais 536 1448 100 0 eais#149
+xform 0 640 1520
+p 528 1598 100 0 1 DTYP:PMAC-VME DPRAM
+p 528 1662 100 0 0 PINI:NO
+p 528 1630 100 0 1 SCAN:Passive
+p 0 1472 100 0 1 SIML:
+p 0 1504 100 0 1 SIOL:$(top)$(dev)SimPmacDemandVelEC
+p 624 1440 100 1024 -1 name:$(top)$(dev)PmacDemandVelEC
+use eais 536 1704 100 0 eais#5
+xform 0 640 1776
+p 528 1854 100 0 1 DTYP:PMAC-VME DPRAM
+p 528 1918 100 0 0 PINI:NO
+p 528 1886 100 0 1 SCAN:Passive
+p 0 1680 100 0 1 SIML:
+p 0 1712 100 0 1 SIOL:$(top)$(dev)SimCurrentPosEC
+p 624 1696 100 1024 -1 name:$(top)$(dev)CurrentPosEC
+use eais 536 1960 100 0 eais#1
+xform 0 640 2032
+p 528 2110 100 0 1 DTYP:PMAC-VME DPRAM
+p 528 2174 100 0 0 PINI:NO
+p 528 2142 100 0 1 SCAN:.1 second
+p -16 1968 100 0 1 SIML:
+p -16 2000 100 0 1 SIOL:$(top)$(dev)SimPmacDemandPosEC
+p 624 1952 100 1024 -1 name:$(top)$(dev)PmacDemandPosEC
+use eais 536 1176 100 0 eais#169
+xform 0 640 1248
+p 544 1326 100 0 1 DTYP:PMAC-VME DPRAM
+p 544 1390 100 0 0 PINI:NO
+p 544 1358 100 0 1 SCAN:Passive
+p 16 1200 100 0 1 SIML:
+p 16 1232 100 0 1 SIOL:$(top)$(dev)SimCurrentVelEC
+p 624 1168 100 1024 -1 name:$(top)$(dev)CurrentVelEC
+use hwout 2472 2040 100 0 hwout#86
+xform 0 2544 2080
+p 2656 2078 100 0 -1 val(outp):$(top)$(dev)PosError .PP
+use hwout 2472 1848 100 0 hwout#80
+xform 0 2544 1888
+p 2656 1886 100 0 -1 val(outp):$(top)$(dev)CurrentVel .PP
+use hwout 2472 2104 100 0 hwout#78
+xform 0 2544 2144
+p 2656 2142 100 0 -1 val(outp):$(top)$(dev)CurrentPos .PP
+use hwout 2472 1976 100 0 hwout#88
+xform 0 2544 2016
+p 2656 2014 100 0 -1 val(outp):$(top)$(dev)PmacDemandPos .PP
+use hwout 2472 1912 100 0 hwout#111
+xform 0 2544 1952
+p 2656 1950 100 0 -1 val(outp):$(top)$(dev)PmacPosError .PP
+use egenSubD 1992 1384 100 0 egenSubD#96
+xform 0 2112 1808
+p 2064 2174 100 0 1 FTA:DOUBLE
+p 2064 2142 100 0 1 FTB:DOUBLE
+p 2064 2110 100 0 1 FTC:DOUBLE
+p 2064 2078 100 0 1 FTD:DOUBLE
+p 2064 2046 100 0 1 FTE:DOUBLE
+p 2064 2014 100 0 1 FTF:DOUBLE
+p 2064 1982 100 0 1 FTG:DOUBLE
+p 2064 1950 100 0 1 FTH:DOUBLE
+p 2064 1918 100 0 1 FTI:DOUBLE
+p 2064 1886 100 0 0 FTJ:LONG
+p 2064 1790 100 0 1 FTK:LONG
+p 2064 1758 100 0 1 FTL:LONG
+p 2064 1726 100 0 1 FTM:LONG
+p 2064 1694 100 0 1 FTN:LONG
+p 2064 1662 100 0 1 FTO:LONG
+p 2064 1630 100 0 1 FTP:LONG
+p 2064 1598 100 0 1 FTQ:DOUBLE
+p 2064 1566 100 0 0 FTR:DOUBLE
+p 2336 2158 100 0 1 FTVA:DOUBLE
+p 2336 2094 100 0 1 FTVB:DOUBLE
+p 2336 2030 100 0 1 FTVC:DOUBLE
+p 2336 1966 100 0 1 FTVD:DOUBLE
+p 2336 1902 100 0 1 FTVE:DOUBLE
+p 2336 1838 100 0 1 FTVF:DOUBLE
+p 2336 1774 100 0 1 FTVG:DOUBLE
+p 2336 1710 100 0 1 FTVH:DOUBLE
+p 2336 1646 100 0 1 FTVI:DOUBLE
+p 2032 2302 100 0 1 INAM:initSetPositions
+p 2032 2270 100 0 1 SCAN:Passive
+p 2032 2238 100 0 1 SNAM:SetPositions
+p 2080 1376 100 1024 -1 name:$(top)$(dev)SetPositions
+[comments]
