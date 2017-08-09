@@ -17,6 +17,7 @@ DBD += mcs-mk-ioc.dbd
 
 # mcs-mk-ioc.dbd will be made up from these files:
 mcs-mk-ioc_DBD += base.dbd
+mcs-mk-ioc_DBD += menuScan.dbd
 mcs-mk-ioc_DBD += iocAdmin.dbd    
 mcs-mk-ioc_DBD += geminiRecords.dbd        
 mcs-mk-ioc_DBD += pvload.dbd   

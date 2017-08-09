@@ -7,12 +7,8 @@ epicsEnvSet("IOCSH_PS1","mcs-mk-ioc> ")
 
 ## Register all support components
 dbLoadDatabase("dbd/mcs-mk-ioc.dbd")
-mcs_cp_ioc_registerRecordDeviceDriver(pdbbase)
+mcs_mk_ioc_registerRecordDeviceDriver(pdbbase)
 
-## Load record instances
-
-dbLoadRecords("db/iocAdminRTEMS.db"," IOC=mc1:iocStats,TODFORMAT=%m/%d/%Y %H:%M:%S")
-dbLoadRecords("db/mctop.db","top=mc1:")
 
 # Configure BANCOMM card
 # - set the bc635 Time Provider priority to something other than the default
@@ -20,7 +16,7 @@ dbLoadRecords("db/mctop.db","top=mc1:")
 # Must be called before BCconfigure
 bc635TimeSetTpPrio (50)
 # - Master ? Simulate ? intPerSecond, intPerTick, timeOffset (microsec)
-BCconfigure (0, 0, 80, 1, 0)
+BCconfigure (0, 0, 100, 1, 0)
 
 # configure pmac card:
 var drvPmacDebug 0
@@ -38,6 +34,12 @@ xy566_set_gain(0, 1)
 xy566_set_gain(1, 0)
 
 drvXy240Config(1, 32, 0xd000)
+
+
+## Load record instances
+
+dbLoadRecords("db/iocAdminRTEMS.db"," IOC=mc1:iocStats,TODFORMAT=%m/%d/%Y %H:%M:%S")
+dbLoadRecords("db/mctop.db","top=mc1:")
 
 iocInit
 #epicsThreadShowAll
