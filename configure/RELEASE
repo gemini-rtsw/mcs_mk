@@ -35,7 +35,7 @@ PMAC=$(PRODSUP)/pmaclib/1-1-4-BR314-2
 XYCOM=$(PRODSUP)/xycom/2-1-4-BR314
 SNCSEQ=$(PRODSUP)/seq/2-2-3-1-BR314
 PVLOAD=$(PRODSUP)/pvload/1-1-1-BR314
-GEMUTIL=$(PRODSUP)/gemUtil/1-3-BR314
+GEMUTIL=$(PRODSUP)/gemUtil/1-3-BR314-1
 
 
 # EPICS_BASE usually appears last so other apps can override stuff:
