@@ -75,6 +75,8 @@ string $(top)PmacCmd_I55        = "I55=1";        # Switch on Background Variabl
 string $(top)PmacCmd_I59        = "I59=2";        # Number of Motors to be reported
 string $(top)PmacCmd_I100       = "I100=1";       # Enabled Motor 1
 string $(top)PmacCmd_I159       = "I159=1";       # Enable Motor 1 user-written servo
+string $(top)PmacCmd_I159       = "I159=1";       # Enable Motor 1 user-written servo
+#string $(top)PmacCmd_I159       = "I159=0";       # Don't enable  Motor 1 user-written servo
 # Be careful, this crashes PMAC if the user-written servo code is not running.
 string $(top)PmacCmd_CloseLoop1 = "#1J/";         # Close the loop for motor 1
 string $(top)PmacCmd_M1         = "M1=1";         # Set the data logging time trigger
