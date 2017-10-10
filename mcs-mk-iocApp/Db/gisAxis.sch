@@ -1,5 +1,5 @@
 [schematic2]
-uniq 34
+uniq 33
 [tools]
 [detail]
 w 2436 1643 100 2 n#1 hwout.hwout#218.outp 2432 1648 2432 1648 efanouts.efanouts#207.LNK3
@@ -14,31 +14,30 @@ w 434 587 100 0 n#7 simmDecode2.simmDecode2#196.VSM 416 576 512 576 512 352 544 
 w 804 315 100 2 n#8 hwout.hwout#202.outp 800 320 800 320 elongouts.elongouts#199.OUT
 w 522 923 100 0 n#9 simmDecode2.simmDecode2#196.NONE 416 480 448 480 448 912 656 912 esubs.esubs#129.SLNK
 w 658 1579 100 0 n#10 embbos.embbos#102.FLNK 1072 1920 1408 1920 1408 1568 -32 1568 -32 480 0 480 simmDecode2.simmDecode2#196.SLNK
-w 746 1867 100 0 n#11 ecalcs.tsrsValid.VAL 672 1904 736 1904 736 1856 816 1856 embbos.embbos#102.SDIS
-w 282 2075 100 0 n#12 hwin.hwin#191.in 176 2000 240 2000 240 2064 384 2064 ecalcs.tsrsValid.INPB
-w 250 2107 100 0 n#13 hwin.hwin#187.in 176 2096 384 2096 ecalcs.tsrsValid.INPA
-w 1274 299 100 0 n#14 efanouts.efanouts#183.LNK2 1184 1184 1232 1184 1232 288 1376 288 ecalcs.ecalcs#175.SLNK
-w 1290 923 100 0 n#15 efanouts.efanouts#183.LNK1 1184 1216 1264 1216 1264 912 1376 912 ecalcs.ecalcs#159.SLNK
-w 948 1131 100 2 n#16 efanouts.efanouts#183.SLNK 944 1136 944 1136 esubs.esubs#129.FLNK
-w 2651 526 100 2 n#17 assertStop.assertStop#181.SLNK 2640 496 2640 496 mcsTimeout.mcsTimeout#178.TIMEOUT
-w 2098 603 100 0 n#18 efanouts.efanouts#176.LNK1 2064 592 2192 592 mcsTimeout.mcsTimeout#178.START
-w 762 1547 100 0 n#19 embbos.embbos#102.VAL 1072 1856 1216 1856 1216 1536 368 1536 368 1296 656 1296 esubs.esubs#129.INPA
-w 802 795 100 0 n#19 junction 368 1296 368 784 1296 784 1296 1296 1376 1296 ecalcs.ecalcs#159.INPA
-w 1306 683 100 0 n#19 junction 1296 784 1296 672 1376 672 ecalcs.ecalcs#175.INPA
-w 1770 603 100 0 n#20 ecalcs.ecalcs#175.VAL 1664 480 1728 480 1728 592 1872 592 efanouts.efanouts#176.SELL
-w 1714 523 100 0 n#21 ecalcs.ecalcs#175.FLNK 1664 512 1824 512 efanouts.efanouts#176.SLNK
-w 2450 955 100 0 n#22 efanouts.efanouts#161.LNK2 2064 1184 2208 1184 2208 944 2752 944 estringins.estringins#164.SLNK
-w 2178 1227 100 0 n#23 efanouts.efanouts#161.LNK1 2064 1216 2352 1216 trackingOff.trackingOff#168.SLNK
-w 1770 1227 100 0 n#24 ecalcs.ecalcs#159.VAL 1664 1104 1728 1104 1728 1216 1872 1216 efanouts.efanouts#161.SELL
-w 2674 987 100 0 n#25 hwin.hwin#166.in 2656 976 2752 976 estringins.estringins#164.INP
-w 1714 1147 100 0 n#26 ecalcs.ecalcs#159.FLNK 1664 1136 1824 1136 efanouts.efanouts#161.SLNK
-w 2530 2203 100 0 n#27 hwin.hwin#137.in 2512 2192 2608 2192 2608 2224 2704 2224 esubs.esubs#126.INPC
-w 2578 2267 100 0 n#28 hwin.hwin#133.in 2512 2256 2704 2256 esubs.esubs#126.INPB
-w 2442 2299 100 0 n#29 embbis.embbis#3.VAL 1888 2240 2240 2240 2240 2288 2704 2288 esubs.esubs#126.INPA
-w 586 1243 100 0 n#30 hwin.hwin#140.in 576 1200 576 1232 656 1232 esubs.esubs#129.INPC
-w 586 1275 100 0 n#31 hwin.hwin#135.in 576 1264 656 1264 esubs.esubs#129.INPB
-w 1082 1899 100 0 n#32 embbos.embbos#102.OUT 1072 1888 1152 1888 hwout.hwout#107.outp
-w 1550 2290 100 0 n#33 hwin.hwin#4.in 1504 2288 1632 2288 embbis.embbis#3.INP
+w 282 2075 100 0 n#11 hwin.hwin#191.in 176 2000 240 2000 240 2064 384 2064 ecalcs.tsrsValid.INPB
+w 250 2107 100 0 n#12 hwin.hwin#187.in 176 2096 384 2096 ecalcs.tsrsValid.INPA
+w 1274 299 100 0 n#13 efanouts.efanouts#183.LNK2 1184 1184 1232 1184 1232 288 1376 288 ecalcs.ecalcs#175.SLNK
+w 1290 923 100 0 n#14 efanouts.efanouts#183.LNK1 1184 1216 1264 1216 1264 912 1376 912 ecalcs.ecalcs#159.SLNK
+w 948 1131 100 2 n#15 efanouts.efanouts#183.SLNK 944 1136 944 1136 esubs.esubs#129.FLNK
+w 2651 526 100 2 n#16 assertStop.assertStop#181.SLNK 2640 496 2640 496 mcsTimeout.mcsTimeout#178.TIMEOUT
+w 2098 603 100 0 n#17 efanouts.efanouts#176.LNK1 2064 592 2192 592 mcsTimeout.mcsTimeout#178.START
+w 762 1547 100 0 n#18 embbos.embbos#102.VAL 1072 1856 1216 1856 1216 1536 368 1536 368 1296 656 1296 esubs.esubs#129.INPA
+w 802 795 100 0 n#18 junction 368 1296 368 784 1296 784 1296 1296 1376 1296 ecalcs.ecalcs#159.INPA
+w 1306 683 100 0 n#18 junction 1296 784 1296 672 1376 672 ecalcs.ecalcs#175.INPA
+w 1770 603 100 0 n#19 ecalcs.ecalcs#175.VAL 1664 480 1728 480 1728 592 1872 592 efanouts.efanouts#176.SELL
+w 1714 523 100 0 n#20 ecalcs.ecalcs#175.FLNK 1664 512 1824 512 efanouts.efanouts#176.SLNK
+w 2450 955 100 0 n#21 efanouts.efanouts#161.LNK2 2064 1184 2208 1184 2208 944 2752 944 estringins.estringins#164.SLNK
+w 2178 1227 100 0 n#22 efanouts.efanouts#161.LNK1 2064 1216 2352 1216 trackingOff.trackingOff#168.SLNK
+w 1770 1227 100 0 n#23 ecalcs.ecalcs#159.VAL 1664 1104 1728 1104 1728 1216 1872 1216 efanouts.efanouts#161.SELL
+w 2674 987 100 0 n#24 hwin.hwin#166.in 2656 976 2752 976 estringins.estringins#164.INP
+w 1714 1147 100 0 n#25 ecalcs.ecalcs#159.FLNK 1664 1136 1824 1136 efanouts.efanouts#161.SLNK
+w 2530 2203 100 0 n#26 hwin.hwin#137.in 2512 2192 2608 2192 2608 2224 2704 2224 esubs.esubs#126.INPC
+w 2578 2267 100 0 n#27 hwin.hwin#133.in 2512 2256 2704 2256 esubs.esubs#126.INPB
+w 2442 2299 100 0 n#28 embbis.embbis#3.VAL 1888 2240 2240 2240 2240 2288 2704 2288 esubs.esubs#126.INPA
+w 586 1243 100 0 n#29 hwin.hwin#140.in 576 1200 576 1232 656 1232 esubs.esubs#129.INPC
+w 586 1275 100 0 n#30 hwin.hwin#135.in 576 1264 656 1264 esubs.esubs#129.INPB
+w 1082 1899 100 0 n#31 embbos.embbos#102.OUT 1072 1888 1152 1888 hwout.hwout#107.outp
+w 1550 2290 100 0 n#32 hwin.hwin#4.in 1504 2288 1632 2288 embbis.embbis#3.INP
 [cell use]
 use bc200tr -144 -24 -100 0 frame
 xform 0 1536 1280
