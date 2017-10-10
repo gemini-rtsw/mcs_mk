@@ -20,8 +20,9 @@ string $(top)health         = "GOOD";                        # Set health to "GO
 string $(top)azpmacSir      = " ";                           # Init. as a blank string.
 string $(top)savePath       = "/gemini/mcs/mcs";             # Pathname to save dir.
 
-double $(top)memoryScanRate = "10.0";    # Memory statistics obtained every <nn> seconds.
-double $(top)loadScanRate   = "5.0";     # CPU load calculated every <nn> seconds.
+#double $(top)memoryScanRate = "10.0";    # Memory statistics obtained every <nn> seconds.
+#double $(top)loadScanRate   = "5.0";     # CPU load calculated every <nn> seconds.
+#double $(top)cpuScanPeriod  = "5.0";     # CPU load calculated every <nn> seconds.
 double $(top)azCurrentPos   = "0.0";     # Start position of azimuth axis.
 double $(top)azCurrentVel   = "0.0";     # Start velocity of azimuth axis.
 double $(top)azPosError     = "0.0";     # Start error of azimuth axis.
@@ -33,13 +34,13 @@ double $(top)velocityTol    = "4.16e-6"; # Position Tolerance.
 double $(top)pmacServoTol   = "0.005"; #
 double $(top)azPark         = "75.0";    # Azimuth Park Position.
 double $(top)elPark         = "90.0";    # Elevation Park Position.
-double $(top)cwUpperLimit   = "970.0";   # Upper Limit for Counterweight moves.
-double $(top)cwLowerLimit   = "0.0";     # Lower Limit for Counterweight moves.
+#double $(top)cwUpperLimit   = "970.0";   # Upper Limit for Counterweight moves.
+#double $(top)cwLowerLimit   = "0.0";     # Lower Limit for Counterweight moves.
 
 # Run the "TESTLAN" Command
 
-long $(top)testLan.DIR      = "0";        # Mark the CAD Record
-long $(top)testLan.DIR      = "3";        # Start the CAD Record
+#long $(top)testLan.DIR      = "0";        # Mark the CAD Record
+#long $(top)testLan.DIR      = "3";        # Start the CAD Record
 
 # Run the "AZCONFIG" Command to set the Virtual Encoder to be 
 # Tape: ALL_HEADS
