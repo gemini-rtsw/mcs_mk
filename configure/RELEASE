@@ -31,11 +31,11 @@ TIMELIB=$(PRODSUP)/timelib/1-9-5-BR314
 SLALIB=$(PRODSUP)/slalib/1-9-5-BR314-1
 IOCSTATS=$(PRODSUP)/iocStats/3-1-14-3-BR314
 GEMREC=$(PRODSUP)/geminiRec/4-1-5-BR314
-PMAC=$(PRODSUP)/pmaclib/1-1-4-BR314-2
+PMAC=$(PRODSUP)/pmaclib/1-1-4-BR314
 XYCOM=$(PRODSUP)/xycom/2-1-4-BR314
 SNCSEQ=$(PRODSUP)/seq/2-2-3-1-BR314
 PVLOAD=$(PRODSUP)/pvload/1-1-1-BR314
-GEMUTIL=$(PRODSUP)/gemUtil/1-3-BR314-1
+GEMUTILS=$(PRODSUP)/gemUtil/1-3-BR314
 
 
 # EPICS_BASE usually appears last so other apps can override stuff:
