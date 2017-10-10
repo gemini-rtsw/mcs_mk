@@ -3,12 +3,16 @@ $(LINUX_ONLY)#!${INSTALL}/bin/${ARCH}/mcs-mk-ioc
 cd ${INSTALL}
 
 epicsEnvSet("IOCSH_PS1","mcs-mk-ioc> ")
-
+epicsEnvSet("EPICS_CA_ADDR_LIST","10.2.2.100")
 
 ## Register all support components
 dbLoadDatabase("dbd/mcs-mk-ioc.dbd")
 mcs_mk_ioc_registerRecordDeviceDriver(pdbbase)
 
+## Load record instances
+
+dbLoadRecords("db/iocAdminRTEMS.db"," IOC=mc:iocStats,TODFORMAT=%m/%d/%Y %H:%M:%S")
+dbLoadRecords("db/mctop.db","top=mc:")
 
 # Configure BANCOMM card
 # - set the bc635 Time Provider priority to something other than the default
@@ -16,7 +20,7 @@ mcs_mk_ioc_registerRecordDeviceDriver(pdbbase)
 # Must be called before BCconfigure
 bc635TimeSetTpPrio (50)
 # - Master ? Simulate ? intPerSecond, intPerTick, timeOffset (microsec)
-BCconfigure (0, 0, 100, 1, 0)
+BCconfigure (0, 0, 80, 1, 0)
 
 # configure pmac card:
 var drvPmacDebug 0
@@ -30,24 +34,20 @@ mcSetSimuLevel(0)
 # be configured contiguously.
 # xy466DIConfig(num_cards, chans_per_card, reg_addr(A16), mem_addr(A24))
 xy566DIConfig(2, 16, 0xC000, 0xA00000)
+#xy566DIConfig(2, 16, 0x7000, 0x040000)
 xy566_set_gain(0, 1)
 xy566_set_gain(1, 0)
 
 drvXy240Config(1, 32, 0xd000)
 
-
-## Load record instances
-
-dbLoadRecords("db/iocAdminRTEMS.db"," IOC=mc1:iocStats,TODFORMAT=%m/%d/%Y %H:%M:%S")
-dbLoadRecords("db/mctop.db","top=mc1:")
-
 iocInit
 #epicsThreadShowAll
 
-pvload "./data/telescopeMK.par", "top=mc1:"
-pvload "./data/tapePolysMK.par", "top=mc1:"
-pvload "./data/axisLimitsMK.par", "top=mc1:"
-pvload "./data/sonyMK.par", "top=mc1:"
-pvload "./data/debug.par", "top=mc1:"
+seq &timeSeq, "sys=mc:"
 
-seq &timeSeq, "sys=mc1:"
+pvload "./data/telescopeMK.par", "top=mc:"
+pvload "./data/tapePolysMK.par", "top=mc:"
+pvload "./data/axisLimitsMK.par", "top=mc:"
+pvload "./data/sonyMK.par", "top=mc:"
+pvload "./data/debug.par", "top=mc:"
+
