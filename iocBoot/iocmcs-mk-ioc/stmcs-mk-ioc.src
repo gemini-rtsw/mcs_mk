@@ -33,8 +33,8 @@ mcSetSimuLevel(0)
 # If there are more than one XY566DI card, register and memory space must
 # be configured contiguously.
 # xy466DIConfig(num_cards, chans_per_card, reg_addr(A16), mem_addr(A24))
-xy566DIConfig(2, 16, 0xC000, 0xA00000)
-#xy566DIConfig(2, 16, 0x7000, 0x040000)
+#Gemini South Setting xy566DIConfig(2, 16, 0xC000, 0xA00000)
+xy566DIConfig(2, 16, 0x7000, 0x040000)
 xy566_set_gain(0, 1)
 xy566_set_gain(1, 0)
 
