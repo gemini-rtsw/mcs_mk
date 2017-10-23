@@ -27,7 +27,7 @@ PRODSUP=/gem_sw/prod/$(EPICS_RELEASE)/support
 WORKSUP=/gem_sw/work/$(EPICS_RELEASE)/support
 
 BANCOMM=$(PRODSUP)/bancomm/1-6-4-BR314-1
-TIMELIB=$(PRODSUP)/timelib/1-9-5-BR314
+TIMELIB=$(PRODSUP)/timelib/1-9-6-bfix
 SLALIB=$(PRODSUP)/slalib/1-9-5-BR314-1
 IOCSTATS=$(PRODSUP)/iocStats/3-1-14-3-BR314
 GEMREC=$(PRODSUP)/geminiRec/4-1-5-BR314
