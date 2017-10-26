@@ -27,7 +27,8 @@ mcs-mk-ioc_DBD += bancomm.dbd
 mcs-mk-ioc_DBD += xy240.dbd 
 mcs-mk-ioc_DBD += xy566.dbd 
 mcs-mk-ioc_DBD += timelib.dbd 
-mcs-mk-ioc_DBD += slalib.dbd 
+mcs-mk-ioc_DBD += slalib.dbd
+mcs-mk-ioc_DBD += timeProbe.dbd 
 mcs-mk-ioc_DBD += listAlarmRecords.dbd
 mcs-mk-ioc_DBD += mcs.dbd 
 
@@ -46,6 +47,7 @@ mcs-mk-ioc_LIBS += xy566
 mcs-mk-ioc_LIBS += pmaclib
 mcs-mk-ioc_LIBS += timelib
 mcs-mk-ioc_LIBS += slalib
+mcs-mk-ioc_LIBS += timeProbe
 mcs-mk-ioc_LIBS += seq pv
 mcs-mk-ioc_LIBS += listAlarmRecords
 
