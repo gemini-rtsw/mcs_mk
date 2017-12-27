@@ -97,8 +97,8 @@ p 112 1712 100 0 0 SCAN:Passive
 p -320 1982 100 0 0 def(INPA):$(mc)azmotstat1:1:OLM
 use hwinm 1424 1880 100 0 hwinm#151
 xform 0 1568 1928
-p 1426 1944 100 0 -1 val(in):$(top)progHealth.VAL
+p 1426 1944 100 0 -1 val(in):$(top)health:progHealth.VAL
 use hwinm 1424 1400 100 0 hwinm#153
 xform 0 1568 1448
-p 1426 1464 100 0 -1 val(in):$(top)dtHealth.VAL
+p 1426 1464 100 0 -1 val(in):$(top)health:dtHealth.VAL
 [comments]

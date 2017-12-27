@@ -57,4 +57,9 @@ p 1984 656 200 0 1 seta:dev el
 p 1984 608 200 0 1 setb:command
 p 1984 560 200 0 1 setc:card 1
 p 1984 496 200 0 1 setd:id 4
+use logDataSyncClock 1576 1080 100 0 logDataSyncClock#28
+xform 0 1816 1160
+p 1657 1012 100 0 -1 set0:AZCARD 0
+p 1663 971 100 0 -1 set1:ELCARD 1
+p 1672 927 100 0 -1 set2:command logData
 [comments]

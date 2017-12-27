@@ -92,14 +92,14 @@ p 1920 1776 100 0 0 def(OUTA):0.0
 p 1760 1770 75 0 -1 pproc(OUTA):NPP
 use hwinl 592 952 100 0 hwinl#168
 xform 0 784 1000
-p 602 1016 100 0 -1 val(in):$(top)timeDummyVal2.VAL
+p 602 1016 100 0 -1 val(in):$(top)health:timeDummyVal2.VAL
 use hwinl 576 1128 100 0 hwinl#170
 xform 0 768 1176
-p 586 1192 100 0 -1 val(in):$(top)timeDummyVal1.VAL
+p 586 1192 100 0 -1 val(in):$(top)health:timeDummyVal1.VAL
 use hwinl 592 728 100 0 hwinl#172
 xform 0 784 776
-p 602 792 100 0 -1 val(in):$(top)timeDummyMess1.VAL
+p 602 792 100 0 -1 val(in):$(top)health:timeDummyMess1.VAL
 use hwinl 592 504 100 0 hwinl#174
 xform 0 784 552
-p 602 568 100 0 -1 val(in):$(top)timeDummyMess2.VAL
+p 602 568 100 0 -1 val(in):$(top)health:timeDummyMess2.VAL
 [comments]

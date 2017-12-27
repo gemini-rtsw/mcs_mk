@@ -104,20 +104,20 @@ p 1424 1770 75 0 -1 pproc(INPA):PP
 p 1760 1770 75 0 -1 pproc(OUTA):NPP
 use hwinl 592 1976 100 0 hwinl#183
 xform 0 784 2024
-p 602 2040 100 0 -1 val(in):$(top)miscDummyVal2.VAL
+p 602 2040 100 0 -1 val(in):$(top)health:miscDummyVal2.VAL
 use hwinl 592 1752 100 0 hwinl#185
 xform 0 784 1800
-p 602 1816 100 0 -1 val(in):$(top)miscDummyVal3.VAL
+p 602 1816 100 0 -1 val(in):$(top)health:miscDummyVal3.VAL
 use hwinl 592 1496 100 0 hwinl#187
 xform 0 784 1544
-p 602 1560 100 0 -1 val(in):$(top)miscDummyVal4.VAL
+p 602 1560 100 0 -1 val(in):$(top)health:miscDummyVal4.VAL
 use hwinl 592 952 100 0 hwinl#189
 xform 0 784 1000
-p 602 1016 100 0 -1 val(in):$(top)miscDummyMess2.VAL
+p 602 1016 100 0 -1 val(in):$(top)health:miscDummyMess2.VAL
 use hwinl 592 696 100 0 hwinl#191
 xform 0 784 744
-p 602 760 100 0 -1 val(in):$(top)miscDummyMess3.VAL
+p 602 760 100 0 -1 val(in):$(top)health:miscDummyMess3.VAL
 use hwinl 592 440 100 0 hwinl#193
 xform 0 784 488
-p 602 504 100 0 -1 val(in):$(top)miscDummyMess4.VAL
+p 602 504 100 0 -1 val(in):$(top)health:miscDummyMess4.VAL
 [comments]

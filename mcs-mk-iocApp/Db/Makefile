@@ -13,6 +13,7 @@ vpath %.db $(SYS_DB_PATHS)
 # databases, templates, substitutions like this
 DB += mctop.db
 DB += iocAdminRTEMS.db
+DB += timeProbe.db
 
 include $(TOP)/configure/RULES
 #----------------------------------------
