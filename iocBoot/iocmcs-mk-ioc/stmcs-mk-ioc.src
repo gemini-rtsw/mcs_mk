@@ -41,6 +41,9 @@ xy566_set_gain(1, 0)
 
 drvXy240Config(1, 32, 0xd000)
 
+## Run this to trace the stages of iocInit
+traceIocInit
+
 iocInit
 #epicsThreadShowAll
 
