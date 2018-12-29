@@ -31,6 +31,7 @@ mcs-mk-ioc_DBD += slalib.dbd
 mcs-mk-ioc_DBD += timeProbe.dbd 
 mcs-mk-ioc_DBD += listAlarmRecords.dbd
 mcs-mk-ioc_DBD += initTrace.dbd
+mcs-mk-ioc_DBD += spy.dbd
 mcs-mk-ioc_DBD += mcs.dbd 
 
 # Include dbd files from all support modules:
@@ -51,6 +52,7 @@ mcs-mk-ioc_LIBS += slalib
 mcs-mk-ioc_LIBS += timeProbe
 mcs-mk-ioc_LIBS += seq pv
 mcs-mk-ioc_LIBS += listAlarmRecords
+mcs-mk-ioc_LIBS += rtemsutils
 
 # mcs-mk-ioc_registerRecordDeviceDriver.cpp derives from mcs-mk-ioc.dbd
 mcs-mk-ioc_SRCS += mcs-mk-ioc_registerRecordDeviceDriver.cpp
