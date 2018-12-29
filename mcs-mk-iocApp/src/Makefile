@@ -32,6 +32,7 @@ mcs-mk-ioc_DBD += timeProbe.dbd
 mcs-mk-ioc_DBD += listAlarmRecords.dbd
 mcs-mk-ioc_DBD += initTrace.dbd
 mcs-mk-ioc_DBD += spy.dbd
+mcs-mk-ioc_DBD += net_config.dbd
 mcs-mk-ioc_DBD += mcs.dbd 
 
 # Include dbd files from all support modules:
@@ -119,6 +120,7 @@ mcs-mk-ioc_SRCS += testFollow.c
 mcs-mk-ioc_SRCS += testLan.c
 mcs-mk-ioc_SRCS += trajectory.c
 mcs-mk-ioc_SRCS += initTrace.c
+mcs-mk-ioc_SRCS += net_config.c
 
 # Build the main IOC entry point on workstation OSs.
 mcs-mk-ioc_SRCS_DEFAULT += mcs-mk-iocMain.cpp
