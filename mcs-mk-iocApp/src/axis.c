@@ -150,6 +150,7 @@ long SetPositions( struct genSubRecord *pgsub )
 
 /*
  * This routine performs the "in-position" calculation at 5 Hz.
+ * AWE: Rewriting the inPosition calculation to be solely based on PMAC position errors .. see REL-873 for details
  *
  * INPUTS:
  *	pgsub->a = Azimuth Position Error (Degrees)		(DOUBLE).
@@ -197,8 +198,7 @@ long inPositionCalc( struct genSubRecord *pgsub )
   pmacServoTol    = *(double *)pgsub->h;
   mask            = 0;
 
-  if( (fabs(azPosError) < PosTolerance ) &&  
-      (fabs(azPmacPosError) < pmacServoTol ) )
+  if (fabs(azPmacPosError) < pmacServoTol )
   {
     *(long *)pgsub->vala = MCS_TRUE;
     if( following )
@@ -207,8 +207,7 @@ long inPositionCalc( struct genSubRecord *pgsub )
   else
     *(long *)pgsub->vala = MCS_FALSE;
 
-  if( (fabs(elPosError) < PosTolerance ) && 
-    ( fabs(elPmacPosError) < pmacServoTol ) )
+  if( fabs(elPmacPosError) < pmacServoTol )
   {
     *(long *)pgsub->valb = MCS_TRUE;
     if( following )
