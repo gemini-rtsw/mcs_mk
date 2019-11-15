@@ -49,9 +49,9 @@ iocInit
 
 seq &timeSeq, "sys=mc:"
 
-pvload "./data/telescopeMK.par", "top=mc:"
-pvload "./data/tapePolysMK.par", "top=mc:"
-pvload "./data/axisLimitsMK.par", "top=mc:"
-pvload "./data/sonyMK.par", "top=mc:"
-pvload "./data/debug.par", "top=mc:"
+pvload "/gem_sw/etc/rtconfig/mcs/telescopeMK.par", "top=mc:"
+pvload "/gem_sw/etc/rtconfig/mcs/tapePolysMK.par", "top=mc:"
+pvload "/gem_sw/etc/rtconfig/mcs/axisLimitsMK.par", "top=mc:"
+pvload "/gem_sw/etc/rtconfig/mcs/sonyMK.par", "top=mc:"
+pvload "/gem_sw/etc/rtconfig/mcs/debug.par", "top=mc:"
 
