@@ -1,9 +1,0 @@
-#
-# Axis limits for stop brackets in the "Observing" position
-#
-
-# For the Telescope
-double $(top)azLowerLimit = "-180.0";
-double $(top)azUpperLimit = "+355.0";
-double $(top)elLowerLimit = "+15.5";
-double $(top)elUpperLimit = "+90.5";

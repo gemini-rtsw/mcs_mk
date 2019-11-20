@@ -1,9 +1,0 @@
-# This File is used to initialize record fields for debugging.
-
-# Set test follow mode
-int    $(top)testFollowMode   = 1;		# 0=continuous, 1=controlled
-double $(top)testFollowProc.E = 45;		# az pos
-double $(top)testFollowProc.F = 90;		# el pos
-double $(top)testFollowProc.C = 0.0015;		# az vel
-#double $(top)testFollowProc.D = 0.0015;	# el vel
-double $(top)testFollowProc.D = 0;		# el vel = 0
