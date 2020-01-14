@@ -151,15 +151,20 @@ long SetPositions( struct genSubRecord *pgsub )
 /*
  * This routine performs the "in-position" calculation at 5 Hz.
  * AWE: Rewriting the inPosition calculation to be solely based on PMAC position errors .. see REL-873 for details
+ *      Adding a velocity dependent term .. the PMAC position error remains very low during the first 10 seconds of acceleration
  *
  * INPUTS:
  *	pgsub->a = Azimuth Position Error (Degrees)		(DOUBLE).
  *	pgsub->b = Elevation Position Error (Degrees)		(DOUBLE).
  *	pgsub->c = Follow Flag                          	(DOUBLE).
- *	pgsub->d = Elevation Velocity Error (Degrees/second)	(DOUBLE).
+ *	pgsub->d = Elevation PMAC Position Error (Degrees)	(DOUBLE).
  *	pgsub->e = Position Tolerance (Degrees)			(DOUBLE).
  *	pgsub->f = Velocity Tolerance (Degrees/second)		(DOUBLE).
- *	pgsub->g = Azimuth Velocity Error (Degrees/second)	(DOUBLE).
+ *	pgsub->g = Azimuth PMAC Position Error (Degrees)	(DOUBLE).
+ *	pgsub->h = PMAC Servo Tolerance (Degrees)       	(DOUBLE).
+ *	pgsub->i = Azimuth Current Velocity (Degrees/second)	(DOUBLE).
+ *	pgsub->j = Elevation Current Velocity (Degrees/second)	(DOUBLE).
+
  *
  * OUTPUTS:
  *	pgsub->vala = Whether Azimuth is in-position or not	  (LONG).
@@ -185,7 +190,10 @@ long inPositionCalc( struct genSubRecord *pgsub )
   double azPmacPosError;
   double elPmacPosError;
   double PosTolerance;
+  double VelTolerance;
   double pmacServoTol;
+  double azCurrentVel;
+  double elCurrentVel;
   long   following;
   long   mask;
 
@@ -193,12 +201,15 @@ long inPositionCalc( struct genSubRecord *pgsub )
   elPosError      = *(double *)pgsub->b;
   following       = (long)(*(double *)pgsub->c);
   PosTolerance    = *(double *)pgsub->e;
+  VelTolerance    = *(double *)pgsub->f;
   azPmacPosError  = *(double *)pgsub->g;
   elPmacPosError  = *(double *)pgsub->d;
   pmacServoTol    = *(double *)pgsub->h;
+  azCurrentVel    = *(double *)pgsub->i;
+  elCurrentVel    = *(double *)pgsub->j;
   mask            = 0;
 
-  if (fabs(azPmacPosError) < pmacServoTol )
+  if ((fabs(azPmacPosError) < pmacServoTol ) && (fabs(azCurrentVel) < VelTolerance ))
   {
     *(long *)pgsub->vala = MCS_TRUE;
     if( following )
@@ -207,7 +218,7 @@ long inPositionCalc( struct genSubRecord *pgsub )
   else
     *(long *)pgsub->vala = MCS_FALSE;
 
-  if( fabs(elPmacPosError) < pmacServoTol )
+  if ((fabs(elPmacPosError) < pmacServoTol ) && (fabs(elCurrentVel) < VelTolerance ))
   {
     *(long *)pgsub->valb = MCS_TRUE;
     if( following )
