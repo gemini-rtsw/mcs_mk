@@ -19,25 +19,25 @@
 # Build settings that are NOT module paths should appear in a
 # CONFIG_SITE file.
 
-EPICS_RELEASE=R3.14.12.7
+EPICS_RELEASE=R3.14.12.8
 
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
 PROD_SUPP=/gem_sw/prod/$(EPICS_RELEASE)/support
 WORK_SUPP=/gem_sw/work/$(EPICS_RELEASE)/support
 
-BANCOMM=$(PROD_SUPP)/bancomm/1-6-9
-TIMELIB=$(PROD_SUPP)/timelib/1-9-14
-SLALIB=$(PROD_SUPP)/slalib/1-9-7
-IOCSTATS=$(PROD_SUPP)/iocStats/3-1-14-4
-GEMREC=$(PROD_SUPP)/geminiRec/4-1-6
-PMAC=$(PROD_SUPP)/pmaclib/1-1-5
-XYCOM=$(PROD_SUPP)/xycom/2-1-5
-SNCSEQ=$(PROD_SUPP)/seq/2-2-3-2
-PVLOAD=$(PROD_SUPP)/pvload/1-1-3
-GEMUTILS=$(PROD_SUPP)/gemUtil/1-8
-TIMEPROBE=$(PROD_SUPP)/timeProbe/1-1-6
-RTEMSUTILS=$(PROD_SUPP)/rtemsutils/1-4-1
+BANCOMM=$(PROD_SUPP)/bancomm/1-6-10
+TIMELIB=$(PROD_SUPP)/timelib/2-0-8
+SLALIB=$(PROD_SUPP)/slalib/1-9-10
+IOCSTATS=$(PROD_SUPP)/iocStats/3-1-16-5
+GEMREC=$(PROD_SUPP)/geminiRec/4-1-11
+PMAC=$(PROD_SUPP)/pmaclib/1-1-12
+XYCOM=$(PROD_SUPP)/xycom/2-1-8
+SNCSEQ=$(PROD_SUPP)/seq/2-2-5-3
+PVLOAD=$(PROD_SUPP)/pvload/1-1-4
+GEMUTILS=$(PROD_SUPP)/gemUtil/1-13
+TIMEPROBE=$(PROD_SUPP)/timeProbe/1-1-15
+RTEMSUTILS=$(PROD_SUPP)/rtemsutils/1-4-2
 
 # EPICS_BASE usually appears last so other apps can override stuff:
 EPICS_BASE=/gem_sw/epics/$(EPICS_RELEASE)/base
