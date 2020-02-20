@@ -5,6 +5,8 @@ cd ${INSTALL}
 epicsEnvSet("IOCSH_PS1","mcs-mk-ioc> ")
 epicsEnvSet("EPICS_CA_ADDR_LIST","10.2.2.100")
 
+nfsMount("$(CFGSERVER)","$(CFGREMOTE)","$(CFGLOCAL)")
+
 ## Register all support components
 dbLoadDatabase("dbd/mcs-mk-ioc.dbd")
 mcs_mk_ioc_registerRecordDeviceDriver(pdbbase)
@@ -40,7 +42,6 @@ xy566_set_gain(0, 1)
 xy566_set_gain(1, 0)
 
 drvXy240Config(1, 32, 0xd000)
-
 ## Run this to trace the stages of iocInit
 traceIocInit
 
@@ -49,9 +50,9 @@ iocInit
 
 seq &timeSeq, "sys=mc:"
 
-pvload "/gem_sw/etc/rtconfig/mcs/telescopeMK.par", "top=mc:"
-pvload "/gem_sw/etc/rtconfig/mcs/tapePolysMK.par", "top=mc:"
-pvload "/gem_sw/etc/rtconfig/mcs/axisLimitsMK.par", "top=mc:"
-pvload "/gem_sw/etc/rtconfig/mcs/sonyMK.par", "top=mc:"
-pvload "/gem_sw/etc/rtconfig/mcs/debug.par", "top=mc:"
+pvload "$(CFGFILE)/telescopeMK.par", "top=mc:"
+pvload "$(CFGFILE)/tapePolysMK.par", "top=mc:"
+pvload "$(CFGFILE)/axisLimitsMK.par", "top=mc:"
+pvload "$(CFGFILE)/sonyMK.par", "top=mc:"
+pvload "$(CFGFILE)/debug.par", "top=mc:"
 
