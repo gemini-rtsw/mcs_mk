@@ -1,35 +1,37 @@
 [schematic2]
-uniq 301
+uniq 19
 [tools]
 [detail]
-w 2420 2011 100 2 n#300 hwout.hwout#205.outp 2416 2016 2416 2016 eseqs.eseqs#139.LNK2
-w 2420 2043 100 2 n#299 hwout.hwout#288.outp 2416 2048 2416 2048 eseqs.eseqs#139.LNK1
-w 2010 2027 100 0 n#298 hwin.hwin#227.in 1984 2016 2096 2016 eseqs.eseqs#139.DOL2
-w 2010 2059 100 0 n#297 hwin.hwin#279.in 1984 2048 2096 2048 eseqs.eseqs#139.DOL1
-w 2354 555 100 0 n#296 efanouts.efanouts#232.LNK3 2272 1024 2528 1024 2528 544 2240 544 elongouts.elongouts#290.SLNK
-w 1988 507 100 2 n#295 hwout.hwout#294.outp 1984 512 1984 512 elongouts.elongouts#290.OUT
-w 2244 571 100 2 n#292 hwin.hwin#291.in 2240 576 2240 576 elongouts.elongouts#290.DOL
-w 130 1803 100 0 n#278 hwin.hwin#277.in 192 1856 224 1856 224 1792 96 1792 96 1696 224 1696 efanouts.efanouts#269.SELL
-w 642 2091 100 0 n#224 hwin.hwin#222.in 608 2080 736 2080 ecalcs.ecalcs#223.INPA
-w 1034 1179 100 0 n#224 junction 640 2080 640 1168 1488 1168 ecalcs.ecalcs#230.INPA
-w 1938 1323 100 0 n#276 eseqs.eseqs#139.LNK3 2416 1984 2560 1984 2560 1312 1376 1312 1376 784 1488 784 ecalcs.ecalcs#230.SLNK
+w 2420 2011 100 2 n#1 hwout.hwout#205.outp 2416 2016 2416 2016 eseqs.eseqs#139.LNK2
+w 2420 2043 100 2 n#2 hwout.hwout#288.outp 2416 2048 2416 2048 eseqs.eseqs#139.LNK1
+w 2010 2027 100 0 n#3 hwin.hwin#227.in 1984 2016 2096 2016 eseqs.eseqs#139.DOL2
+w 2010 2059 100 0 n#4 hwin.hwin#279.in 1984 2048 2096 2048 eseqs.eseqs#139.DOL1
+w 2354 555 100 0 n#5 efanouts.efanouts#232.LNK3 2272 1024 2528 1024 2528 544 2240 544 elongouts.elongouts#290.SLNK
+w 1988 507 100 2 n#6 hwout.hwout#294.outp 1984 512 1984 512 elongouts.elongouts#290.OUT
+w 2244 571 100 2 n#7 hwin.hwin#291.in 2240 576 2240 576 elongouts.elongouts#290.DOL
+w 130 1803 100 0 n#8 hwin.hwin#277.in 192 1856 224 1856 224 1792 96 1792 96 1696 224 1696 efanouts.efanouts#269.SELL
+w 642 2091 100 0 n#9 hwin.hwin#222.in 608 2080 736 2080 ecalcs.ecalcs#223.INPA
+w 1034 1179 100 0 n#9 junction 640 2080 640 1168 1488 1168 ecalcs.ecalcs#230.INPA
+w 1938 1323 100 0 n#10 eseqs.eseqs#139.LNK3 2416 1984 2560 1984 2560 1312 1376 1312 1376 784 1488 784 ecalcs.ecalcs#230.SLNK
 w 2418 1099 100 0 OK efanouts.efanouts#232.LNK1 2272 1088 2624 1088 2624 1408 2976 1408 outhier.OK.p
 w 2508 1963 100 0 OK eseqs.eseqs#139.LNK4 2416 1952 2624 1952 2624 1408 junction
 w 1572 1419 100 0 OK efanouts.efanouts#269.LNK2 416 1664 544 1664 544 1408 2624 1408 junction
 w 2418 1067 100 0 FAIL efanouts.efanouts#232.LNK2 2272 1056 2624 1056 2624 976 2976 976 outhier.FAIL.p
-w 1074 2283 100 0 n#272 ecalcs.ecalcs#223.FLNK 1024 1920 1056 1920 1056 2272 1152 2272 eaos.eaos#245.SLNK
-w 546 1707 100 0 n#271 efanouts.efanouts#269.LNK1 416 1696 736 1696 ecalcs.ecalcs#223.SLNK
+w 1074 2283 100 0 n#11 ecalcs.ecalcs#223.FLNK 1024 1920 1056 1920 1056 2272 1152 2272 eaos.eaos#245.SLNK
+w 546 1707 100 0 n#12 efanouts.efanouts#269.LNK1 416 1696 736 1696 ecalcs.ecalcs#223.SLNK
 w 74 1627 100 0 SLNK inhier.SLNK.P 32 1616 176 1616 efanouts.efanouts#269.SLNK
-w 1298 1899 100 0 n#268 ecalcs.ecalcs#223.VAL 1024 1888 1632 1888 1632 2080 2096 2080 eseqs.eseqs#139.SELL
-w 1650 2315 100 0 n#265 eaos.eaos#245.FLNK 1408 2304 1952 2304 1952 1728 2096 1728 eseqs.eseqs#139.SLNK
-w 1426 2251 100 0 n#249 eaos.eaos#245.OUT 1408 2240 1504 2240 hwout.hwout#247.outp
-w 1074 2315 100 0 n#246 hwin.hwin#244.in 1056 2304 1152 2304 eaos.eaos#245.DOL
-w 1826 987 100 0 n#234 ecalcs.ecalcs#230.VAL 1776 976 1936 976 1936 1088 2080 1088 efanouts.efanouts#232.SELL
-w 1874 1019 100 0 n#233 ecalcs.ecalcs#230.FLNK 1776 1008 2032 1008 efanouts.efanouts#232.SLNK
+w 1298 1899 100 0 n#13 ecalcs.ecalcs#223.VAL 1024 1888 1632 1888 1632 2080 2096 2080 eseqs.eseqs#139.SELL
+w 1650 2315 100 0 n#14 eaos.eaos#245.FLNK 1408 2304 1952 2304 1952 1728 2096 1728 eseqs.eseqs#139.SLNK
+w 1426 2251 100 0 n#15 eaos.eaos#245.OUT 1408 2240 1504 2240 hwout.hwout#247.outp
+w 1074 2315 100 0 n#16 hwin.hwin#244.in 1056 2304 1152 2304 eaos.eaos#245.DOL
+w 1826 987 100 0 n#17 ecalcs.ecalcs#230.VAL 1776 976 1936 976 1936 1088 2080 1088 efanouts.efanouts#232.SELL
+w 1874 1019 100 0 n#18 ecalcs.ecalcs#230.FLNK 1776 1008 2032 1008 efanouts.efanouts#232.SLNK
 s 128 752 100 0 It will only respond if waiting for a response (only time that the record will process due to DISA)
 s 128 704 100 0 The timout will still occor as before and keep the sequence moving.
 s 128 800 100 0 When the DriveCondition changes, this record will be triggered.
 [cell use]
+use bc200tr -144 -24 -100 0 frame
+xform 0 1536 1280
 use hwout 1984 471 100 0 hwout#294
 xform 4 1888 512
 p 1760 512 100 0 -1 val(outp):$(top)$(dev)$(command)GIS4-$(id).DISA
@@ -93,7 +95,7 @@ p 768 2144 100 0 1 CALC:(A=2)?8:7
 p 848 1600 100 1024 -1 name:$(top)$(dev)$(command)GIS1-$(id)
 use ecalcs 1488 695 100 0 ecalcs#230
 xform 0 1632 960
-p 1536 1216 100 0 1 CALC:(A=2)?5:3
+p 1536 1216 100 0 1 CALC:(A=2)?5:6
 p 1424 656 100 0 1 DISV:0
 p 1600 688 100 1024 -1 name:$(top)$(dev)$(command)GIS4-$(id)
 use eseqs 2120 1640 100 0 eseqs#139
@@ -108,6 +110,4 @@ p 2432 2016 75 1024 -1 pproc(LNK2):NPP
 p 2432 1984 75 1024 -1 pproc(LNK3):PP
 p 2432 1952 75 1024 -1 pproc(LNK4):PP
 p 1712 892 100 0 0 typ(DOL2):path
-use bc200tr -144 -24 -100 0 frame
-xform 0 1536 1280
 [comments]
