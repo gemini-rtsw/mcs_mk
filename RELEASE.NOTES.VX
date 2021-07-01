@@ -1,0 +1,124 @@
+16 December 1998	V1-1
+	Initial release of the MCS.
+
+28 January 1999		V1-2
+	Fixed a datum bug.
+	Used for obtaining Dedication images.
+
+28 June 1999		V1-3
+	Never used.
+
+12 July 1999		V1-4
+	Velocity feedback from PMAC working.
+	Datum flag added to Az/El subsystem screens.
+	Screen sizes for Az/El subsystems now the same.
+	Changes to mcsInstall to accommodate new release mechanism.
+
+24 September 1999	V1-5
+	Top-level Makefile replaced with latest version from EPICS release.
+	mcsInstall changed so that build output goes to screen as well as file.
+	AZCONFIG/ELCONFIG changed so that a change of encoder sets the datum
+	flag back to "NOT DATUMED".
+	Makefile.Unix changed in src/misc to remove link dependency on -lgen.
+	This prevents problems with running solaris executables under 5.6 and 5.7.
+	Took out line which set encoder to FDE during a datum.
+	Run AZCONFIG/ELCONFIG at startup to automatically use the tape encoders.
+
+4 October 1999		V1-6
+	Added balancing screen and records.
+	Added ability to datum with tape heads (still needs debugging).
+	Added accurate time-stamping of position and velocity for TCS.
+	Added automatic version number to top-level screen.
+
+19 October 1999		V1-7
+	Implemented RELOAD and INIT commands.
+	Removed READLUT and UNWRAP stubs.
+	General tidying up.
+
+01 November 1999	V1-8
+	Added extra diagnostics for Datum with tape encoders.
+	Changed DPRAM memory location for Motion Program Handshake bit.
+	Added DPRAM memory location for time-stamping strobe bit (so
+	that ASCII mailboxes are not being used at 10Hz).
+	Implemented averaging over 10 seconds for elevation torque feedback.
+
+03 December 1999	V1-9
+	Implemented and tested datum for both azimuth and elevation tape encoders.
+
+29 June 2001    	V2-0
+	Implemented and tested:
+       
+        - "Double buffer" follow.
+        - Busy/Idle transition.
+        - Close Loop after a datum using sony switch.
+
+29 June 2001    	V2-2
+	Debug of PMAC logging. implemented automatic log file translation.
+
+
+20 August 2001    	V2-3
+	PMAC simulator implemented. 
+
+20 September 2001       V2-4
+        Ported to EPICS3.13.4GEM7.
+
+        Implemented and tested:
+
+        - New Health tree with informative Messages.
+          This Health tree includes the Time bus health
+          and status of data stream from TCS.
+
+        - Time stamped az/el positions.
+
+30 September 2002    	V2-6
+
+        - Ported to PPC board. 
+   
+        - new timeStamp.
+
+        - NO trajectory calculation YET.
+
+29 November 2003        V3-0
+
+	- Trajectory Calculation Implemented.
+        
+	- Inposition calculation bug fixed.
+
+25 August 2008 			V3-3
+	- Extra protection for follow trigger. Pmac
+	variable P102 set to 0 when MCS is not in follow mode.
+
+7 May 2010	V3-4
+	- logTRacking command added.
+	- Added debug capabilities to the move and follow commands.
+	- added log_console command.
+
+16 March 2015   V3-5
+        - BFOSW 27
+        - Assert/Disassert will be enabled (using SDIS) whenever timer is on or we are in Base Mode.
+        - Corresponding EPICS DM screens (mcs-ws.rpm) will display TSRS Mode and enable bit (from timer)
+          on Alt and AZ screens where assert/dissassert is controlled. 
+
+24 June 2016    V3-6
+	Attempt to get MCS working in simulation mode. Only partially succesfull.  At least got  the system 
+	to simulates the drive condition response from the GIS which helped developing REL-2548
+	
+	files changed: 
+	M capfast/pmacMotor1servo.sch   new revision: 1.2
+	M capfast/pmacMotorStat1.sch	new revision: 1.5
+	M capfast/pmacSimulator.sch	new revision: 1.2
+	M capfast/setPositions.sch	new revision: 1.4
+	M capfast/simulate.sch		new revision: 1.3
+	M src/misc/datum.c		new revision: 1.12
+	M src/misc/simRoutines.c	new revision: 1.3
+	A startup/startupSim.vws	initial revision: 1.1
+
+	REL-2548 Improve MCS Drive Assert Sequencing.
+	Change the Move, Datum and Follow drive assert sequencing to continue immediately after the DriveCondition changes.
+        The old 12 second timeout is retained and will handle the case where the GIS fails to set driveCondition
+
+        files changed:
+	M capfast/GISassert.sch		new revision: 1.2
+	M capfast/gisAxis.sch		new revision: 1.5
+
+
