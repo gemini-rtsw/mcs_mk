@@ -123,6 +123,13 @@ mcs-mk-ioc_SRCS += trajectory.c
 #mcs-mk-ioc_SRCS += initTrace.c
 mcs-mk-ioc_SRCS += net_config.c
 
+INC += tcsServo.h
+INC += tcsRandom.h
+INC += mcs.h
+INC += mcscad.h
+INC += caLogDataDriver.h
+
+
 # Build the main IOC entry point on workstation OSs.
 mcs-mk-ioc_SRCS_DEFAULT += mcs-mk-iocMain.cpp
 

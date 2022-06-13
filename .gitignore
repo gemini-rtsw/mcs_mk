@@ -36,3 +36,5 @@
 
 # /mcs-mk-iocApp/Db/
 /mcs-mk-iocApp/Db/O.*
+/configure/RELEASE.local
+/configure/CONFIG_SITE.local
