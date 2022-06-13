@@ -338,8 +338,7 @@ long moveCAD( struct cadRecord *pcad )
             }
             else if( azVel > azMaxVel )
             {
-              sprintf(pcad->mess, "Az. Velocity %6.3f above limit (%6.3f)",
-                      azVel, azMaxVel);
+              sprintf(pcad->mess, "Az. Vel. %6.3f above limit (%6.3f)",azVel, azMaxVel);
               ret = CAD_REJECT;
             }
             else
@@ -380,8 +379,7 @@ long moveCAD( struct cadRecord *pcad )
               }
               else if( elVel > elMaxVel )
               {
-                sprintf(pcad->mess, "El. Velocity %6.3f above limit (%6.3f)",
-                        elVel, elMaxVel);
+                sprintf(pcad->mess, "El. Vel. %6.3f above limit (%6.3f)", elVel, elMaxVel);
                 ret = CAD_REJECT;
               }
               else

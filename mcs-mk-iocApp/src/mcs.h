@@ -80,6 +80,17 @@ long check_numeric( char * );
 #define EL_I223_S      2.5       /* El. home velocity using switch           */
 #define AZ_I223_H      1.0       /* Az. home velocity using tape head        */
 #define EL_I223_H      1.0       /* El. home velocity using tape head        */
+#define MCDEG_TO_CNTS   533572.2667 /* Degs to encoder counts */
+#define MCDEG_TO_I122   MCDEG_TO_CNTS/1000.0  /* Cr. Factor between deg/s and I122 cnts/msec */
+#define VEL_CNTS_PER_DEG 29965.06616
+
+/* Default values when using simulation mode */
+#define DEF_I10          3713707
+#define DEF_I108         96
+#define DEF_I109         96
+#define DEF_I508         80
+#define DEF_I509         80
+
 
 #endif
 

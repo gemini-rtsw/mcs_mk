@@ -18,20 +18,20 @@ DBD += mcs-mk-ioc.dbd
 # mcs-mk-ioc.dbd will be made up from these files:
 mcs-mk-ioc_DBD += base.dbd
 mcs-mk-ioc_DBD += menuScan.dbd
-mcs-mk-ioc_DBD += iocAdmin.dbd    
+#mcs-mk-ioc_DBD += iocAdmin.dbd    
 mcs-mk-ioc_DBD += geminiRecords.dbd        
 mcs-mk-ioc_DBD += pvload.dbd   
 mcs-mk-ioc_DBD += loadRecord.dbd
-mcs-mk-ioc_DBD += pmaclib.dbd
-mcs-mk-ioc_DBD += bancomm.dbd 
-mcs-mk-ioc_DBD += xy240.dbd 
-mcs-mk-ioc_DBD += xy566.dbd 
-mcs-mk-ioc_DBD += timelib.dbd 
+mcs-mk-ioc_DBD += pmacDev.dbd
+mcs-mk-ioc_DBD += bancommDev.dbd 
+mcs-mk-ioc_DBD += xy240Supp.dbd 
+mcs-mk-ioc_DBD += xy566Supp.dbd 
+mcs-mk-ioc_DBD += timelibSupp.dbd 
 mcs-mk-ioc_DBD += slalib.dbd
-mcs-mk-ioc_DBD += timeProbe.dbd 
+mcs-mk-ioc_DBD += timeProbeSupp.dbd 
 mcs-mk-ioc_DBD += listAlarmRecords.dbd
-mcs-mk-ioc_DBD += initTrace.dbd
-mcs-mk-ioc_DBD += spy.dbd
+#mcs-mk-ioc_DBD += initTrace.dbd
+#mcs-mk-ioc_DBD += spy.dbd
 mcs-mk-ioc_DBD += net_config.dbd
 mcs-mk-ioc_DBD += mcs.dbd 
 
@@ -41,7 +41,7 @@ mcs-mk-ioc_DBD += mcs.dbd
 # Add all the support libraries used by this IOC
 # mcs-mk-ioc_LIBS += xxx
 # mcs-mk-ioc_LIBS += seq pv seqDev
-mcs-mk-ioc_LIBS += devIocStats        
+#mcs-mk-ioc_LIBS += devIocStats        
 mcs-mk-ioc_LIBS += geminiRecords        
 mcs-mk-ioc_LIBS += pvload             
 mcs-mk-ioc_LIBS += bancomm
@@ -52,8 +52,9 @@ mcs-mk-ioc_LIBS += timelib
 mcs-mk-ioc_LIBS += slalib
 mcs-mk-ioc_LIBS += timeProbe
 mcs-mk-ioc_LIBS += seq pv
+mcs-mk-ioc_LIBS += autosave
 mcs-mk-ioc_LIBS += listAlarmRecords
-mcs-mk-ioc_LIBS += rtemsutils
+#mcs-mk-ioc_LIBS += rtemsutils
 
 # mcs-mk-ioc_registerRecordDeviceDriver.cpp derives from mcs-mk-ioc.dbd
 mcs-mk-ioc_SRCS += mcs-mk-ioc_registerRecordDeviceDriver.cpp
@@ -106,7 +107,7 @@ mcs-mk-ioc_SRCS += carCombines.c
 mcs-mk-ioc_SRCS += datum.c
 mcs-mk-ioc_SRCS += endCommand.c
 mcs-mk-ioc_SRCS += follow.c
-mcs-mk-ioc_SRCS += getTime.c
+#mcs-mk-ioc_SRCS += getTime.c
 mcs-mk-ioc_SRCS += healthRoutines.c
 mcs-mk-ioc_SRCS += logData.c
 mcs-mk-ioc_SRCS += miscRoutines.c
@@ -119,7 +120,7 @@ mcs-mk-ioc_SRCS += test.c
 mcs-mk-ioc_SRCS += testFollow.c
 mcs-mk-ioc_SRCS += testLan.c
 mcs-mk-ioc_SRCS += trajectory.c
-mcs-mk-ioc_SRCS += initTrace.c
+#mcs-mk-ioc_SRCS += initTrace.c
 mcs-mk-ioc_SRCS += net_config.c
 
 # Build the main IOC entry point on workstation OSs.

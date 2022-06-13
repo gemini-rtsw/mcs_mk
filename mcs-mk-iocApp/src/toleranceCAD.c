@@ -87,13 +87,13 @@ long toleranceCAD( struct cadRecord *pcad )
                  poserror, POS_ERROR_LOWER, POS_ERROR_UPPER);
         if( poserror < POS_ERROR_LOWER )
         {
-          sprintf(pcad->mess, "Position Error %6.3f below limit (%6.3f)", 
+          sprintf(pcad->mess, "Pos. Error %6.3f below limit (%6.3f)", 
                   poserror, POS_ERROR_LOWER);
           ret = CAD_REJECT;
         }
         else if( poserror > POS_ERROR_UPPER )
         {
-          sprintf(pcad->mess, "Position Error %6.3f above limit (%6.3f)", 
+          sprintf(pcad->mess, "Pos. Error %6.3f above limit (%6.3f)", 
                   poserror, POS_ERROR_UPPER);
           ret = CAD_REJECT;
         }
@@ -129,13 +129,13 @@ long toleranceCAD( struct cadRecord *pcad )
                    velerror, VEL_ERROR_LOWER, VEL_ERROR_UPPER);
           if( velerror < VEL_ERROR_LOWER )
           {
-            sprintf(pcad->mess, "Velocity Error %6.3f below limit (%6.3f)", 
+            sprintf(pcad->mess, "Vel. Error %6.3f below limit (%6.3f)", 
                     velerror, VEL_ERROR_LOWER);
             ret = CAD_REJECT;
           }
           else if( velerror > VEL_ERROR_UPPER )
           {
-            sprintf(pcad->mess, "Velocity Error %6.3f above limit (%6.3f)", 
+            sprintf(pcad->mess, "Vel. Error %6.3f above limit (%6.3f)", 
                     velerror, VEL_ERROR_UPPER);
             ret = CAD_REJECT;
           }
