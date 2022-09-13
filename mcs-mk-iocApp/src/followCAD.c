@@ -32,18 +32,25 @@
 long followCAD( struct cadRecord *pcad )
 {
   long ret = 0;
-  long debug;
+  /* removed during Epics 7 migration
+  long debug; 
+  */
   long azDatum;
   long elDatum;
+  /* removed during Epics 7 migration
   long azState;
-  long elState;
+  long elState; 
+  */
 
-  debug   = atol( (char *)pcad->a );
+  /* removed during Epics 7 migration
+  debug   = atol( (char *)pcad->a ); 
+  */
   azDatum = atol( (char *)pcad->b );
   elDatum = atol( (char *)pcad->c );
+  /* removed during Epics 7 migration
   azState = atol( (char *)pcad->d );
   elState = atol( (char *)pcad->e );
-
+  */
   switch( pcad->dir )
   {
     case menuDirectiveMARK:

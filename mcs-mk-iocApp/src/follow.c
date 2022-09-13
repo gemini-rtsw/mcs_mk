@@ -474,8 +474,6 @@ long Tracking (struct genSubRecord *pgsub)
     double elCurrentMaxVel;
     double azCurrentMaxAcc;
     double elCurrentMaxAcc;
-    double azPmacDemandPos;
-    double elPmacDemandPos;
     double azPos[NUM_EXTRAP];
     double azVel[NUM_EXTRAP];
     double elPos[NUM_EXTRAP];
@@ -509,6 +507,7 @@ long Tracking (struct genSubRecord *pgsub)
     static double startT;
     static double lastAzVel;
     static double lastElVel;
+    static double count01 = 0;
 
     /* Get input values.
      */
@@ -533,8 +532,6 @@ long Tracking (struct genSubRecord *pgsub)
     elCurrentMaxAcc = *(double *) pgsub->p;
 
     trajectoryMode  = *(long *) pgsub->s;
-    azPmacDemandPos = *(double *) pgsub->t;
-    elPmacDemandPos = *(double *) pgsub->u;
 
     /* Initialize variables.
      */
@@ -623,6 +620,7 @@ long Tracking (struct genSubRecord *pgsub)
 		     */
 		    if (first)
 		    {
+			printf("First execution\n");
 			/* Set the other two temporary arrays to the
 			 * same values of the first and only array.
 			 * Reset tick counters.
@@ -866,6 +864,7 @@ long Tracking (struct genSubRecord *pgsub)
 	        }
 	    }
 	}
+    count01++;
     }
     else
     {
@@ -891,6 +890,7 @@ long Tracking (struct genSubRecord *pgsub)
        memcpy (pgsub->vald, elVel, NUM_EXTRAP * sizeof(double));
     *(double *)pgsub->valp = azPos[0];
     *(double *)pgsub->valq = elPos[0];
+    *(double *)pgsub->valt = count01;
 
     lastAzVel = azVel[NUM_EXTRAP-1];
     lastElVel = elVel[NUM_EXTRAP-1];

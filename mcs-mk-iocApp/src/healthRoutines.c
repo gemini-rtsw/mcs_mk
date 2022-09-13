@@ -239,13 +239,16 @@ long mcMotorHealth (struct genSubRecord *pgsub)
 
   char health[16] ;             /* Motor health value */
   char mesg[MAX_STRING_SIZE] ;  /* Output health message */
-  long gisState ;               /* State of GIS */
+  /* Removed during EPICS 7 Migration
+  long gisState ;*/               /* State of GIS */
 
 /* Initialise health output to GOOD */
   strcpy (mesg, " ") ;
   strcpy (health, "GOOD") ;
 
+  /* Removed during EPICS 7 Migration
   gisState = *(long *)pgsub->j ;
+  */
 
 /* Check inputs and compute output */
   if (*(long *)pgsub->a) {

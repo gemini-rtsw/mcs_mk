@@ -28,18 +28,13 @@ long check_numeric( char * );
 #define VEL_ERROR_LOWER 0.0          /* Degrees/s */
 #define VEL_ERROR_UPPER 2.0          /* Degrees/s */
 
-#define AZ_MAX_VEL 1.9
-#define EL_MAX_VEL 0.7
-
-#define AZ_MIN_VEL -1.9
-#define EL_MIN_VEL -0.7
-
-#define AZ_MAX_ACC 0.1
-#define EL_MAX_ACC 0.04
-
-#define AZ_MIN_ACC -0.1
-#define EL_MIN_ACC -0.04
-
+/* Velocity limits are defined as EPICS records to get adjusted easier,
+ * see azMaxVelLim variable. Position limits are very unlikely to change
+ * so these will stay as hardcoded values for now, but these could be 
+ * considered for a change along with other variables to be consistent.
+ * More info under: http://jira.gemini.edu:8080/browse/RTUPG-178 
+ * Acceleration limits are removed as they are unused.
+ */
 #define AZ_MIN_POS -188.25
 #define AZ_MAX_POS  367.67
 #define EL_MIN_POS  0.0

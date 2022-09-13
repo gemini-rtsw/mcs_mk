@@ -698,7 +698,9 @@ int getAddress( char *card, char *name, char *address )
 void readDataSet( long *azFlag, long *elFlag, long *cwFlag, char *dataset )
 {
   char (*ptrC)[FIELD_SIZE];
+  /* Removed during EPICS 7 Migration
   int  numElements;
+  */
   int  i;
 
   *azFlag = 0;
@@ -708,22 +710,30 @@ void readDataSet( long *azFlag, long *elFlag, long *cwFlag, char *dataset )
   if( !strcmp(dataset, "DATASET1") )
   {
     ptrC        = dataset1C;
+  /* Removed during EPICS 7 Migration
     numElements = index1;
+    */
   }
   else if( !strcmp(dataset, "DATASET2") )
   {
     ptrC        = dataset2C;
+  /* Removed during EPICS 7 Migration
     numElements = index2;
+    */
   }
   else if( !strcmp(dataset, "DATASET3") )
   {
     ptrC        = dataset3C;
+  /* Removed during EPICS 7 Migration
     numElements = index3;
+    */
   }
   else if( !strcmp(dataset, "DATASET4") )
   {
     ptrC        = dataset4C;
+  /* Removed during EPICS 7 Migration
     numElements = index4;
+    */
   }
   else
   {

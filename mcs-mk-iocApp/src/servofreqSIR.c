@@ -33,7 +33,9 @@ long servofreqSIR( struct sirRecord *psir )
 {
   long I10;
   long card;
+  /* Removed during EPICS 7 Migration
   long terminator;
+  */
   char command[MAX_STRING_SIZE];
   char response[MAX_STRING_SIZE];
   char errmsg[MAX_STRING_SIZE];
@@ -41,7 +43,10 @@ long servofreqSIR( struct sirRecord *psir )
   card = (long)(*(double *)psir->val);
 
   sprintf(command, "I10");
+  /* Removed during EPICS 7 Migration
   terminator = drvPmacMbxWriteRead(card, command, response, errmsg);
+  */
+  drvPmacMbxWriteRead(card, command, response, errmsg);
   sscanf(response, "%ld", &I10);
   *(double *)psir->val = (PMAC_INTERRUPT_FACTOR/(double)I10) * 1000.0;
   

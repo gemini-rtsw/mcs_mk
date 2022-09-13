@@ -34,14 +34,14 @@ p 1520 1184 100 1024 -1 name:$(top)$(command)azTime
 use eais 408 2168 100 0 eais#0
 xform 0 512 2240
 p 173 2313 100 0 0 DESC:TAI time
-p 432 2318 100 0 1 DTYP:Bancomm 635
+p 432 2318 100 0 1 DTYP:Soft Channel
 p 128 1982 100 0 0 EGU:seconds
 p 432 2382 100 0 1 PREC:6
 p 432 2350 100 0 1 SCAN:.1 second
 p 496 2160 100 1024 -1 name:$(top)bancommExtEvent
 use hwin 40 2232 100 0 hwin#1
 xform 0 112 2272
-p 19 2264 100 0 -1 val(in):#C0 S3
+p 6 2294 100 0 -1 val(in):$(top)azcapturedTime.VAL
 use hwin 1752 1304 100 0 hwin#45
 xform 0 1824 1344
 p 1728 1374 100 0 -1 val(in):$(top)PmacCmd_M1

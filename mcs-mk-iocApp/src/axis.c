@@ -39,7 +39,9 @@ long initSetPositions( struct genSubRecord *pgsub )
   long I208;
   long I209;
   long card;
+  /* Removed during EPICS 7 Migration
   long terminator;
+  */
   char command[MAX_STRING_SIZE];
   char response[MAX_STRING_SIZE];
   char errmsg[MAX_STRING_SIZE];
@@ -47,12 +49,18 @@ long initSetPositions( struct genSubRecord *pgsub )
   card = (long)(*(double *)pgsub->q);
 
   sprintf(command, "I208");
+  /* Removed during EPICS 7 Migration
   terminator = drvPmacMbxWriteRead(card, command, response, errmsg);
+  */
+  drvPmacMbxWriteRead(card, command, response, errmsg);
   sscanf(response, "%ld", &I208);
   *(long *)pgsub->o = I208;
 
   sprintf(command, "I209");
+  /* Removed during EPICS 7 Migration
   terminator = drvPmacMbxWriteRead(card, command, response, errmsg);
+  */
+  drvPmacMbxWriteRead(card, command, response, errmsg);
   sscanf(response, "%ld", &I209);
   *(long *)pgsub->p = I209;
 
@@ -237,7 +245,9 @@ long setAxisState( struct genSubRecord *pgsub )
   long dc;
   long pdc;
   long counter;
+  /* Removed during EPICS 7 Migration
   long card;
+  */
   long reset = 1;
 
   dvz      = *(long *)pgsub->a;
@@ -247,7 +257,9 @@ long setAxisState( struct genSubRecord *pgsub )
   de       = *(long *)pgsub->e;
   pdc      = *(long *)pgsub->f;
   counter  = *(long *)pgsub->g;
+  /* Removed during EPICS 7 Migration
   card     = (long)(*(double *)pgsub->h);
+  */
 
 /*
   if( card == 0 )
@@ -349,12 +361,14 @@ long capturedPos( struct genSubRecord *pgsub )
   double azcapturedSC;
   double azcapturedPosC;
   double azcapturedVelC;
+  
   double elbaseSC;
   double elservoFreq;
   double elcountsPerDegree;
   double elcapturedSC;
   double elcapturedPosC;
   double elcapturedVelC;
+  
   double capturedTime;
   long   I208;
   long   I209;
@@ -362,7 +376,7 @@ long capturedPos( struct genSubRecord *pgsub )
   double bbb[3]={0.0,0.0,0.0};
   double azdiffSC;
   double eldiffSC;
-  double aztotalVel, eltotalVel;
+  double aztotalVel, eltotalVel, azMaxVelLim, elMaxVelLim;
   int    i;
   static int ii = 0;
   static double azvel[10];
@@ -390,16 +404,23 @@ long capturedPos( struct genSubRecord *pgsub )
   azcapturedSC       = *(double *)pgsub->d;
   azcapturedPosC     = *(double *)pgsub->e;
   azcapturedVelC     = *(double *)pgsub->f;
+  azMaxVelLim        = *(double *)pgsub->g;
+  
   elbaseSC           = *(double *)pgsub->h;
   elservoFreq        = *(double *)pgsub->i;
   elcountsPerDegree  = *(double *)pgsub->k;
   elcapturedSC       = *(double *)pgsub->l;
   elcapturedPosC     = *(double *)pgsub->m;
   elcapturedVelC     = *(double *)pgsub->n;
+  elMaxVelLim        = *(double *)pgsub->r;
+
   capturedTime       = *(double *)pgsub->q;
   I208               = *(long *)pgsub->o;
   I209               = *(long *)pgsub->p;
   
+  timeNow(&capturedTime) ;
+     
+  azrawTime =  capturedTime;
   azdiffSC =  azcapturedSC - azbaseSC;
   if( azdiffSC < 0 )
     azdiffSC += TWO_POWER_24;
@@ -473,43 +494,46 @@ long capturedPos( struct genSubRecord *pgsub )
   /* The following limiting is intended only to trap corrupted values not to
    *  limit the returned data to the same range as a user is allowed to
    *  demand
+   * Its also used to raise awareness about exceeding a limit. Velocity limits are
+   *  defined from records so they can be adjusted easily.
+   *  More info under: http://jira.gemini.edu:8080/browse/RTUPG-178 
    */
   /* azimuth */
   if (azrawPos > AZ_MAX_POS) {
      strcpy (dtHealth, "BAD");
-     strcpy (dtHealthMess, "Time stamp posn. > 367.67 degs.");
+     strcpy (dtHealthMess, "AZ Time stamp posn. > 367.67 degs.");
      azrawPos = AZ_MAX_POS;
   } else if (azrawPos < AZ_MIN_POS) {
      strcpy (dtHealth, "BAD");
-     strcpy (dtHealthMess, "Time stamp posn. < -188.25 degs.");
+     strcpy (dtHealthMess, "AZ Time stamp posn. < -188.25 degs.");
      azrawPos = AZ_MIN_POS;
-  } else if (azrawVel > AZ_MAX_VEL) {
+  } else if (azrawVel > azMaxVelLim) {
      strcpy (dtHealth, "BAD");
-     strcpy (dtHealthMess, "Time stamp vel. > 2.0 degs/s");
-     azrawVel = AZ_MAX_VEL ;
-  } else if (azrawVel < AZ_MIN_VEL) {
+     sprintf(dtHealthMess, "AZ vel. %lf > %lf deg/s", azrawVel, azMaxVelLim);
+     azrawVel = azMaxVelLim ;
+  } else if (azrawVel < -azMaxVelLim) {
      strcpy (dtHealth, "BAD") ;
-     strcpy (dtHealthMess, "Time stamp vel. < -2.0 degs/s");
-     azrawVel = AZ_MIN_VEL;
+     sprintf(dtHealthMess, "AZ vel. %lf < %lf deg/s", azrawVel, -azMaxVelLim);
+     azrawVel = -azMaxVelLim;
   } 
 
   /* elevation */
   if (elrawPos > EL_MAX_POS) {
      strcpy (dtHealth, "BAD");
-     strcpy (dtHealthMess, "Time stamp posn. > 92.73 degs.");
+     strcpy (dtHealthMess, "EL Time stamp posn. > 92.73 degs.");
      elrawPos = EL_MAX_POS;
   } else if (elrawPos < EL_MIN_POS) {
      strcpy (dtHealth, "BAD");
-     strcpy (dtHealthMess, "Time stamp posn. < 0.0 degs.");
+     strcpy (dtHealthMess, "EL Time stamp posn. < 0.0 degs.");
      elrawPos = EL_MIN_POS;
-  } else if (elrawVel > EL_MAX_VEL) {
+  } else if (elrawVel > elMaxVelLim) {
      strcpy (dtHealth, "BAD");
-     strcpy (dtHealthMess, "Time stamp vel. > 0.75 degs/s");
-     elrawVel = EL_MAX_VEL ;
-  } else if (elrawVel < EL_MIN_VEL) {
+     sprintf(dtHealthMess, "EL vel. %lf > %lf deg/s", elrawVel, elMaxVelLim);
+     elrawVel = elMaxVelLim ;
+  } else if (elrawVel < -elMaxVelLim) {
      strcpy (dtHealth, "BAD");
-     strcpy (dtHealthMess, "Time stamp vel. < -0.75 degs/s");
-     elrawVel = EL_MIN_VEL;
+     sprintf(dtHealthMess, "EL vel. %lf < %lf deg/s", elrawVel, -elMaxVelLim);
+     elrawVel = -elMaxVelLim;
   } 
 
   /* Perform running average over 10 previous Azimuth velocities */
@@ -546,8 +570,8 @@ long capturedPos( struct genSubRecord *pgsub )
   timeNow(&tai) ;
   deltaT = tai - azrawTime;
 
-
-  /*printf("*********************\n");
+/*
+  printf("*********************\n");
   printf("deltaT = %f\n",deltaT);
   printf("tai = %f\n",tai);
   printf("azrawTime = %f\n",azrawTime);
@@ -556,7 +580,7 @@ long capturedPos( struct genSubRecord *pgsub )
   printf("azCapturedSC = %f\n",azcapturedSC);
   printf("azbaseSC = %f\n",azbaseSC);
   printf("azServoFreq = %f\n",azservoFreq);
- */ 
+*/ 
   
   
   if (deltaT > 1.0 || deltaT < -1.0) {

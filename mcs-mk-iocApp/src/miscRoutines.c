@@ -548,7 +548,9 @@ long GISdebug( struct subRecord *psub )
 
 long speedControl( struct genSubRecord *pgsub )
 {
+  /* Removed during EPICS 7 Migration	
   long   terminator;
+  */
   long   ret;
   long   card;
   char   command[MAX_STRING_SIZE];
@@ -567,7 +569,10 @@ long speedControl( struct genSubRecord *pgsub )
   else if( *((char *)pgsub->j) == 'K' )
     strcpy(command, "#2K");
 
+  /* Removed during EPICS 7 Migration	
   terminator = drvPmacMbxWriteRead(card, command, response, errmsg);
+  */
+  drvPmacMbxWriteRead(card, command, response, errmsg);
   if( errmsg[0] )
   {
     printf("PMAC command = %s,  Error: %s\n", command, errmsg);
@@ -583,7 +588,9 @@ long SendJog( struct genSubRecord *pgsub )
   long ret;
   long card;
   long debug;
+  /* Removed during EPICS 7 Migration	
   long terminator;
+  */
   char response[MAX_STRING_SIZE];
   char errmsg[MAX_STRING_SIZE];
 
@@ -595,7 +602,10 @@ long SendJog( struct genSubRecord *pgsub )
   {
     /* if( debug ) */
       printf("SendJog: Setting Velocity with: %s\n", (char *)pgsub->b);
+    /* Removed during EPICS 7 Migration	
     terminator = drvPmacMbxWriteRead(card, pgsub->b, response, errmsg);
+    */
+    drvPmacMbxWriteRead(card, pgsub->b, response, errmsg);
     if( errmsg[0] )
     {
       printf("PMAC command = %s,  Error: %s\n", (char *)pgsub->b, errmsg);
@@ -607,7 +617,10 @@ long SendJog( struct genSubRecord *pgsub )
   {
     /* if( debug ) */
       printf("SendJog: Sending jog: %s\n", (char *)pgsub->a);
+    /* Removed during EPICS 7 Migration	
     terminator = drvPmacMbxWriteRead(card, pgsub->a, response, errmsg);
+    */
+    drvPmacMbxWriteRead(card, pgsub->a, response, errmsg);
     if( errmsg[0] )
     {
       printf("PMAC command = %s,  Error: %s\n", (char *)pgsub->a, errmsg);
@@ -752,7 +765,9 @@ long startSlew( struct genSubRecord *pgsub )
 {
   long ret;
   long debug;
+  /* Removed during EPICS 7 Migration	
   long terminator;
+  */
   char response[MAX_STRING_SIZE];
   char errmsg[MAX_STRING_SIZE];
 
@@ -764,7 +779,10 @@ long startSlew( struct genSubRecord *pgsub )
   if( strcmp((char *)pgsub->d, "NO") )   /* Set the velocity if required */
   {
     printf("SendJog: Setting Azimuth Velocity with: %s\n", (char *)pgsub->d);
+    /* Removed during EPICS 7 Migration	
     terminator = drvPmacMbxWriteRead(0, pgsub->d, response, errmsg); 
+    */
+    drvPmacMbxWriteRead(0, pgsub->d, response, errmsg); 
     if( errmsg[0] )
     {
       printf("PMAC command = %s,  Error: %s\n", (char *)pgsub->d, errmsg);
@@ -777,7 +795,10 @@ long startSlew( struct genSubRecord *pgsub )
   if( strcmp((char *)pgsub->e, "NO") )   /* Set the velocity if required */
   {
     printf("SendJog: Setting Elevation Velocity with: %s\n", (char *)pgsub->e);
+    /* Removed during EPICS 7 Migration	
     terminator = drvPmacMbxWriteRead(1, pgsub->e, response, errmsg); 
+    */
+    drvPmacMbxWriteRead(1, pgsub->e, response, errmsg); 
     if( errmsg[0] )
     {
       printf("PMAC command = %s,  Error: %s\n", (char *)pgsub->e, errmsg);
@@ -788,7 +809,10 @@ long startSlew( struct genSubRecord *pgsub )
   if( !ret )  /* Send the Azimuth Jog */
   {
     printf("SendJog: Sending Azimuth jog: %s\n", (char *)pgsub->b);
+    /* Removed during EPICS 7 Migration	
     terminator = drvPmacMbxWriteRead(0, pgsub->b, response, errmsg);
+    */
+    drvPmacMbxWriteRead(0, pgsub->b, response, errmsg);
     if( errmsg[0] )
     {
       printf("PMAC command = %s,  Error: %s\n", (char *)pgsub->b, errmsg);
@@ -799,7 +823,10 @@ long startSlew( struct genSubRecord *pgsub )
   if( !ret )  /* Send the Elevation Jog */
   {
     printf("SendJog: Sending Elevation jog: %s\n", (char *)pgsub->c);
+    /* Removed during EPICS 7 Migration	
     terminator = drvPmacMbxWriteRead(1, pgsub->c, response, errmsg);
+    */
+    drvPmacMbxWriteRead(1, pgsub->c, response, errmsg);
     if( errmsg[0] )
     {
       printf("PMAC command = %s,  Error: %s\n", (char *)pgsub->c, errmsg);
