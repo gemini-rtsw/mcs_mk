@@ -38,3 +38,4 @@
 /mcs-mk-iocApp/Db/O.*
 /configure/RELEASE.local
 /configure/CONFIG_SITE.local
+docker-compose.yml
