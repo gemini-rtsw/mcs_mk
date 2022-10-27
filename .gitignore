@@ -1,41 +1,18 @@
-[200~
-# /
-/O.*
-/db
-/dbd
-/bin
-/data
-
-# /configure/
-/configure/O.*
-/configure/db
-/configure/dbd
-/configure/bin
-/configure/data
-
-# /iocBoot/
-/iocBoot/O.*
-/iocBoot/db
-/iocBoot/dbd
-/iocBoot/bin
-/iocBoot/data
-
-# /iocBoot/mcs-mk-ioc/
-/iocBoot/mcs-mk-ioc/O.*
-/iocBoot/mcs-mk-ioc/db
-/iocBoot/mcs-mk-ioc/dbd
-/iocBoot/mcs-mk-ioc/bin
-/iocBoot/mcs-mk-ioc/data
-
-# /mcs-mk-iocApp/
-/mcs-mk-iocApp/O.*
-/mcs-mk-iocApp/db
-/mcs-mk-iocApp/dbd
-/mcs-mk-iocApp/bin
-/mcs-mk-iocApp/data
-
-# /mcs-mk-iocApp/Db/
-/mcs-mk-iocApp/Db/O.*
+*.vscode
+*.swp
+*BAK.adl
+cdCommands
+envPaths
+*.bak
+O.*
+db
+dbd
+bin
+data
+include
+lib
+.git
+edl
 /configure/RELEASE.local
 /configure/CONFIG_SITE.local
 docker-compose.yml
