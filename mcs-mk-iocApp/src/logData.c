@@ -8,7 +8,7 @@
 #include <time.h>
 #include <epicsPrint.h>
 #include <epicsTimer.h>
-#include <tsDefs.h>
+#include <epicsTime.h>
 
 #include <dbEvent.h>
 #include <dbDefs.h>
@@ -299,7 +299,7 @@ long configLogAddressI( struct genSubRecord *pgsub )
 
 long writeHeader( struct genSubRecord *pgsub )
 {
-  TS_STAMP now;
+  epicsTimeStamp  now;
   char     nowText[28];
   char     tbuf[28];
   double   freq;
@@ -326,8 +326,10 @@ long writeHeader( struct genSubRecord *pgsub )
   endTime      = *(long *)pgsub->i;
 
   /* Get the local time as a time stamp */
-  tsLocalTime(&now);
-  sprintf(tbuf, "%s", tsStampToText(&now, TS_TEXT_MMDDYY, nowText));
+  /*tsLocalTime(&now);
+  sprintf(tbuf, "%s", tsStampToText(&now, TS_TEXT_MMDDYY, nowText));*/
+  epicsTimeGetCurrent(&now);
+  sprintf(tbuf, "%s", epicsTimeToStrftime(&now, sizeof(nowText), "%H%M%S%T", nowText));
 
   /* First header line */
   sprintf(header1, "MCS, Time = %s, LOGDATA, Filename = %s, DataID = %s, Start = %ld, End = %ld\nFrequency = %f, Period = %ld, ServoCounter = %ld, CapTime = %f\n", 

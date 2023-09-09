@@ -8,8 +8,7 @@ use bc200tr -160 -24 -100 0 frame
 xform 0 1520 1280
 use mcHealthCombine 2016 1175 100 0 mcHealthCombine#17
 xform 0 2384 1416
-p 2176 1328 200 0 0 seta:
-p 2176 1264 200 0 1 setb:top $(mc)health:
+p 2176 1264 200 0 1 setb:$(top)health:
 use generalStat1 1088 1783 100 0 generalStat1#15
 xform 0 1456 2024
 use axisStatus2 216 568 100 0 axisStatus2#11

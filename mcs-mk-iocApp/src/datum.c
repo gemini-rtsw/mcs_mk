@@ -44,13 +44,17 @@ long calcWrap (struct genSubRecord *pgsub)
 {
     long outer;
     long inner;
+    /* Removed during EPICS 7 Migration 
     long debug;
+    */
 
     /* Get arguments.
      */
     outer = *(long *) pgsub->a;
     inner = *(long *) pgsub->b;
+    /* Removed during EPICS 7 Migration 
     debug = *(long *) pgsub->c;
+    */
 
     if (mcGetSimuLevel())
     {
@@ -134,7 +138,9 @@ long startDatumS (struct genSubRecord *pgsub)
     long   card;
     long   tilt;
     long   wrap;
+    /* Removed during EPICS 7 migration
     long   terminator;
+    */
     double curpos;
     char   command[MAX_STRING_SIZE];
     char   response[MAX_STRING_SIZE];
@@ -197,7 +203,10 @@ long startDatumS (struct genSubRecord *pgsub)
         /* Set the home direction using the PMAC variable I223.
          */
         sprintf (command, "I223=%f", *(double *)pgsub->vala);
+	/* Removed during EPICS 7 Migration
         terminator = drvPmacMbxWriteRead (card, command, response, errmsg);
+	*/
+        drvPmacMbxWriteRead (card, command, response, errmsg);
         if (errmsg[0])
         {
 	    printf ("startDatumS: PMAC command: Setting I223, Error: %s\n", errmsg);
@@ -206,7 +215,10 @@ long startDatumS (struct genSubRecord *pgsub)
 
         /* Set the home flags to point at the sony switch.
          */
+	/* Removed during EPICS 7 Migration
         terminator = drvPmacMbxWriteRead (card, "I225=$53C000", response, errmsg);
+	*/
+        drvPmacMbxWriteRead (card, "I225=$53C000", response, errmsg);
         if (errmsg[0])
         {
 	    printf ("startDatumS: PMAC command: I225=$53C000, Error: %s\n", errmsg);
@@ -215,7 +227,10 @@ long startDatumS (struct genSubRecord *pgsub)
 
         /* Make sure homing is done on falling edge.
          */
+        /* Removed during EPICS 7 migration
         terminator = drvPmacMbxWriteRead (card, "I902=10", response, errmsg);
+	*/
+        drvPmacMbxWriteRead (card, "I902=10", response, errmsg);
         if (errmsg[0])
         {
 	    printf ("startDatumS: PMAC command: I902=10, Error: %s\n", errmsg);
@@ -224,7 +239,10 @@ long startDatumS (struct genSubRecord *pgsub)
 
         /* Issue "home" command.
          */
+        /* Removed during EPICS 7 migration
         terminator = drvPmacMbxWriteRead (card, "#2home", response, errmsg);
+	*/
+        drvPmacMbxWriteRead (card, "#2home", response, errmsg);
         if (errmsg[0])
         {
 	    printf ("startDatumS: PMAC command: #2home, Error: %s\n", errmsg);
@@ -266,7 +284,9 @@ long endDatumS (struct genSubRecord *pgsub)
     double switchNeg;
     long   cmd;
     long   card;
+    /* Removed during EPICS 7 Migration
     long   terminator;
+    */
     long   debug;
     long   mech;
     long   hc;
@@ -348,11 +368,17 @@ long endDatumS (struct genSubRecord *pgsub)
 
 	/* Open the loop.
 	 */
+        /* Removed during EPICS 7 Migration
 	terminator = drvPmacMbxWriteRead (card, "#2K", response, errmsg);
+	*/
+	drvPmacMbxWriteRead (card, "#2K", response, errmsg);
 
 	/* Download new value to Actual Position Register.
 	 */
+        /* Removed during EPICS 7 Migration
 	terminator = drvPmacMbxWriteRead (card, command, response, errmsg);
+	*/
+	drvPmacMbxWriteRead (card, command, response, errmsg);
 
 	/* Set sequence mask to mark datum processed.
 	 */
@@ -401,7 +427,9 @@ long startDatumH (struct genSubRecord *pgsub)
     long   tilt;
     long   wrap;
     long   head;
+    /* Removed during EPICS 7 Migration
     long   terminator;
+    */
     double curpos;
     char   command[MAX_STRING_SIZE];
     char   response[MAX_STRING_SIZE];
@@ -456,7 +484,10 @@ long startDatumH (struct genSubRecord *pgsub)
     /* Set the home direction using the PMAC variable I223.
      */
     sprintf (command, "I223=%f", *(double *) pgsub->vala);
+    /* Removed during EPICS 7 Migration
     terminator = drvPmacMbxWriteRead(card, command, response, errmsg);
+    */
+    drvPmacMbxWriteRead(card, command, response, errmsg);
     if (errmsg[0])
     {
 	printf ("startDatumH: PMAC command: Setting I223, Error: %s\n", errmsg);
@@ -475,7 +506,10 @@ long startDatumH (struct genSubRecord *pgsub)
     else if (head == MCS_HEAD_4)
         strcpy (command, "P308=4");
 
+    /* Removed during EPICS 7 Migration
     terminator = drvPmacMbxWriteRead (card, command, response, errmsg);
+    */
+    drvPmacMbxWriteRead (card, command, response, errmsg);
     if (errmsg[0])
     {
 	printf ("startDatumH: PMAC command: %s, Error: %s\n", command, errmsg);
@@ -494,7 +528,10 @@ long startDatumH (struct genSubRecord *pgsub)
 	    strcpy (command, "P313=-1");
     }
 
+    /* Removed during EPICS 7 Migration
     terminator = drvPmacMbxWriteRead (card, command, response, errmsg);
+    */
+    drvPmacMbxWriteRead (card, command, response, errmsg);
     if (errmsg[0])
     {
 	printf ("startDatumH: PMAC command: %s, Error: %s\n", command, errmsg);
@@ -513,7 +550,10 @@ long startDatumH (struct genSubRecord *pgsub)
 	    strcpy (command, "P314=0");
     }
 
+    /* Removed during EPICS 7 Migration
     terminator = drvPmacMbxWriteRead (card, command, response, errmsg);
+    */
+    drvPmacMbxWriteRead (card, command, response, errmsg);
     if (errmsg[0])
     {
 	printf ("startDatumH: PMAC command: %s, Error: %s\n", command, errmsg);
@@ -522,7 +562,10 @@ long startDatumH (struct genSubRecord *pgsub)
 
     /* Set the flag to enable the PLC program.
      */
+    /* Removed during EPICS 7 Migration
     terminator = drvPmacMbxWriteRead (card, "P300=1", response, errmsg);
+    */
+    drvPmacMbxWriteRead (card, "P300=1", response, errmsg);
     if (errmsg[0])
     {
 	printf ("startDatumH: PMAC command: P300=1, Error: %s\n", errmsg);
@@ -531,7 +574,10 @@ long startDatumH (struct genSubRecord *pgsub)
 
     /* Enable PLC 6 - This performs the datum.
      */
+    /* Removed during EPICS 7 Migration
     terminator = drvPmacMbxWriteRead (card, "enable plc 6", response, errmsg);
+    */
+    drvPmacMbxWriteRead (card, "enable plc 6", response, errmsg);
     if (errmsg[0])
     {
 	printf ("startDatumH: PMAC command: enable plc 6, Error: %s\n", errmsg);
@@ -585,7 +631,9 @@ long endDatumH (struct genSubRecord *pgsub)
     double ap360 = 0;
     long   cmd;
     long   card;
+    /* Removed during EPICS 7 Migration
     long   terminator;
+    */
     long   debug;
     long   mech;
     long   P304;
@@ -622,7 +670,10 @@ long endDatumH (struct genSubRecord *pgsub)
 	/* Check whether the PLC program is running. The P304 variable
 	 * will change to zero when datum has finished.
 	 */
+        /* Removed during EPICS 7 Migration
 	terminator = drvPmacMbxWriteRead (card, "P304", response, errmsg);
+	*/
+	drvPmacMbxWriteRead (card, "P304", response, errmsg);
 	sscanf (response, "%ld", &P304);
 	if (P304 == -1)		/* error */
 	{
@@ -660,7 +711,10 @@ long endDatumH (struct genSubRecord *pgsub)
 	{
 	    /* Disable PLC program by setting P300 to zero.
 	     */
+            /* Removed during EPICS 7 Migration
 	    terminator = drvPmacMbxWriteRead (card, "P300=0", response, errmsg);
+	    */
+	    drvPmacMbxWriteRead (card, "P300=0", response, errmsg);
 	    if(errmsg[0])
 	    {
 		printf ("endDatumH: PMAC command: P300=0, Error: %s\n", errmsg);
@@ -670,7 +724,10 @@ long endDatumH (struct genSubRecord *pgsub)
 	    /* Get the reference mark number (P307) and use this number
 	     * to get the (MORE INFO).
 	     */
+            /* Removed during EPICS 7 Migration
 	    terminator = drvPmacMbxWriteRead (card, "P307", response, errmsg);
+	    */
+	    drvPmacMbxWriteRead (card, "P307", response, errmsg);
 	    sscanf (response, "%ld", &P307);
 	    if (card == 0)		/* azimuth */
 		OM = 0;
@@ -800,21 +857,33 @@ long endDatumH (struct genSubRecord *pgsub)
 
 	    /* Open the loop
 	     */
+            /* Removed during EPICS 7 Migration
 	    terminator = drvPmacMbxWriteRead(card, "#2K", response, errmsg);
+            */
+	    drvPmacMbxWriteRead(card, "#2K", response, errmsg);
 
 	    /* Diagnostics for John
 	     */
 	    sprintf (command, "P309=%f", ap);
+            /* Removed during EPICS 7 Migration
 	    terminator = drvPmacMbxWriteRead (card, command, response, errmsg);
+            */
+	    drvPmacMbxWriteRead (card, command, response, errmsg);
 
 	    /* Download new value to Actual Position Register.
 	     */
 	    sprintf (command, "M262=M262+%f", ap);
+            /* Removed during EPICS 7 Migration
 	    terminator = drvPmacMbxWriteRead (card, command, response, errmsg);
+            */ 
+	    drvPmacMbxWriteRead (card, command, response, errmsg);
 
 	    /* Get value back (what for?).
 	     */
+            /* Removed during EPICS 7 Migration
 	    terminator = drvPmacMbxWriteRead (card, "M262", response, errmsg);
+	    */
+	    drvPmacMbxWriteRead (card, "M262", response, errmsg);
 	    sscanf (response, "%lf", &M262);
 
 	    /* Set sequence mask.

@@ -60,12 +60,12 @@ use estringouts 416 1799 100 0 miscDummyVal3
 xform 0 544 1872
 p 544 1888 100 0 0 DESC:Dummy health value
 p 352 1838 100 0 0 VAL:GOOD
-p 384 1308 100 0 0 def(DOL):
+p 384 1308 100 0 1 def(DOL):GOOD
 use estringouts 416 1543 100 0 miscDummyVal4
 xform 0 544 1616
 p 544 1632 100 0 0 DESC:Dummy health value
 p 352 1582 100 0 0 VAL:GOOD
-p 384 1052 100 0 0 def(DOL):
+p 384 1052 100 0 1 def(DOL):GOOD
 use estringouts 416 999 100 0 miscDummyMess2
 xform 0 544 1072
 p 544 1088 100 0 0 DESC:Empty message
@@ -75,7 +75,7 @@ use estringouts 416 2023 100 0 miscDummyVal2
 xform 0 544 2096
 p 544 2112 100 0 0 DESC:Dummy health value
 p 352 2062 100 0 0 VAL:GOOD
-p 384 1532 100 0 0 def(DOL):
+p 384 1532 100 0 1 def(DOL):GOOD
 use outhier 2720 1655 100 0 VAL
 xform 0 2736 1696
 use outhier 2720 1511 100 0 MESS

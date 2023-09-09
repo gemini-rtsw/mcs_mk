@@ -1,6 +1,7 @@
 # RULES
 
 -include $(CONFIG)/RULES.Gem
+-include $(TOP)/configure/RULES.local
 include $(CONFIG)/RULES
 
 # Library should be rebuilt because LIBOBJS may have changed.

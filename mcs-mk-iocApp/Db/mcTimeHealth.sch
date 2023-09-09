@@ -52,12 +52,12 @@ use estringouts 416 999 100 0 timeDummyVal2
 xform 0 544 1072
 p 544 1088 100 0 0 DESC:Dummy health value
 p 352 1038 100 0 0 VAL:GOOD
-p 384 508 100 0 0 def(DOL):
+p 384 508 100 0 1 def(DOL):GOOD
 use estringouts 416 1191 100 0 timeDummyVal1
 xform 0 544 1264
 p 544 1280 100 0 0 DESC:Dummy health value
 p 352 1230 100 0 0 VAL:GOOD
-p 384 700 100 0 0 def(DOL):
+p 384 700 100 0 1 def(DOL):GOOD
 use estringouts 416 551 100 0 timeDummyMess2
 xform 0 544 624
 p 544 640 100 0 0 DESC:Empty message

@@ -11,9 +11,7 @@
 #define NUM_EXTRAP	20	/* number of points to extrapolate    */
 #define	DOUBLE_BUFF	(NUM_EXTRAP>10)
 #define	LOGGING_ON	TRUE
-#define AZ_MAX_VEL      2.0
 #define AZ_MAX_ACC      0.1
-#define EL_MAX_VEL      0.75
 #define EL_MAX_ACC      0.05
 
 
@@ -109,7 +107,10 @@ long test ()
     double pos1[NUM_EXTRAP];
     double pos2[NUM_EXTRAP];
     double vel[NUM_EXTRAP];
+    /* Removed from EPICS 7 Migration
     double tt, tt2;
+    */
+    double tt;
 
     double lastVel = -0.007688;
     double lastPos = 62.56433468;
@@ -120,7 +121,9 @@ long test ()
      for (i=0; i<NUM_EXTRAP; i++)
      {
             tt       = (double)i*TIME_INT; 
+	    /* Removed from EPICS 7 Migration
             tt2      = i*TIME_INT; 
+	    */
 
             pos1[i] = lastPos + lastVel*tt + (double)0.5*acceleration*tt*tt;
             pos2[i] = lastPos + lastVel*tt + 0.5*acceleration*tt*tt;

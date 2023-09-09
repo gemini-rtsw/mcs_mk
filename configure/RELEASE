@@ -19,29 +19,40 @@
 # Build settings that are NOT module paths should appear in a
 # CONFIG_SITE file.
 
-EPICS_RELEASE=R3.14.12.8
+PROD_SUPP=/gem_base/epics/support
+WORK_SUPP=/gem_base/epics/support
 
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
-PROD_SUPP=/gem_sw/prod/$(EPICS_RELEASE)/support
-WORK_SUPP=/gem_sw/work/$(EPICS_RELEASE)/support
-
-BANCOMM=$(PROD_SUPP)/bancomm/1-6-10
-TIMELIB=$(PROD_SUPP)/timelib/2-1-1
-SLALIB=$(PROD_SUPP)/slalib/1-9-10
-IOCSTATS=$(PROD_SUPP)/iocStats/3-1-16-5
-GEMREC=$(PROD_SUPP)/geminiRec/4-1-11
-PMAC=$(PROD_SUPP)/pmaclib/1-1-12
-XYCOM=$(PROD_SUPP)/xycom/2-1-8
-SNCSEQ=$(PROD_SUPP)/seq/2-2-5-3
-PVLOAD=$(PROD_SUPP)/pvload/1-1-4
-GEMUTILS=$(PROD_SUPP)/gemUtil/1-13
-TIMEPROBE=$(PROD_SUPP)/timeProbe/1-1-15
-RTEMSUTILS=$(PROD_SUPP)/rtemsutils/1-4-2
+SNCSEQ=$(PROD_SUPP)/sequencer
+SLALIB=$(PROD_SUPP)/slalib
+BANCOMM=$(PROD_SUPP)/bancomm
+TIMELIB=$(PROD_SUPP)/timelib
+GEMREC=$(PROD_SUPP)/geminiRec
+AUTOSAVE=$(PROD_SUPP)/autosave
+TIMEPROBE=$(PROD_SUPP)/timeProbe
+#IOCSTATS=$(PROD_SUPP)/iocStats
+GEMUTILS=$(PROD_SUPP)/gemUtil
+PMAC=$(PROD_SUPP)/pmaclib
+PVLOAD=$(PROD_SUPP)/pvload
+XYCOM=$(PROD_SUPP)/xycom
+#RTEMSUTILS=$(PROD_SUPP)/rtemsutils
 
 # EPICS_BASE usually appears last so other apps can override stuff:
-EPICS_BASE=/gem_sw/epics/$(EPICS_RELEASE)/base
+EPICS_BASE = /gem_base/epics/epics-base
 
 # Set RULES here if you want to take build rules from somewhere
 # other than EPICS_BASE:
 #RULES=/path/to/epics/support/module/rules/x-y
+
+# include local RELEASE configuration file (this will be ignored by with
+# .gitignore to keep it local and prevent poisoning the default build 
+# scheme)
+# overwrite configuration from above with this file and do not edit
+# this one
+#
+# These lines allow developers to override these RELEASE settings
+# without having to modify this file directly.
+-include $(TOP)/../RELEASE.local
+-include $(TOP)/../RELEASE.$(EPICS_HOST_ARCH).local
+-include $(TOP)/configure/RELEASE.local

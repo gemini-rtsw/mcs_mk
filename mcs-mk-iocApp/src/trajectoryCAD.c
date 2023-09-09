@@ -89,7 +89,7 @@ long trajectoryCAD( struct cadRecord *pcad )
       }
       else
       {
-        sprintf( pcad->mess, "%s: Not a valid Trajectory calculation mode", str );
+        sprintf( pcad->mess, "%s: Not a valid Trajectory calc. mode", str );
         ret = CAD_REJECT;
       }
       break;

@@ -28,18 +28,13 @@ long check_numeric( char * );
 #define VEL_ERROR_LOWER 0.0          /* Degrees/s */
 #define VEL_ERROR_UPPER 2.0          /* Degrees/s */
 
-#define AZ_MAX_VEL 1.9
-#define EL_MAX_VEL 0.7
-
-#define AZ_MIN_VEL -1.9
-#define EL_MIN_VEL -0.7
-
-#define AZ_MAX_ACC 0.1
-#define EL_MAX_ACC 0.04
-
-#define AZ_MIN_ACC -0.1
-#define EL_MIN_ACC -0.04
-
+/* Velocity limits are defined as EPICS records to get adjusted easier,
+ * see azMaxVelLim variable. Position limits are very unlikely to change
+ * so these will stay as hardcoded values for now, but these could be 
+ * considered for a change along with other variables to be consistent.
+ * More info under: http://jira.gemini.edu:8080/browse/RTUPG-178 
+ * Acceleration limits are removed as they are unused.
+ */
 #define AZ_MIN_POS -188.25
 #define AZ_MAX_POS  367.67
 #define EL_MIN_POS  0.0
@@ -80,6 +75,17 @@ long check_numeric( char * );
 #define EL_I223_S      2.5       /* El. home velocity using switch           */
 #define AZ_I223_H      1.0       /* Az. home velocity using tape head        */
 #define EL_I223_H      1.0       /* El. home velocity using tape head        */
+#define MCDEG_TO_CNTS   533572.2667 /* Degs to encoder counts */
+#define MCDEG_TO_I122   MCDEG_TO_CNTS/1000.0  /* Cr. Factor between deg/s and I122 cnts/msec */
+#define VEL_CNTS_PER_DEG 29965.06616
+
+/* Default values when using simulation mode */
+#define DEF_I10          3713707
+#define DEF_I108         96
+#define DEF_I109         96
+#define DEF_I508         80
+#define DEF_I509         80
+
 
 #endif
 

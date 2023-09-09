@@ -12,7 +12,7 @@ vpath %.db $(SYS_DB_PATHS)
 # Create and install (or just install) into <top>/db
 # databases, templates, substitutions like this
 DB += mctop.db
-DB += iocAdminRTEMS.db
+#DB += iocAdminRTEMS.db
 DB += timeProbe.db
 
 include $(TOP)/configure/RULES
@@ -21,5 +21,9 @@ include $(TOP)/configure/RULES
 $(COMMON_DIR)/%.db: %.db
 	cp $< $@
 
+CLEANS += *.dat *.bak
+ifndef BASE_3_15
 clean::
-	$(RM) *.dat *.bak
+        $(RM) *.dat *.bak
+endif
+
