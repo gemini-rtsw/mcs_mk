@@ -93,13 +93,13 @@ use eais 512 967 100 0 eais#231
 xform 0 640 1040
 p 576 1104 100 0 1 DTYP:PMAC-VME DPRAM
 p 576 1168 100 0 1 PINI:YES
-p 576 1136 100 0 1 SCAN:.1 second
+p 576 1136 100 0 1 SCAN:.0125 second
 p 624 960 100 1024 -1 name:$(top)elMPHandshake
 use eais 512 1223 100 0 eais#239
 xform 0 640 1296
 p 576 1360 100 0 1 DTYP:PMAC-VME DPRAM
 p 576 1424 100 0 1 PINI:YES
-p 576 1392 100 0 1 SCAN:.1 second
+p 576 1392 100 0 1 SCAN:.0125 second
 p 624 1216 100 1024 -1 name:$(top)azMPHandshake
 use setCarError 2400 295 100 0 setCarError#291
 xform 0 2624 432
