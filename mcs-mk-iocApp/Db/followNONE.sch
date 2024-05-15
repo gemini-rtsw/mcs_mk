@@ -11,7 +11,7 @@ w 3264 3491 100 0 n#6 trackingOff.trackingOff#182.FLNK 3200 3488 3328 3488 carId
 w 2080 3491 100 0 n#7 trackingOff.trackingOff#178.FLNK 2016 3488 2144 3488 carIdle.carIdle#184.SLNK
 w 1136 4067 100 0 n#8 hwin.hwin#175.in 1056 4064 1216 4064 efanouts.efanouts#174.SELL
 w 1072 3987 100 0 SLNK inhier.SLNK.P 976 3984 1168 3984 efanouts.efanouts#174.SLNK
-n 1639 3159 2550 3183 100
+n 1325 3204 2236 3228 100
 WARNING: This path is never executed, the standard way of operating uses the stop schematics
 _
 [cell use]
