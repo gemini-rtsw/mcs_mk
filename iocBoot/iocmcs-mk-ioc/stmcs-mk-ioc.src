@@ -1,9 +1,11 @@
 $(LINUX_ONLY)#!${INSTALL}/bin/${ARCH}/mcs-mk-ioc
 
-#cd ${INSTALL}
-cd ../..
-epicsEnvSet("IOCSH_PS1","$(IOCPROMPT)> ")
-epicsEnvSet("EPICS_CA_ADDR_LIST","172.17.2.30")
+cd ${INSTALL}
+
+epicsEnvSet("IOCSH_PS1","mcs-mk-ioc> ")
+epicsEnvSet("EPICS_CA_ADDR_LIST","10.2.2.100")
+
+nfsMount("$(CFGSERVER)","$(CFGREMOTE)","$(CFGLOCAL)")
 
 # specify NTP server config file
 epicsEnvSet("EPICS_TS_NTP_CONF_FILE","$(NTPCFGFILE)")
@@ -14,9 +16,9 @@ mcs_mk_ioc_registerRecordDeviceDriver(pdbbase)
 
 ## Load record instances
 
-#dbLoadRecords("db/iocAdminRTEMS.db"," IOC=$(MCSTOP):iocStats,TODFORMAT=%m/%d/%Y %H:%M:%S")
-dbLoadRecords("db/timeProbe.db","top=$(MCSTOP):")
-dbLoadRecords("db/mctop.db","top=$(MCSTOP):")
+#dbLoadRecords("db/iocAdminRTEMS.db"," IOC=mc:iocStats,TODFORMAT=%m/%d/%Y %H:%M:%S")
+dbLoadRecords("db/timeProbe.db","top=mc:")
+dbLoadRecords("db/mctop.db","top=mc:")
 
 # Configure BANCOMM card
 # - set the bc635 Time Provider priority to something other than the default
@@ -50,10 +52,9 @@ iocInit
 
 #seq &timeSeq, "sys=mc:"
 
-pvload "$(CFGFILE)/telescopeCP.par", "top=$(MCSTOP):"
-pvload "$(CFGFILE)/tapePolysCP.par", "top=$(MCSTOP):"
-pvload "$(CFGFILE)/axisLimitsCP.par", "top=$(MCSTOP):"
-pvload "$(CFGFILE)/sonyCP.par", "top=$(MCSTOP):"
-pvload "$(CFGFILE)/debug.par", "top=$(MCSTOP):"
+pvload "$(CFGFILE)/telescopeMK.par", "top=mc:"
+pvload "$(CFGFILE)/tapePolysMK.par", "top=mc:"
+pvload "$(CFGFILE)/axisLimitsMK.par", "top=mc:"
+pvload "$(CFGFILE)/sonyMK.par", "top=mc:"
+pvload "$(CFGFILE)/debug.par", "top=mc:"
 
-zoneset "CLST3"
