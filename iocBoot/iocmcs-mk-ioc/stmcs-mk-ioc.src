@@ -1,14 +1,14 @@
-$(LINUX_ONLY)#!${INSTALL}/bin/${ARCH}/mcs-mk-ioc
+# Commented out Linux command:#!/home/emma.kurz/mcs_mk/bin/RTEMS-mvme2700/mcs-mk-ioc
 
-cd ${INSTALL}
+cd /home/emma.kurz/mcs_mk
 
 epicsEnvSet("IOCSH_PS1","mcs-mk-ioc> ")
 epicsEnvSet("EPICS_CA_ADDR_LIST","10.2.2.100")
 
-nfsMount("$(CFGSERVER)","$(CFGREMOTE)","$(CFGLOCAL)")
+nfsMount("10.2.71.11","/gem_sw/etc/rtconfig","/rtconfig")
 
 # specify NTP server config file
-epicsEnvSet("EPICS_TS_NTP_CONF_FILE","$(NTPCFGFILE)")
+epicsEnvSet("EPICS_TS_NTP_CONF_FILE","/rtconfig/ntp/ntp-10.2.50.10.conf")
 
 ## Register all support components
 dbLoadDatabase("dbd/mcs-mk-ioc.dbd")
@@ -17,8 +17,8 @@ mcs_mk_ioc_registerRecordDeviceDriver(pdbbase)
 ## Load record instances
 
 #dbLoadRecords("db/iocAdminRTEMS.db"," IOC=mc:iocStats,TODFORMAT=%m/%d/%Y %H:%M:%S")
-dbLoadRecords("db/timeProbe.db","top=mc:")
-dbLoadRecords("db/mctop.db","top=mc:")
+dbLoadRecords("db/timeProbe.db","top=mcv:")
+dbLoadRecords("db/mctop.db","top=mcv:")
 
 # Configure BANCOMM card
 # - set the bc635 Time Provider priority to something other than the default
@@ -50,11 +50,11 @@ traceIocInit
 iocInit
 #epicsThreadShowAll
 
-#seq &timeSeq, "sys=mc:"
+seq &timeSeq, "sys=mcv:"
 
-pvload "$(CFGFILE)/telescopeMK.par", "top=mc:"
-pvload "$(CFGFILE)/tapePolysMK.par", "top=mc:"
-pvload "$(CFGFILE)/axisLimitsMK.par", "top=mc:"
-pvload "$(CFGFILE)/sonyMK.par", "top=mc:"
-pvload "$(CFGFILE)/debug.par", "top=mc:"
+pvload "/rtconfig/mcs/telescopeMK.par", "top=mcv:"
+pvload "/rtconfig/mcs/tapePolysMK.par", "top=mcv:"
+pvload "/rtconfig/mcs/axisLimitsMK.par", "top=mcv:"
+pvload "/rtconfig/mcs/sonyMK.par", "top=mcv:"
+pvload "/rtconfig/mcs/debug.par", "top=mcv:"
 
