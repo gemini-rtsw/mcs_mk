@@ -5,7 +5,8 @@
 %define repository gemdev
 %define _prefix /gem_base/epics/ioc
 %define arch %(uname -m)
-%define checkout %(git log --pretty=format:'%h' -n 1) 
+%define checkout %(git log --pretty=format:'%h' -n 1)
+%define git_hash %(git rev-parse --short HEAD 2>/dev/null || echo "nogit")
 
 %global _enable_debug_package 0
 %global debug_package %{nil}
