@@ -1,12 +1,12 @@
 variables:
-  SCRIPTS_BRANCH: "mcs_mk"
+  SCRIPTS_BRANCH: "main"
   CI_SCRIPTS_DIR: "gemini-rtsw-ci"
   GIT_SUBMODULE_FORCE_HTTPS: "true"
   GIT_SUBMODULE_STRATEGY: "recursive"
 
 include:
   - project: 'nsf-noirlab/gemini/rtsw/user-tools/gemini-rtsw-ci'
-    ref: 'mcs_mk'
+    ref: 'main'
     file: '.imported-ci.yml'
 
 stages:
