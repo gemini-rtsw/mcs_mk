@@ -26,7 +26,7 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
 SNCSEQ=$(PROD_SUPP)/sequencer
 SLALIB=$(PROD_SUPP)/slalib
-BANCOMM=$(PROD_SUPP)/bancomm
+#BANCOMM=$(PROD_SUPP)/bancomm
 TIMELIB=$(PROD_SUPP)/timelib
 GEMREC=$(PROD_SUPP)/geminiRec
 AUTOSAVE=$(PROD_SUPP)/autosave

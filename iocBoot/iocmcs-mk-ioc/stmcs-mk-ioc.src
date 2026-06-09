@@ -1,11 +1,14 @@
-$(LINUX_ONLY)#!${INSTALL}/bin/${ARCH}/mcs-mk-ioc
+# Commented out Linux command:#!/home/emma.kurz/mcs_mk/bin/RTEMS-mvme2700/mcs-mk-ioc
 
-cd ${INSTALL}
+cd /home/emma.kurz/mcs_mk
 
 epicsEnvSet("IOCSH_PS1","mcs-mk-ioc> ")
 epicsEnvSet("EPICS_CA_ADDR_LIST","10.2.2.100")
 
-nfsMount("$(CFGSERVER)","$(CFGREMOTE)","$(CFGLOCAL)")
+nfsMount("10.2.71.11","/gem_sw/etc/rtconfig","/rtconfig")
+
+# specify NTP server config file
+epicsEnvSet("EPICS_TS_NTP_CONF_FILE","/rtconfig/ntp/ntp-10.2.50.10.conf")
 
 ## Register all support components
 dbLoadDatabase("dbd/mcs-mk-ioc.dbd")
@@ -13,17 +16,17 @@ mcs_mk_ioc_registerRecordDeviceDriver(pdbbase)
 
 ## Load record instances
 
-dbLoadRecords("db/iocAdminRTEMS.db"," IOC=mc:iocStats,TODFORMAT=%m/%d/%Y %H:%M:%S")
-dbLoadRecords("db/timeProbe.db","top=mc:")
-dbLoadRecords("db/mctop.db","top=mc:")
+#dbLoadRecords("db/iocAdminRTEMS.db"," IOC=mc:iocStats,TODFORMAT=%m/%d/%Y %H:%M:%S")
+dbLoadRecords("db/timeProbe.db","top=mcv:")
+dbLoadRecords("db/mctop.db","top=mcv:")
 
 # Configure BANCOMM card
 # - set the bc635 Time Provider priority to something other than the default
 # or set it to a negative value to disable the bc635 Time Provider
 # Must be called before BCconfigure
-bc635TimeSetTpPrio (50)
+#bc635TimeSetTpPrio (50)
 # - Master ? Simulate ? intPerSecond, intPerTick, timeOffset (microsec)
-BCconfigure (0, 0, 200, 1, 0)
+#BCconfigure (0, 0, 80, 1, 0)
 
 # configure pmac card:
 var drvPmacDebug 0
@@ -36,7 +39,6 @@ mcSetSimuLevel(0)
 # If there are more than one XY566DI card, register and memory space must
 # be configured contiguously.
 # xy466DIConfig(num_cards, chans_per_card, reg_addr(A16), mem_addr(A24))
-#Gemini South Setting xy566DIConfig(2, 16, 0xC000, 0xA00000)
 xy566DIConfig(2, 16, 0x7000, 0x040000)
 xy566_set_gain(0, 1)
 xy566_set_gain(1, 0)
@@ -48,11 +50,11 @@ traceIocInit
 iocInit
 #epicsThreadShowAll
 
-seq &timeSeq, "sys=mc:"
+seq &timeSeq, "sys=mcv:"
 
-pvload "$(CFGFILE)/telescopeMK.par", "top=mc:"
-pvload "$(CFGFILE)/tapePolysMK.par", "top=mc:"
-pvload "$(CFGFILE)/axisLimitsMK.par", "top=mc:"
-pvload "$(CFGFILE)/sonyMK.par", "top=mc:"
-pvload "$(CFGFILE)/debug.par", "top=mc:"
+pvload "/rtconfig/mcs/telescopeMK.par", "top=mcv:"
+pvload "/rtconfig/mcs/tapePolysMK.par", "top=mcv:"
+pvload "/rtconfig/mcs/axisLimitsMK.par", "top=mcv:"
+pvload "/rtconfig/mcs/sonyMK.par", "top=mcv:"
+pvload "/rtconfig/mcs/debug.par", "top=mcv:"
 
