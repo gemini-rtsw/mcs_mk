@@ -1,7 +1,5 @@
 # Commented out Linux command:#!/home/emma.kurz/mcs_mk/bin/RTEMS-mvme2700/mcs-mk-ioc
 
-cd /home/emma.kurz/mcs_mk
-
 epicsEnvSet("IOCSH_PS1","mcs-mk-ioc> ")
 epicsEnvSet("EPICS_CA_ADDR_LIST","10.2.2.100")
 
