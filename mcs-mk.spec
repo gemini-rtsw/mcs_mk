@@ -21,9 +21,23 @@ Group: Applications/Engineering
 Source0: %{name}-%{version}.tar.gz
 ExclusiveArch: %{arch}
 Prefix: %{_prefix}
-## You may specify dependencies here
-BuildRequires: epics-base-devel re2c tdct sequencer-devel autosave-devel bancomm-devel geminiRec-devel timelib-devel pmaclib-devel slalib-devel xycom-devel gemUtil-devel timeProbe-devel pvload-devel
-Requires: epics-base sequencer autosave bancomm geminiRec timelib pmaclib slalib xycom gemUtil timeProbe pvload
+BuildRequires: re2c 
+BuildRequires: tdct
+BuildRequires: epics-base-devel  = 7.0.7-0.git.f9e3717%{?dist}
+BuildRequires: sequencer-devel   = 2.2.9.e5e3615-4.git.7b11f25%{?dist}
+BuildRequires: autosave-devel    = 5.10.2-0.git.57f0212%{?dist}
+BuildRequires: bancomm-devel     = 1.6.13-4.git.6f4ba7b%{?dist}
+BuildRequires: geminiRec-devel   = 4.1.13-3.git.6f58677%{?dist}
+BuildRequires: timelib-devel     = 2.1.4-3.git.a504360%{?dist}
+BuildRequires: pmaclib-devel     = 1.1.12-2.git.955fcac%{?dist}
+BuildRequires: slalib-devel      = 1.9.7-6.git.54d124d%{?dist}
+BuildRequires: xycom-devel       = 2.1.12-2.git.e8d8b00%{?dist}
+BuildRequires: gemUtil-devel     = 1.6.13-2.git.9268b49%{?dist}
+BuildRequires: timeProbe-devel   = 1.1.16-3.git.1bb32b7%{?dist}
+BuildRequires: pvload-devel      = 1.2.1-7.git.6df46ce%{?dist}
+
+
+#Requires: epics-base sequencer autosave bancomm geminiRec timelib pmaclib slalib xycom gemUtil timeProbe pvload
 ## Switch dependency checking off
 AutoReqProv: no
 
@@ -34,7 +48,22 @@ This is the module %{name}.
 %package devel
 Summary: %{name}-devel Package
 Group: Development/Gemini
-Requires: %{name} tdct sequencer-devel autosave-devel  bancomm-devel geminiRec-devel timelib-devel pmaclib-devel slalib-devel xycom-devel gemUtil-devel timeProbe-devel pvload-devel
+Requires: %{name} = %{version}-%{release}
+Requires: re2c 
+Requires: tdct
+Requires: epics-base-devel  = 7.0.7-0.git.f9e3717%{?dist}
+Requires: sequencer-devel   = 2.2.9.e5e3615-4.git.7b11f25%{?dist}
+Requires: autosave-devel    = 5.10.2-0.git.57f0212%{?dist}
+Requires: bancomm-devel     = 1.6.13-4.git.6f4ba7b%{?dist}
+Requires: geminiRec-devel   = 4.1.13-3.git.6f58677%{?dist}
+Requires: timelib-devel     = 2.1.4-3.git.a504360%{?dist}
+Requires: pmaclib-devel     = 1.1.12-2.git.955fcac%{?dist}
+Requires: slalib-devel      = 1.9.7-6.git.54d124d%{?dist}
+Requires: xycom-devel       = 2.1.12-2.git.e8d8b00%{?dist}
+Requires: gemUtil-devel     = 1.6.13-2.git.9268b49%{?dist}
+Requires: timeProbe-devel   = 1.1.16-3.git.1bb32b7%{?dist}
+Requires: pvload-devel      = 1.2.1-7.git.6df46ce%{?dist}
+#Requires: %{name} tdct sequencer-devel autosave-devel  bancomm-devel geminiRec-devel timelib-devel pmaclib-devel slalib-devel xycom-devel gemUtil-devel timeProbe-devel pvload-devel
 %description devel
 This is the module %{name}.
 
